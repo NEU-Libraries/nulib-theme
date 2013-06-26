@@ -1,0 +1,468 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Modules
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+/* Accordion Module === === === === === === === === === === === === === === === === === === === === === === === === === */
+
+.accordion {
+  padding: 10px 10px 0;
+  background-color: #fff;
+}
+.accordion li {
+  padding:6px 0;
+  margin: 0;
+  border-top:1px solid #ccc;
+  list-style:none;
+}
+.accordion li.first,
+.accordion li:first-child {
+  border:0 none;
+  padding-top: 0;
+}
+.accordion .opener {
+  font:normal 1.6em/1.1em HelveticaNeue57Condensed,Verdana,sans-serif;
+  color: #333;
+  display: block;
+  padding-bottom: 4px;
+}
+.accordion li.closed .opener {
+  background: url(../images/style/icon_redplus.gif) top right no-repeat;
+}
+.accordion li.open .opener,
+.accordion li.current .opener {
+  background: url(../images/style/icon_redminus.gif) top right no-repeat;
+}
+.accordion .opener:hover {
+  text-decoration: none;
+}
+.accordion .closed .detail {
+  overflow:hidden;
+  height:0;
+}
+.accordion ul {
+  overflow: hidden;
+}
+.accordion li li {
+  padding: 0 0 5px 10px;
+  border: 0 none;
+}
+.accordion li li.first,
+.accordion li li:first-child {
+  margin-top:5px;
+}
+.accordion li li a {
+  color: #333;
+}
+
+/* Accordion Module Variant=== === === === === === === === === === === === === === === === === === === === === === === === === */
+
+#leftNav.accordion {
+  padding: 0;
+  background-color: #fff;
+}
+#leftNav.accordion li {
+  padding: 6px 0;
+  margin: 0;
+  border-top: 0;
+  list-style:none;
+}
+.accordion li.first,
+.accordion li:first-child {
+  border:0 none;
+  padding-top: 0;
+}
+.accordion .opener {
+  font:normal 1.6em/1.1em HelveticaNeue57Condensed,Verdana,sans-serif;
+  color: #333;
+  display: block;
+  padding-bottom: 4px;
+}
+.accordion li.closed .opener {
+  background: url(../images/style/icon_redplus.gif) top right no-repeat;
+}
+.accordion li.open .opener,
+.accordion li.current .opener {
+  background: url(../images/style/icon_redminus.gif) top right no-repeat;
+}
+.accordion .opener:hover {
+  text-decoration: none;
+}
+.accordion .closed .detail {
+  overflow:hidden;
+  height:0;
+}
+.accordion ul {
+  overflow: hidden;
+}
+.accordion li li {
+  padding: 0 0 5px 10px;
+  border: 0 none;
+}
+.accordion li li.first,
+.accordion li li:first-child {
+  margin-top:5px;
+}
+.accordion li li a {
+  color: #333;
+}
+
+
+/* Large List Module === === === === === === === === === === === === === === === === === === === === === === */
+
+.largeList {
+  margin: 20px 0 28px;
+}
+
+.largeList li {
+  border-bottom: 1px solid #c4b996;
+  list-style-type: none;
+  margin: 0;
+}
+.largeList li.clock { background: url(../images/style/icon_reserve.gif) 6px 4px no-repeat; }
+.largeList li.arrows { background: url(../images/style/icon_renew.gif) 6px 4px no-repeat; }
+.largeList li.file_drawer { background: url(../images/style/icon_course.gif) 6px 4px no-repeat; }
+.largeList li.pencil { background: url(../images/style/icon_cite.gif) 6px 4px no-repeat; }
+.largeList li.ill_arrow { background: url(../images/style/icon_loan.gif) 6px 4px no-repeat; }
+.largeList li a {
+  padding: 6px 10px 7px 32px;
+  display: block;
+  color: #333;
+  font:normal 1.6em/1.1em HelveticaNeue57Condensed,Verdana,sans-serif;
+}
+
+
+/* Texture Box Module === === === === === === === === === === === === === === === === === === === === === === */
+
+.textureBox {
+  padding: 15px 10px;
+  background: #fff url(../images/style/snell_texture.jpg) top left no-repeat;
+  margin-bottom: 9px;
+  border: 1px solid #c5bb98;
+}
+.special .textureBox {
+  border: none;
+}
+
+/* Small List Module === === === === === === === === === === === === === === === === === === === === === === */
+
+.smallList {
+  margin: 10px 0 0;
+}
+
+.smallList li {
+  list-style-type: none;
+  margin: 0;
+  padding: 2px 0;
+}
+.smallList li a {
+  background: url(../images/style/redarrow.gif) no-repeat scroll right 4px transparent;
+  font:normal 1.4em/1.2em HelveticaNeue57Condensed,Verdana,sans-serif;
+  padding: 0 8px 0 0;
+}
+
+
+/* Textbox Modules === === === === === === === === === === === === === === === === === === === === === === */
+.textbox,
+#columnTwo .block-aggregator {
+  padding: 10px;
+  background-color: #fff;
+  margin-bottom: 9px;
+}
+.textbox .date-display-single{font-weight: bold;}
+.textbox .hours {
+  padding-bottom: 0;
+  font-size: 1.3em;
+}
+.textbox li {
+  background: transparent url(../images/style/listbul_c00_sm.gif) no-repeat 0px 5px;
+  line-height: 1.4em;
+  list-style-type: none;
+  margin: 0 0 0.6em 0;
+  padding: 0 0 0 9px;
+}
+.textbox p,
+#columnTwo .block-aggregator p {
+  line-height:1.3em;
+}
+.textbox.address p strong{color:#666666;}
+.textbox.address{padding: 10px 7px;}
+/* Carousel Module === === === === === === === === === === === === === === === === === === === === === === */
+
+.carousel {
+  position:relative;
+  overflow:hidden;
+  width:348px;
+}
+.carouselTrack {
+  position:relative;
+  overflow: hidden;
+  width:999em;
+  margin-left:0;
+  /*-webkit-transition: margin-left .6s ease;
+  -moz-transition: margin-left .6s ease;
+  transition: margin-left .6s ease;*/
+}
+/*.carouselPos2 {margin-left:-348px;}
+.carouselPos3 {margin-left:-696px;}
+.carouselPos4 {margin-left:-1044px;}
+.carouselPos5 {margin-left:-1392px;}*/
+.carousel .item {
+  float:left;
+  width:348px;
+  overflow: hidden;
+}
+.carouselNav {
+  width: 267px;
+  height: 23px;
+  background: url(../images/style/carousel_line.gif) top left repeat-x;
+  list-style: none;
+  margin: 15px 0 10px 44px;
+}
+.carouselNav li {
+  position:relative;
+  margin-left: 43px;
+  float: left;
+  list-style-type: none;
+  background: url(../images/style/carousel_reddot.gif) center center no-repeat;
+}
+.carouselNav li:first-child {
+  margin-left: -10px;
+}
+.carouselNav li.last {
+  margin-right:-10px;
+}
+.carouselNav li a {
+  width: 23px;
+  height: 23px;
+  display: block;
+  text-indent: -999em;
+  opacity: 0;
+  -webkit-transition: opacity .6s ease-in;
+  -moz-transition: opacity .6s ease-in;
+  transition: opacity .6s ease-in;
+}
+.carouselNav li.active a,
+.carouselNav li a:hover {
+  background: url(../images/style/carousel_graydot.gif) top left no-repeat;
+  opacity: 1;
+}
+
+
+/* Carousel Module Exhibit variant === === === === === === === === === === === === === === === === === === === === === === */
+
+#exhCar.carousel {
+  width: 639px;
+  margin: 0 0 25px;
+}
+#exhCar .carouselTrack {
+  background-color:#c3c3c3;
+  height: 390px;
+}
+/*#exhCar .carouselPos2 {margin-left:-639px;}
+#exhCar .carouselPos3 {margin-left:-1278px;}
+#exhCar .carouselPos4 {margin-left:-1917px;}
+#exhCar .carouselPos5 {margin-left:-2556px;}
+#exhCar .carouselPos6 {margin-left:-3195px;}
+#exhCar .carouselPos7 {margin-left:-3834px;}
+#exhCar .carouselPos8 {margin-left:-4473px;}*/
+
+#exhCar.carousel .item {
+  width: 639px;
+}
+#exhCar.carousel .item img {
+  margin: 0;
+}
+#exhCar.carousel .item.image img {
+  margin: 0 auto;
+  display: block;
+}
+#exhCar.carousel .item.image_plus_text .image {
+  float:left;
+  margin:28px 0 28px 15px;
+}
+#exhCar.carousel .item.image_plus_text .text {
+  background-color:#fff;
+  color: #333;
+  float: right;
+  width: 205px;
+  height: 324px;
+  margin: 28px 15px 28px 0;
+  padding-bottom: 10px;
+  font-size: 10px;
+  overflow-y: scroll;
+}
+#exhCar.carousel .item.image_plus_text dt {
+  font: normal 1.8em/1.1em "Times New Roman",Times,Georgia,sans-serif;
+  margin: 16px 12px 9px;
+}
+#exhCar.carousel .item.image_plus_text dd {
+  margin: 0 12px;
+  line-height: 15px;
+}
+#exhCar.carousel .item.image_plus_text dd .subhead_1 {
+  color: #000;
+  font-size: 12px;
+  font-style: italic;
+}
+#exhCar.carousel .item.image_plus_text dd .subhead_2 {
+  color: #666;
+  display: block;
+  margin: 0 0 10px;
+  font-weight: bold;
+}
+#exhCar .carouselNav {
+  width: 470px;
+  margin: 15px auto 10px;
+}
+
+/* Carousel Module Showcase variant === === === === === === === === === === === === === === === === === === === === === === */
+#shoCar.carousel {
+  width: 431px;
+}
+/*#shoCar .carouselPos2 {margin-left:-431px;}
+#shoCar .carouselPos3 {margin-left:-862px;}
+#shoCar .carouselPos4 {margin-left:-1293px;}
+#shoCar .carouselPos5 {margin-left:-1724px;}*/
+
+#shoCar.carousel .item {
+  width: 431px;
+}
+#shoCar.carousel .item .image img,
+#shoCar.carousel .item .image iframe {
+  margin: 0 auto;
+  display: block;
+  border: 1px solid #999;
+}
+#shoCar.carousel .item .caption {
+  color: #666666;
+  font-size: 10px;
+  font-style:italic;
+}
+#shoCar .carouselNav {
+  margin: 5px auto 10px;
+}
+
+/* Carousel Module Archive Lander variant === === === === === === === === === === === === === === === === === === === === === === */
+#landCar.carousel {
+  width: 654px;
+}
+/*#landCar .carouselPos2 {margin-left:-654px;}
+#landCar .carouselPos3 {margin-left:-1308px;}
+#landCar .carouselPos4 {margin-left:-1962px;}
+#landCar .carouselPos5 {margin-left:-2616px;}*/
+
+#landCar.carousel .item {
+  width: 654px;
+  height: 216px;
+  position:relative;
+}
+#landCar.carousel .item .image img,
+#landCar.carousel .item .image iframe {
+  margin: 0 ;
+  display: block;
+  border: 1px solid #666;
+}
+#landCar.carousel .text {
+  background-color:#fff;
+  padding: 12px 10px 5px 15px;
+  width: 180px;
+  height: 199px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#landCar.carousel .text h3 {
+  margin: 2px 10px 14px 0;
+}
+#landCar.carousel .text p {
+  line-height: 1.5em;
+}
+#landCar .carouselNav {
+  margin: -11px 0 0 82px;
+  background-image: url(../images/style/carousel_line2.gif);
+}
+#landCar .carouselNav li {
+  background-image: url(../images/style/carousel_reddot2.gif);
+}
+#landCar .carouselNav li.active a,
+#landCar .carouselNav li a:hover {
+  background-image: url(../images/style/carousel_graydot2.gif);
+}
+
+
+
+/* Large Social Icons Module === === === === === === === === === === === === === === === === === === === === === === === === === */
+.region-social-networking {
+  clear: both;
+  padding-top: 30px;
+}
+#block-menu-menu-social-networking {
+  position: static;
+  height: 26px;
+  width: auto;
+  text-align:right;
+  background: none;
+}
+.dmdsTypical #block-menu-menu-social-networking ,
+.archives #block-menu-menu-social-networking,
+.node-type-poll #block-menu-menu-social-networking,
+.section-services #block-menu-menu-social-networking{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.section-news-events.node-type-exhibit #block-menu-menu-social-networking{margin-right: 23px;}
+.sidebar-second #block-menu-menu-social-networking,
+.two-sidebars  #block-menu-menu-social-networking {
+  position: absolute;
+  height: 56px;
+  width: 195px;
+  right: 14px;
+  bottom: 6px;
+}
+#block-menu-menu-social-networking h2 {
+  font:normal 1.5em/1.1em HelveticaNeue57Condensed,Verdana,sans-serif;
+  color: #333;
+  float:none;
+  text-align: right;
+  width: auto;
+  margin:0 10px 0 0;
+  display:inline;
+}
+.sidebar-second #block-menu-menu-social-networking h2,
+.two-sidebars #block-menu-menu-social-networking h2 {
+  float: left;
+  width: 38px;
+  margin-top: 0;
+}
+#block-menu-menu-social-networking .content {
+  float: right;
+  width: 232px;
+  margin:0;
+}
+.sidebar-second #block-menu-menu-social-networking .content,
+.two-sidebars #block-menu-menu-social-networking .content {
+  float: left;
+  width: 120px;
+}
+#block-menu-menu-social-networking .content li {
+  float: left;
+  margin: 0 3px 4px 0;
+  list-style: none;
+}
+#block-menu-menu-social-networking .content a {
+  display: block;
+  height: 26px;
+  width: 26px;
+  text-indent: -99999em;
+  background:url(../images/style/social_icons_sprite.png) no-repeat 0 0;
+}
+#block-menu-menu-social-networking ul li a.rss { background-position:0 0px; }
+#block-menu-menu-social-networking ul li a.facebook { background-position:-29px 0px; }
+#block-menu-menu-social-networking ul li a.twitter { background-position:-58px 0px; }
+#block-menu-menu-social-networking ul li a.youtube { background-position:-87px 0px; }
+#block-menu-menu-social-networking ul li a.flickr { background-position:-116px 0px; }
+#block-menu-menu-social-networking ul li a.libx { background-position:-145px 0px; }
+#block-menu-menu-social-networking ul li a.itunes { background-position:-174px 0px; }
+#block-menu-menu-social-networking ul li a.snippets { background-position:-203px 0px; }
+

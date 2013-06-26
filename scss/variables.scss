@@ -1,0 +1,16 @@
+$searchUrlColor: #444;
+
+@mixin placeholder($color) {
+  &:-moz-placeholder {
+    color: $color;
+    font-style: italic;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+    font-style: italic;
+  }
+  &:-webkit-input-placeholder {
+    color: $color;
+    font-style: italic;
+  }
+}
