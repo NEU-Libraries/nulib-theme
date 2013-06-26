@@ -519,6 +519,9 @@ function nulib_preprocess_block(&$variables, $hook) {
           $variables['classes_array'][] = $styles[$region];
         } 
         break;
+      case 'primo_search_block':
+        array_push($variables['classes_array'],'bigSearch');
+        break;
       case 'jump':
         $variables['bigBrowse'] = "";
         if ($block->delta != 'menu-menu-audience') {
