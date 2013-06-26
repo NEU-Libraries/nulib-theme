@@ -2,19 +2,20 @@
  * @file
  * Form Styling
  */
+
 .form-item {
   margin: 1.5em 0;
-}
-.form-item input.error, .form-item textarea.error, .form-item select.error {
-  border: 1px solid #c00;
-}
-.form-item label {
-  display: block;
-  font-weight: bold;
-}
-.form-item label.option {
-  display: inline;
-  font-weight: normal;
+  input.error, textarea.error, select.error {
+    border: 1px solid #c00;
+  }
+  label {
+    display: block;
+    font-weight: bold;
+    &.option {
+      display: inline;
+      font-weight: normal;
+    }
+  }
 }
 
 .form-required {
@@ -30,13 +31,20 @@
   /* Drupal core uses "0.4em 0" */
 }
 
-.container-inline div, .container-inline label {
-  display: inline;
+.form-submit! {}
+
+.container-inline {
+  div, label {
+    display: inline;
+  }
 }
+
+.tips! {}
 
 /*
  * Password confirmation
  */
+
 .password-parent, .confirm-parent {
   margin: 0;
 }
@@ -44,16 +52,20 @@
 /*
  * Search (search-block-form.tpl.php)
  */
+
+#block-search-form! {}
+
 /*
  * Drupal's default login form block
  */
+
 #user-login-form {
   text-align: left;
   /* LTR */
-}
-#user-login-form ul {
-  margin-bottom: 0;
-  /* Position OpenID's ul next to the rest of the links. */
+  ul {
+    margin-bottom: 0;
+    /* Position OpenID's ul next to the rest of the links. */
+  }
 }
 
 /*
@@ -62,6 +74,7 @@
  * The default styling for the OpenID login link seems to assume Garland's
  * styling of list items.
  */
+
 html.js #user-login-form li.openid-link {
   margin-top: 1.5em;
   margin-left: -20px;
@@ -69,14 +82,16 @@ html.js #user-login-form li.openid-link {
   /* Un-do some of the padding on the ul list. */
 }
 
-#user-login-form li.openid-link {
-  margin-top: 1.5em;
-  margin-left: -20px;
-  /* LTR */
-  /* Un-do some of the padding on the ul list. */
-}
-#user-login-form li.user-link {
-  margin-top: 1.5em;
+#user-login-form li {
+  &.openid-link {
+    margin-top: 1.5em;
+    margin-left: -20px;
+    /* LTR */
+    /* Un-do some of the padding on the ul list. */
+  }
+  &.user-link {
+    margin-top: 1.5em;
+  }
 }
 
 #user-login ul {
@@ -89,19 +104,22 @@ html.js #user-login-form li.openid-link {
  * We overrode these styles in html-reset.css, but restore them for the admin
  * section of the site.
  */
-form th {
-  text-align: left;
-  /* LTR */
-  padding-right: 1em;
-  /* LTR */
-  border-bottom: 3px solid #ccc;
-}
-form tbody {
-  border-top: 1px solid #ccc;
-}
-form tr.even {
-  background-color: #fff;
-}
-form table .item-list ul {
-  margin: 0;
+
+form {
+  th {
+    text-align: left;
+    /* LTR */
+    padding-right: 1em;
+    /* LTR */
+    border-bottom: 3px solid #ccc;
+  }
+  tbody {
+    border-top: 1px solid #ccc;
+  }
+  tr.even {
+    background-color: #fff;
+  }
+  table .item-list ul {
+    margin: 0;
+  }
 }

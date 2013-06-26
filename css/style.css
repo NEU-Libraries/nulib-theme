@@ -2306,6 +2306,109 @@ ul.showBullet {
     padding: 0.5em;
     padding-left: 0; }
 
+.block {
+  margin-bottom: 1.5em; }
+
+/**
+ * @file
+ * Form Styling
+ */
+.form-item {
+  margin: 1.5em 0; }
+  .form-item input.error, .form-item textarea.error, .form-item select.error {
+    border: 1px solid #c00; }
+  .form-item label {
+    display: block;
+    font-weight: bold; }
+    .form-item label.option {
+      display: inline;
+      font-weight: normal; }
+
+.form-required {
+  color: #c00; }
+
+.form-item .description {
+  font-size: 0.85em; }
+
+.form-checkboxes .form-item, .form-radios .form-item {
+  margin: 0;
+  /* Drupal core uses "0.4em 0" */ }
+
+.container-inline div, .container-inline label {
+  display: inline; }
+
+/*
+ * Password confirmation
+ */
+.password-parent, .confirm-parent {
+  margin: 0; }
+
+/*
+ * Search (search-block-form.tpl.php)
+ */
+/*
+ * Drupal's default login form block
+ */
+#user-login-form {
+  text-align: left;
+  /* LTR */ }
+  #user-login-form ul {
+    margin-bottom: 0;
+    /* Position OpenID's ul next to the rest of the links. */ }
+
+/*
+ * OpenID
+ *
+ * The default styling for the OpenID login link seems to assume Garland's
+ * styling of list items.
+ */
+html.js #user-login-form li.openid-link {
+  margin-top: 1.5em;
+  margin-left: -20px;
+  /* LTR */
+  /* Un-do some of the padding on the ul list. */ }
+
+#user-login-form li.openid-link {
+  margin-top: 1.5em;
+  margin-left: -20px;
+  /* LTR */
+  /* Un-do some of the padding on the ul list. */ }
+#user-login-form li.user-link {
+  margin-top: 1.5em; }
+
+#user-login ul {
+  margin: 1.5em 0; }
+
+/*
+ * Drupal admin tables
+ *
+ * We overrode these styles in html-reset.css, but restore them for the admin
+ * section of the site.
+ */
+form th {
+  text-align: left;
+  /* LTR */
+  padding-right: 1em;
+  /* LTR */
+  border-bottom: 3px solid #ccc; }
+form tbody {
+  border-top: 1px solid #ccc; }
+form tr.even {
+  background-color: #fff; }
+form table .item-list ul {
+  margin: 0; }
+
+.field-collection-container,
+.field-collection-container .field-items .field-item,
+.field-collection-view,
+.block {
+  border: none;
+  margin: 0;
+  padding: 0; }
+
+.region-sidebar-first {
+  min-height: 500px; }
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 IE Styles
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

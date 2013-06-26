@@ -1,4 +1,90 @@
-$searchUrlColor: #444;
+//// Colors
+//
+// Web Color Pallet
+//
+
+// Red
+// #cc0000 
+// rgb 204 0 0
+$red = #cc0000;
+
+// Black
+// #000000 
+// rgb 0 0 0
+$black = #cc0000;
+
+
+// Light Black
+// #242424
+// rgb 36 36 36
+$light-black = #242424;
+
+// Darkest Gray
+// #333333
+// rgb 51 51 51
+$darkest-gray = #333333;
+
+// Darker Gray
+// #4e4e4e
+// rgb 78 78 78
+$darker-gray = #4e4e4e;
+
+
+// Dark Gray
+// #666666
+// rgb 102 102 102
+$dark-gray = #666666;
+
+
+// Medium Gray
+// #7d7d7d
+// rgb 125 125 125
+$meidum-gray = #7d7d7d;
+
+// Darker Light Gray
+// #c3c3c3
+// rgb 195 195 195
+$darker-light-gray = #c3c3c3;
+
+
+// Light Gray
+// #dedede
+// rgb 222 222 222
+$light-gray: #dedede;
+
+
+// Lighter Gray
+// #eeeeee
+// rgb 238 238 238
+$lighter-gray=#eeeeee;
+
+// Lightest Gray
+// #f8f8f8
+// rgb 248 248 248
+$lightest-gray
+
+// Dark Taupe
+// #c4b996
+// rgb 196 185 150
+$dark-taupe = #c4b996;
+
+// Medium Taupe
+// #d1cbb5
+// rgb 209 203 181
+$medium-taupe = #d1cbb5;
+
+// Light Taupe
+// #e6e3d6
+// rgb 230 227 214
+$light-taupe = #e6e3d6
+
+// Lightest Taupe
+// #f2f1ea
+// rgb 242 241 234
+$lightest-taupe = #f2f1ea;
+
+
+$searchUrlColor: $darker-gray;
 
 @mixin placeholder($color) {
   &:-moz-placeholder {
