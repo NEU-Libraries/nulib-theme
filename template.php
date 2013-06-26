@@ -520,6 +520,7 @@ function nulib_preprocess_block(&$variables, $hook) {
         } 
         break;
       case 'primo_search_block':
+
         array_push($variables['classes_array'],'bigSearch');
         break;
       case 'jump':

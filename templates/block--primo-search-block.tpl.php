@@ -46,15 +46,20 @@
  * @see template_process()
  * @see zen_process_block()
  */
+
+$primoUrl = variable_get('primo_search_block_url', 'onesearch.northeastern.edu');
+
 ?>
+
+
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
-  <div class="jump-menu-wrapper <?php print $bigBrowse; ?>">
     <?php if ($title): ?>
-      <h4 class="label"><?php print $title; ?></h4>
+      <a href="<?php print $primoUrl?>">
+        <img class="svg svg-logo" src="/sites/all/themes/nulib/images/scholar-one-search/scholar-one-search.svg"  alt="<?php print $title; ?>"/>
+      </a>
     <?php endif; ?>
 
     <div class="content"<?php print $content_attributes; ?>>
       <?php print $content; ?>
     </div>
-  </div>
 </div><!-- /.block -->

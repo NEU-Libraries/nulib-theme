@@ -86,6 +86,13 @@ $lightest-taupe: #f2f1ea;
 
 $searchUrlColor: $darker-gray;
 
+////
+// Images
+//
+
+$scholar-one-search: '../images/scholar-one-search/scholar-one-search.svg';
+$scholar-one-search-png: '../images/scholar-one-search/scholar-one-search.png';
+
 @mixin placeholder($color) {
   &:-moz-placeholder {
     color: $color;
