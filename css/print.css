@@ -1,36 +1,103 @@
-/**
- * @file
- * Print styling
- *
- * We provide some sane print styling for Drupal using Zen's layout method.
- */
-/* underline all links */
-/* line 10, ../scss/print.scss */
+/* line 7, ../scss/print.scss */
+body.bp {
+  line-height: 1.5;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  color: black;
+  background: none;
+  font-size: 10pt;
+}
+/* line 45, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp .container {
+  background: none;
+}
+/* line 47, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp hr {
+  background: #cccccc;
+  color: #cccccc;
+  width: 100%;
+  height: 2px;
+  margin: 2em 0;
+  padding: 0;
+  border: none;
+}
+/* line 55, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp hr.space {
+  background: white;
+  color: white;
+}
+/* line 58, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp h1, body.bp h2, body.bp h3, body.bp h4, body.bp h5, body.bp h6 {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+/* line 60, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp code {
+  font-size: 0.9em;
+  font-family: "andale mono", "lucida console", monospace;
+}
+/* line 65, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp a img {
+  border: none;
+}
+/* line 68, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp a:link, body.bp a:visited {
+  background: transparent;
+  font-weight: 700;
+  text-decoration: underline;
+}
+/* line 72, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp p img.top {
+  margin-top: 0;
+}
+/* line 74, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp blockquote {
+  margin: 1.5em;
+  padding: 1em;
+  font-style: italic;
+  font-size: 0.9em;
+}
+/* line 79, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp .small {
+  font-size: 0.9em;
+}
+/* line 81, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp .large {
+  font-size: 1.1em;
+}
+/* line 83, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp .quiet {
+  color: #999999;
+}
+/* line 85, ../../../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/blueprint/stylesheets/blueprint/_print.scss */
+body.bp .hide {
+  display: none;
+}
+
+/* line 13, ../scss/print.scss */
 a:link, a:visited {
   text-decoration: underline !important;
 }
 
 /* Don't underline header */
-/* line 18, ../scss/print.scss */
+/* line 19, ../scss/print.scss */
 #site-name a:link, #site-name a:visited {
   text-decoration: none !important;
 }
 
 /* CSS2 selector to add visible href after links */
-/* line 25, ../scss/print.scss */
+/* line 24, ../scss/print.scss */
 #content {
   float: none;
   width: 100%;
   margin: 0 !important;
   padding: 0 !important;
 }
-/* line 27, ../scss/print.scss */
+/* line 26, ../scss/print.scss */
 #content a:link:after, #content a:visited:after {
   content: " (" attr(href) ") ";
   font-size: 0.8em;
   font-weight: normal;
 }
-/* line 37, ../scss/print.scss */
+/* line 36, ../scss/print.scss */
 #content .section {
   float: none;
   width: 100%;
@@ -38,22 +105,20 @@ a:link, a:visited {
   padding: 0 !important;
 }
 
-/* Un-float the content */
-/* Turn off any background colors or images */
-/* line 49, ../scss/print.scss */
+/* line 44, ../scss/print.scss */
 body, #page-wrapper, #page, #main-wrapper, #main {
   color: #000;
   background-color: transparent !important;
   background-image: none !important;
 }
 
-/* line 55, ../scss/print.scss */
+/* line 49, ../scss/print.scss */
 #content {
   color: #000;
   background-color: transparent !important;
   background-image: none !important;
 }
-/* line 59, ../scss/print.scss */
+/* line 53, ../scss/print.scss */
 #content .section {
   color: #000;
   background-color: transparent !important;
@@ -61,7 +126,7 @@ body, #page-wrapper, #page, #main-wrapper, #main {
 }
 
 /* Hide sidebars and nav elements */
-/* line 68, ../scss/print.scss */
+/* line 62, ../scss/print.scss */
 #skip-to-nav, #toolbar, #navigation, .region-sidebar-first, .region-sidebar-second, .region-footer, .breadcrumb, div.tabs, .action-links, .links, .book-navigation, .forum-topic-navigation, .pager, .feed-icons {
   visibility: hidden;
   display: none;
@@ -69,18 +134,18 @@ body, #page-wrapper, #page, #main-wrapper, #main {
 
 /* If you un-comment the "page { overflow-y: hidden; }" ruleset, Firefox clips
    the content after the first page. */
-/* line 76, ../scss/print.scss */
+/* line 70, ../scss/print.scss */
 #page-wrapper {
   overflow-y: visible;
 }
 
 /* Custom print styles */
-/* line 82, ../scss/print.scss */
+/* line 76, ../scss/print.scss */
 .view-filters {
   display: none;
 }
 
-/* line 86, ../scss/print.scss */
+/* line 80, ../scss/print.scss */
 * {
   background: transparent !important;
   color: black !important;
@@ -90,50 +155,50 @@ body, #page-wrapper, #page, #main-wrapper, #main {
 }
 
 /* Black prints faster: sanbeiji.com/archives/953 */
-/* line 96, ../scss/print.scss */
+/* line 90, ../scss/print.scss */
 a {
   color: #444 !important;
   text-decoration: underline;
 }
-/* line 99, ../scss/print.scss */
+/* line 93, ../scss/print.scss */
 a:visited {
   color: #444 !important;
   text-decoration: underline;
 }
-/* line 103, ../scss/print.scss */
+/* line 97, ../scss/print.scss */
 a[href]:after {
   content: " (" attr(href) ")";
 }
 
-/* line 108, ../scss/print.scss */
+/* line 102, ../scss/print.scss */
 abbr[title]:after {
   content: " (" attr(title) ")";
 }
 
-/* line 112, ../scss/print.scss */
+/* line 106, ../scss/print.scss */
 .ir a:after {
   content: "";
 }
 
-/* line 117, ../scss/print.scss */
+/* line 111, ../scss/print.scss */
 a[href^="javascript:"]:after, a[href^="#"]:after {
   content: "";
 }
 
 /* Don't show links for images, or javascript/internal links */
-/* line 124, ../scss/print.scss */
+/* line 118, ../scss/print.scss */
 pre, blockquote {
   border: 1px solid #999;
   page-break-inside: avoid;
 }
 
-/* line 129, ../scss/print.scss */
+/* line 123, ../scss/print.scss */
 thead {
   display: table-header-group;
 }
 
 /* css-discuss.incutio.com/wiki/Printing_Tables */
-/* line 135, ../scss/print.scss */
+/* line 129, ../scss/print.scss */
 tr, img {
   page-break-inside: avoid;
 }
@@ -142,13 +207,16 @@ tr, img {
   margin: 0.5cm;
 }
 
-/* line 144, ../scss/print.scss */
+/* line 138, ../scss/print.scss */
 p, h2, h3 {
   orphans: 3;
   widows: 3;
 }
 
-/* line 149, ../scss/print.scss */
+/* line 143, ../scss/print.scss */
 h2, h3 {
   page-break-after: avoid;
 }
+
+/* Un-float the content */
+/* Turn off any background colors or images */

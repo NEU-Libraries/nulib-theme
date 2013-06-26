@@ -2,15 +2,13 @@
  * @file
  * RTL companion for the forms.css file.
  */
-
-
 /*
  * Drupal's default login form block
  */
+/* line 10, ../scss/forms-rtl.scss */
 #user-login-form {
   text-align: right;
 }
-
 
 /*
  * OpenID
@@ -18,13 +16,13 @@
  * The default styling for the OpenID login link seems to assume Garland's
  * styling of list items.
  */
-
+/* line 23, ../scss/forms-rtl.scss */
 html.js #user-login-form li.openid-link,
-#user-login-form li.openid-link /* The "Log in using OpenID" link. */ {
+#user-login-form li.openid-link {
   margin-left: 0;
-  margin-right: -20px; /* Un-do some of the padding on the ul list. */
+  margin-right: -20px;
+  /* Un-do some of the padding on the ul list. */
 }
-
 
 /*
  * Drupal admin tables
@@ -32,7 +30,7 @@ html.js #user-login-form li.openid-link,
  * We overrode these styles in html-elements.css, but restore them for the admin
  * section of the site.
  */
-
+/* line 36, ../scss/forms-rtl.scss */
 form th {
   text-align: right;
   padding-left: 1em;

@@ -2,14 +2,14 @@
  * @file
  * RTL companion for the navigation.css file.
  */
-
-
-#navigation ul.links, /* Main menu and secondary menu links */
-#navigation .content ul /* Menu block links */ {
+/* line 8, ../scss/navigation-rtl.scss */
+#navigation ul.links,
+#navigation .content ul {
   text-align: right;
 }
 
-#navigation ul.links li, /* A simple method to get navigation links to appear in one line. */
+/* line 13, ../scss/navigation-rtl.scss */
+#navigation ul.links li,
 #navigation .content li {
   float: right;
   padding: 0 0 0 10px;

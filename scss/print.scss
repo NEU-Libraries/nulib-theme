@@ -1,27 +1,26 @@
-/**
- * @file
- * Print styling
- *
- * We provide some sane print styling for Drupal using Zen's layout method.
- */
-/* underline all links */
+@import "blueprint";
+
+// To generate css equivalent to the blueprint css but with your configuration applied, uncomment:
+// @include blueprint-print
+
+//Recommended Blueprint configuration with scoping and semantic layout:
+body.bp {
+  @include blueprint-print(true);
+}
+
 
 a {
   &:link, &:visited {
     text-decoration: underline !important;
   }
 }
-
 /* Don't underline header */
-
 #site-name a {
   &:link, &:visited {
     text-decoration: none !important;
   }
 }
-
 /* CSS2 selector to add visible href after links */
-
 #content {
   a {
     &:link:after, &:visited:after {
@@ -42,16 +41,11 @@ a {
   }
 }
 
-/* Un-float the content */
-
-/* Turn off any background colors or images */
-
 body, #page-wrapper, #page, #main-wrapper, #main {
   color: #000;
   background-color: transparent !important;
   background-image: none !important;
 }
-
 #content {
   color: #000;
   background-color: transparent !important;
@@ -149,3 +143,5 @@ p, h2, h3 {
 h2, h3 {
   page-break-after: avoid;
 }
+/* Un-float the content */
+/* Turn off any background colors or images */
