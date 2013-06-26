@@ -6,12 +6,10 @@
  * target specific versions of IE by using conditional comments. See your
  * sub-theme's .info file for an easy way to use them.
  */
-
-
 /*
  * Tabs
  */
-
+/* line 18, ../scss/ie7.scss */
 ul.primary li a,
 ul.primary li a .tab,
 ul.secondary li a,
@@ -22,17 +20,20 @@ ul.secondary li a .tab {
 /*
  * Drupal nodes
  */
-
-.node-unpublished>* {
-  position: relative; /* Otherwise these elements will appear below the "Unpublished" text. */
+/* line 26, ../scss/ie7.scss */
+.node-unpublished > * {
+  position: relative;
+  /* Otherwise these elements will appear below the "Unpublished" text. */
 }
 
 /*
  * Drupal admin tables
  */
+/* line 36, ../scss/ie7.scss */
 tr.even th,
 tr.even td,
 tr.odd th,
 tr.odd td {
-  border-bottom: 1px solid #ccc; /* IE doesn't display borders on table rows */
+  border-bottom: 1px solid #ccc;
+  /* IE doesn't display borders on table rows */
 }

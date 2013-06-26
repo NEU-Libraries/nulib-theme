@@ -1,0 +1,154 @@
+/* Search and Browse widgets -- skinny version, ie in region-content-top */
+/* line 4, ../scss/big-search.scss */
+.region-content-top .bigSearch {
+  width: auto;
+  padding: 12px 10px 0 10px;
+  font-family: Arial,sans-serif;
+  font-size: .909em;
+  /* 10px */
+  margin: 0 0 24px;
+}
+/* line 11, ../scss/big-search.scss */
+.region-content-top .bigSearch .label {
+  margin: 2px 0 5px;
+  font: normal 1.4em / 1.1em HelveticaNeue67MdCn, Verdana, sans-serif;
+  color: #333;
+}
+/* line 18, ../scss/big-search.scss */
+.region-content-top .external_links .bigSearch .label {
+  margin-bottom: 1.7em;
+}
+/* line 21, ../scss/big-search.scss */
+.region-content-top .external_links .bigSearch .search {
+  padding: 1px 8px 2px;
+  height: 35px;
+  width: 259px;
+  font-size: 2.8em;
+}
+/* line 28, ../scss/big-search.scss */
+.region-content-top .bigSearch .search.typeMode {
+  font-size: 1.8em;
+}
+/* line 32, ../scss/big-search.scss */
+.region-content-top .external_links .bigSearch .radios {
+  top: 32px;
+  right: auto;
+  left: 4px;
+}
+/* line 37, ../scss/big-search.scss */
+.region-content-top .external_links .bigSearch #extLinks {
+  width: 100px;
+  margin-top: -38px;
+}
+/* line 40, ../scss/big-search.scss */
+.region-content-top .external_links .bigSearch #extLinks a {
+  padding: 0 0 0 15px;
+  background-position: 0 4px;
+}
+/* line 46, ../scss/big-search.scss */
+.region-content-top .bigSearch.block-jump {
+  width: 408px;
+  margin-bottom: 20px;
+  padding-left: 12px;
+  padding-bottom: 12px;
+}
+
+/* line 55, ../scss/big-search.scss */
+.section-gateways .region-content-top .bigSearch#block-jump-menu-menu-hp-browse.bigSearch, .section-gateways .region-content-top .bigSearch#block-jump-menu-menu-hp-subject.bigSearch {
+  padding-top: 0px;
+}
+
+/* line 62, ../scss/big-search.scss */
+.region-content-top .bigSearch.block-jump#block-jump-menu-menu-hp-browse, .region-content-top .bigSearch.block-jump#block-jump-menu-menu-dmds-soft {
+  width: 205px;
+  float: left;
+  padding: 15px 0 15px 10px;
+}
+/* line 67, ../scss/big-search.scss */
+.region-content-top .bigSearch.block-jump#block-jump-menu-menu-hp-subject, .region-content-top .bigSearch.block-jump#block-jump-menu-menu-dmds-equip {
+  width: 205px;
+  float: left;
+  padding: 15px 10px 15px 0px;
+}
+/* line 73, ../scss/big-search.scss */
+.region-content-top #block-jump-menu-menu-hp-browse .bigBrowse, .region-content-top #block-jump-menu-menu-dmds-soft .bigBrowse {
+  padding: 8px 0 8px 10px;
+}
+/* line 76, ../scss/big-search.scss */
+.region-content-top #block-jump-menu-menu-hp-subject .bigBrowse, .region-content-top #block-jump-menu-menu-dmds-equip .bigBrowse {
+  padding: 8px 10px 8px 10px;
+}
+/* line 81, ../scss/big-search.scss */
+.region-content-top .bigSearch.block-jump#block-jump-menu-menu-hp-browse select, .region-content-top .bigSearch.block-jump#block-jump-menu-menu-hp-subject select, .region-content-top .bigSearch.block-jump#block-jump-menu-menu-dmds-soft select, .region-content-top .bigSearch.block-jump#block-jump-menu-menu-dmds-equip select {
+  width: 186px;
+}
+/* line 85, ../scss/big-search.scss */
+.region-content-top .bigSearch .submit {
+  margin: 0 0 0 5px;
+  width: 12px;
+  height: 35px;
+  background: transparent url(../images/style/search_sml_arrow.gif) no-repeat left top;
+}
+/* line 92, ../scss/big-search.scss */
+.region-content-top .bigBrowse {
+  padding: 8px 9px 11px;
+}
+/* line 94, ../scss/big-search.scss */
+.region-content-top .bigBrowse .label {
+  margin: 2px 0 5px;
+}
+/* line 97, ../scss/big-search.scss */
+.region-content-top .bigBrowse select {
+  width: 186px;
+  font-size: 1em;
+}
+
+/* line 104, ../scss/big-search.scss */
+.archives .region-content-top .node-search-box .bigSearch, .section-gateways .region-content-top .node-search-box .bigSearch {
+  margin-bottom: 0;
+}
+
+/* line 110, ../scss/big-search.scss */
+.region-content-top .bigSearch .search {
+  padding: 1px 8px 2px;
+  height: 30px;
+  width: 375px;
+  font-size: 2.8em;
+}
+/* line 116, ../scss/big-search.scss */
+.region-content-top .bigSearch .radios {
+  top: 13px;
+  right: 29px;
+  left: auto;
+}
+/* line 121, ../scss/big-search.scss */
+.region-content-top .bigSearch a.advsearch {
+  padding: 4px 0 0 2px;
+}
+/* line 125, ../scss/big-search.scss */
+.region-content-top .external_links .bigSearch a.help {
+  padding: 2px 133px 12px 17px;
+  background-position: 0 4px;
+}
+/* line 129, ../scss/big-search.scss */
+.region-content-top .bigSearch a.help {
+  background-position: 0 6px;
+  padding: 4px 23px 0 17px;
+}
+/* line 133, ../scss/big-search.scss */
+.region-content-top .bigBrowse {
+  padding: 8px 9px 11px;
+}
+/* line 135, ../scss/big-search.scss */
+.region-content-top .bigBrowse select {
+  width: 280px;
+}
+
+/* line 142, ../scss/big-search.scss */
+.dmds .bigSearch {
+  background-color: #C3C3C3;
+}
+/* line 145, ../scss/big-search.scss */
+.dmds .bigBrowse {
+  background-color: #f4f4f4;
+}
