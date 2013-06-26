@@ -1229,17 +1229,17 @@ html.js #block-views-exp-search-node-index-page-1 input.throbbing, html.js #view
   font: 1.4em/1.25em "Times New Roman",Times,Georgia,serif;
   color: #000;
 }
-/* line 97, ../scss/variables.scss */
+/* line 91, ../scss/variables.scss */
 #block-views-exp-search-node-index-page-1 .form-text:-moz-placeholder, #views-exposed-form-search-user-index-page .form-text:-moz-placeholder {
   color: #666666;
   font-style: italic;
 }
-/* line 101, ../scss/variables.scss */
+/* line 95, ../scss/variables.scss */
 #block-views-exp-search-node-index-page-1 .form-text:-ms-input-placeholder, #views-exposed-form-search-user-index-page .form-text:-ms-input-placeholder {
   color: #666666;
   font-style: italic;
 }
-/* line 105, ../scss/variables.scss */
+/* line 99, ../scss/variables.scss */
 #block-views-exp-search-node-index-page-1 .form-text:-webkit-input-placeholder, #views-exposed-form-search-user-index-page .form-text:-webkit-input-placeholder {
   color: #666666;
   font-style: italic;
