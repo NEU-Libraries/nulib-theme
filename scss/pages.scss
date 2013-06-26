@@ -1,0 +1,215 @@
+/**
+ * @file
+ * Page Styling
+ *
+ * Style the markup found in page.tpl.php. Also includes some styling of
+ * miscellaneous Drupal elements that appear in the $content variable, such as
+ * ul.links, .pager, .more-link, etc.
+ */
+
+/*
+ * Body
+ */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#page-wrapper {}
+
+#page {}
+
+/*
+ * The skip-link link will be completely hidden until a user tabs to the link.
+ * See the element-focusable rule in system.base.css.
+ */
+
+#skip-link a,
+#skip-link a:visited {
+    display: block;
+    width: 100%;
+    padding: 2px 0 3px 0;
+    text-align: center;
+    background-color: #666;
+    color: #fff;
+}
+
+/*
+ * Header
+ */
+#header {}
+
+#header .section {}
+
+#logo {
+    float: left;
+    /* LTR */
+    margin: 0;
+    padding: 0;
+}
+
+#logo img {
+    vertical-align: bottom;
+}
+
+#name-and-slogan {
+    float: left;
+}
+
+h1#site-name,
+div#site-name {
+    margin: 0;
+    font-size: 2em;
+    line-height: 1.5em;
+}
+
+#site-name a:link,
+#site-name a:visited {
+    color: #000;
+    text-decoration: none;
+}
+
+#site-name a:hover,
+#site-name a:focus {
+    text-decoration: underline;
+}
+
+#site-slogan {}
+
+.region-header {
+    clear: both;
+    /* Clear the logo */
+}
+
+/*
+ * Main (container for everything else)
+ */
+#main-wrapper {}
+
+#main {}
+
+/*
+ * Content
+ */
+#content {}
+
+#content .section {}
+
+.region-highlighted {}
+
+.breadcrumb {
+    padding-bottom: 0;
+    /* Undo system.css */
+}
+
+h1.title,
+h2.node-title,
+h2.block-title,
+h2.title,
+h2.comment-form,
+h3.title {
+    margin: 0;
+}
+
+tr.even {
+    /* background-color: #eee; */
+    /* Drupal core uses a #eee background */
+}
+
+tr.odd {
+    /* background-color: #eee; */
+    /* Drupal core uses a #eee background */
+}
+
+div.messages {
+    margin: 1.5em 0;
+    /* Drupal core uses "6px 0" margin */
+}
+
+div.messages ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+div.status {}
+
+div.warning,
+tr.warning {
+    /* border: 1px solid #f0c020; */
+    /* Drupal core uses: 1px solid #f0c020 */
+}
+
+div.error,
+tr.error {}
+
+.error {
+    /* color: #e55; */
+    /* Drupal core uses a #e55 background */
+}
+
+.warning {
+    /* color: #e09010; */
+    /* Drupal core uses a #e09010 background */
+}
+
+div.tabs {}
+
+.region-help {}
+
+.more-help-link {}
+
+.region-content {}
+
+ul.links {}
+
+ul.links.inline {
+    display: block;
+    /* Let the links be inline, but the container be a block. */
+}
+
+ul.links li {
+    padding: 0 1em 0 0;
+    /* LTR */
+}
+
+.item-list .pager {
+    padding: 0;
+}
+
+.item-list .pager li {
+    padding: 0 0.5em;
+}
+
+.feed-icon {}
+
+.more-link {}
+
+/*
+ * First sidebar (on left in LTR languages, on right in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-first
+ * (see the layout.css file.)
+ */
+.region-sidebar-first {}
+
+.region-sidebar-first .section {}
+
+/*
+ * Second sidebar (on right in LTR languages, on left in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-second
+ * (see the layout.css file.)
+ */
+.region-sidebar-second {}
+
+.region-sidebar-second .section {}
+
+/*
+ * Footer
+ */
+.region-footer {}
+
+/*
+ * Page bottom
+ */
+.region-bottom {}

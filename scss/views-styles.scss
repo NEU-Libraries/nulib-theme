@@ -3,7 +3,6 @@
  * Views Styling
  */
 
-@import "variables.scss";
 
 
 
@@ -72,7 +71,6 @@
     height: 27px;
     width: 14px;
     background:url(../images/style/search_arrow.gif) no-repeat left top transparent;
-    position: ;
   }
   .special & .form-submit {
     background:url(../images/style-special/search_arrow.gif) no-repeat left top transparent;

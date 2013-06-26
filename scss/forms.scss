@@ -86,8 +86,8 @@ html.js #user-login-form li.openid-link {
   &.openid-link {
     margin-top: 1.5em;
     margin-left: -20px;
-    /* LTR */
-    /* Un-do some of the padding on the ul list. */
+    // /* LTR */
+    // /* Un-do some of the padding on the ul list. */
   }
   &.user-link {
     margin-top: 1.5em;
@@ -98,15 +98,15 @@ html.js #user-login-form li.openid-link {
   margin: 1.5em 0;
 }
 
-/*
- * Drupal admin tables
- *
- * We overrode these styles in html-reset.css, but restore them for the admin
- * section of the site.
- */
+
+ // * Drupal admin tables
+ // *
+ // * We overrode these styles in html-reset.css, but restore them for the admin
+ // * section of the site.
+ 
 
 form {
-  th {
+  th{
     text-align: left;
     /* LTR */
     padding-right: 1em;

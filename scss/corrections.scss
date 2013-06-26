@@ -12,3 +12,45 @@
 .region-sidebar-first {
   min-height: 500px;
 }
+
+.field-name-field-user-photo img {
+  max-width: 128px;
+  height: auto;
+}
+
+.search-form .form-text {
+  margin-bottom: 0;
+}
+
+/* Fixing the overflow issues */
+
+.no-sidebars #mainContent {
+  padding: 0;
+}
+
+
+tr.even{
+  background-color: #efefef;
+}
+tr.odd{
+  background-color: #ffffff;
+}
+img {
+  width: auto\9;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+
+
+//fix the autocomplete list from being covered.
+#autocomplete{
+  z-index: 9999;
+  background-color: #FFF;
+  ul{
+    padding: 4px;
+  }
+}
