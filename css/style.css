@@ -1524,7 +1524,7 @@ body.special {
 
 /* line 163, ../scss/layout.scss */
 .home #columnTwo {
-  margin-top: -219px;
+  margin-top: -236px;
 }
 
 /* line 167, ../scss/layout.scss */
@@ -4684,13 +4684,14 @@ img {
 /* line 118, ../scss/big-search.scss */
 .bigSearch .ext-links > li {
   float: right;
+  margin-right: 5px;
 }
 /* line 122, ../scss/big-search.scss */
 .bigSearch .ext-links a {
   display: block;
-  padding: 0 0 2px 15px;
+  padding: 0 0 0 15px;
   color: black;
-  background: url(../images/style/icon_offsite.gif) no-repeat 0 3px transparent;
+  background: url(../images/style/icon_offsite.gif) no-repeat 0 2px transparent;
 }
 /* line 129, ../scss/big-search.scss */
 .bigSearch .search-links {

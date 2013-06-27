@@ -117,13 +117,13 @@
     .ext-links {
         & > li {
             float: right;
+            margin-right: 5px;
         }
-        
         a {
             display: block;
-            padding: 0 0 2px 15px;
+            padding: 0 0 0 15px;
             color: $big-search-link-color;
-            background: url(../images/style/icon_offsite.gif) no-repeat 0 3px transparent;
+            background: url(../images/style/icon_offsite.gif) no-repeat 0 2px transparent;
         }
     }
     .search-links {

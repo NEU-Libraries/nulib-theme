@@ -522,7 +522,7 @@ function nulib_preprocess_block(&$variables, $hook) {
       case 'primo_search_block':
 
         array_push($variables['classes_array'],'bigSearch');
-        break;
+        break;    
       case 'jump':
         $variables['bigBrowse'] = "";
         if ($block->delta != 'menu-menu-audience') {
@@ -965,6 +965,10 @@ function _get_image_with_style($vars, $field_name, $style_name, $entity){
  * Sets a placeholder for the exposed search form for search_api_views.
  */
 function nulib_form_alter(&$form, &$form_state, $form_id) { 
+  
+  if($form_id == 'search_by_page_form'){
+    $form['keys']['#attributes'] = array('placeholder' => t('Search Library Site ...'));
+  }
   if($form_id == "views_exposed_form"){
     if(isset($form['keywords'])){
       if ($form['#action'] == "/search-site"){
