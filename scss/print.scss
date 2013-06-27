@@ -14,13 +14,13 @@ a {
     text-decoration: underline !important;
   }
 }
-/* Don't underline header */
+//* Don't underline header */
 #site-name a {
   &:link, &:visited {
     text-decoration: none !important;
   }
 }
-/* CSS2 selector to add visible href after links */
+// /* CSS2 selector to add visible href after links */
 #content {
   a {
     &:link:after, &:visited:after {

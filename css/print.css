@@ -3,13 +3,11 @@ a:link, a:visited {
   text-decoration: underline !important;
 }
 
-/* Don't underline header */
 /* line 19, ../scss/print.scss */
 #site-name a:link, #site-name a:visited {
   text-decoration: none !important;
 }
 
-/* CSS2 selector to add visible href after links */
 /* line 24, ../scss/print.scss */
 #content {
   float: none;

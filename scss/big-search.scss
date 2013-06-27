@@ -2,6 +2,7 @@
 
 //////////////////////////////// Big search
 .bigSearch {
+
     h4 {
         max-width: 390px;
         &.first {
@@ -15,44 +16,60 @@
     width: 616px;
     padding: 15px 20px 0 20px;
     position: relative;
-    color: #000;
+    color: $black;
+    display: inline-block;
     .svg-logo {
-        width: 57%;
+        width: $big-search-svg-width;
+        margin: $big-search-svg-margin;
+    }
+    .nav{
+        display: inline-block;
+        float: left;
+        width: 50%;
+        margin: 0 0 0 0;
+
     }
 }
-
+.nav > li{
+    float: left;
+    margin-right: 3px;
+    list-style: none;
+    & > a{
+        padding: 0.25em 0.5em;
+    }
+}
 @mixin typeMode {
-    color: #000;
+    color: $big-search-text-color;
     font-style: normal;
-    font-size: 20px;
+    font-size: $big-search-input-font-size;
     line-height: 1;
     vertical-align: middle !important;
 }
 
 @mixin placeholder {
-    font: italic 28px / 1 "Times New Roman", Times, Georgia, serif;
-    color: #ccc;
+    font: $big-search-placeholder-font;
+    color: $big-search-placeholder-color;
     vertical-align: middle;
     padding: 0;
 }
 
 .special .bigSearch {
-    background-color: #d1cbb5;
+    background-color: $special-big-search-bg;
 }
 
 .bigSearch {
     a {
-        color: #000;
+        color: $big-search-link-color;
     }
     .search {
         margin: 0;
         padding: 4px 10px 2px;
         height: 45px;
-        width: 363px;
+        width: 350px;
         border: 1px solid #666;
-        // background: url(../images/style/textfieldbg.gif) no-repeat left top transparent;
         @include typeMode;
-        @include box-shadow(inset 0 0 10px $light-gray);
+        @include box-shadow($big-search-input-box-shadow);
+        @include border-radius($component-large-border-radius);
         &::-webkit-input-placeholder {
             @include placeholder;
         }
@@ -80,6 +97,7 @@
       padding: 0 5px;
     }
     .form-submit {
+        float: left;
         margin: 0 0 0 6px;
         border: 0 none;
         text-indent: -999em;
@@ -96,43 +114,33 @@
 }
 
 .bigSearch {
-    .radios {
-        position: absolute;
-        top: 17px;
-        right: 166px;
-        input {
-            margin: 0 0 3px 6px;
-            border: 0;
-        }
-    }
     .ext-links {
-        float: right;
-        width: 102px;
-        margin-top: -43px;
-        list-style: none;
+        & > li {
+            float: right;
+        }
+        
         a {
             display: block;
             padding: 0 0 2px 15px;
-            color: #000;
+            color: $big-search-link-color;
             background: url(../images/style/icon_offsite.gif) no-repeat 0 3px transparent;
         }
     }
     .search-links {
         list-style: none;
+
     }
     a {
         &.advsearch,
         &.browse-search {
-            padding: 5px 0 0;
+            
             display: block;
             float: left;
         }
         &.help {
-            clear: right;
-            float: right;
-            padding: 5px 145px 0 17px;
+            padding-left: 17px;
             display: block;
-            background: url(../images/style/icon_help.gif) no-repeat 0 6px transparent;
+            background: url(../images/style/icon_help.gif) no-repeat 0 3px transparent;
         }
     }
 }

@@ -11,7 +11,7 @@ $red: #cc0000;
 // Black
 // #000000 
 // rgb 0 0 0
-$black: #cc0000;
+$black: #000000;
 
 
 // Light Black
@@ -85,6 +85,33 @@ $lightest-taupe: #f2f1ea;
 
 
 $searchUrlColor: $darker-gray;
+
+
+// Components
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Default sizing
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+$component-large-border-radius: 5px;
+$component-default-border-radius: 3px;
+$component-small-border-radius: 2px;
+
+// Big Search Homepage
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+$big-search-link-color: $black;
+$big-search-text-color: $black;
+$big-search-input-font-size: 20px;
+$big-search-input-box-shadow: inset 0 0 10px $light-gray;
+$big-search-input-border-radius: $component-large-border-radius;
+$big-search-placeholder-color: $light-gray;
+$big-search-placeholder-font: italic 28px / 1 "Times New Roman", Times, Georgia, serif;
+
+$big-search-svg-width: 34%;
+$big-search-svg-margin: 0 0 0 0;
+
+$special-big-search-bg: $medium-taupe;
+
 
 
 @mixin placeholder($color) {
