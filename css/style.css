@@ -1587,36 +1587,24 @@ Header
   background: url('../images/library-logo/nu-libraries-lockup-color.png?1364433590') no-repeat top left;
 }
 
-/* line 33, ../scss/layout/_header.scss */
-.special #mainLogo a {
-  margin-left: -50px;
-  background: url(../images/style-special/lib_logo.gif) no-repeat left top transparent;
-}
-
-/* line 38, ../scss/layout/_header.scss */
-#mainLogo span {
-  position: absolute;
-  left: -999em;
-}
-
-/* line 43, ../scss/layout/_header.scss */
+/* line 34, ../scss/layout/_header.scss */
 #block-search-by-page-1 {
   position: absolute;
   top: 58px;
   left: 699px;
 }
 
-/* line 49, ../scss/layout/_header.scss */
+/* line 40, ../scss/layout/_header.scss */
 .special #block-search-by-page-1 {
   left: 734px;
 }
 
-/* line 54, ../scss/layout/_header.scss */
+/* line 45, ../scss/layout/_header.scss */
 #block-search-by-page-1 .form-item {
   float: left;
   margin: 0;
 }
-/* line 58, ../scss/layout/_header.scss */
+/* line 49, ../scss/layout/_header.scss */
 #block-search-by-page-1 .form-text {
   height: 16px;
   width: 190px;
@@ -1655,12 +1643,12 @@ Header
   color: #c3c3c3;
   font-style: italic !important;
 }
-/* line 73, ../scss/layout/_header.scss */
+/* line 64, ../scss/layout/_header.scss */
 #block-search-by-page-1 .typeMode {
   color: #000;
   font-style: normal;
 }
-/* line 77, ../scss/layout/_header.scss */
+/* line 68, ../scss/layout/_header.scss */
 #block-search-by-page-1 .form-submit {
   margin: 0;
   border: 0 none;
@@ -1672,11 +1660,11 @@ Header
   background: url(../images/style/search_arrow.gif) no-repeat left top transparent;
 }
 
-/* line 90, ../scss/layout/_header.scss */
+/* line 81, ../scss/layout/_header.scss */
 .special #block-search-by-page-1 .form-submit {
   background: url(../images/style-special/search_arrow.gif) no-repeat left top transparent;
 }
-/* line 93, ../scss/layout/_header.scss */
+/* line 84, ../scss/layout/_header.scss */
 .special .region-navigation-wrapper {
   background: #3f3f3f url(../images/style/navbg.gif) repeat-x left top;
   border-top: 1px solid #000;

@@ -37,28 +37,7 @@
 
       $(".typicalTable tbody tr:odd").addClass("odd");
 
-      // $(".bigSearch .search").click(function(){
-      //   $(this).addClass("typeMode");
-      //   return false;
-      // });
-      // $("#block-search-by-page-1 .form-text").click(function(){
-      //   $(this).addClass("typeMode");
-      //   return false;
-      // });
 
-
-      // //Search Area - change text when radio button's selected.
-      // $(".searchAll").click(function(){
-      //   $(this).parent().parent().siblings("h4").text("Search journal articles and NuCat library catalog");
-      // });
-      // $(".bigSearch .radios .first").click(function(){
-      //   $(this).parent().parent().siblings("h4.first").show();
-      //   $(this).parent().parent().siblings("h4.second").hide();
-      // });
-      // $(".bigSearch .radios .second").click(function(){
-      //   $(this).parent().parent().siblings("h4.first").hide();
-      //   $(this).parent().parent().siblings("h4.second").show();
-      // });
 
       $(".region-navigation .container-inline select option:first").addClass("hideOption");
       /*$(".region-navigation .container-inline select option[value='/']").attr("disabled","disabled");*/
@@ -97,50 +76,24 @@
           });
         }
       });
+      $neu.initModernizr();
     },
-    initSearchHandling: function() {
-      // // Search input handling
-      // if($("#block-search-by-page-1 .form-text").val() === "") {
-      //   $("#block-search-by-page-1 .form-text").val("Search Library Site ...");
-      // }
-      // $("#block-search-by-page-1 .form-text").focus(function() {
-      //   if(this.value === "Search Library Site ...") {
-      //     this.value = "";
-      //   }
-      // });
-      // $("#block-search-by-page-1 .form-text").blur(function() {
-      //   if(this.value === "") {
-      //     this.value = "Search Library Site ...";
-      //   }
-      // });
+    
+    initModernizr: function() {
+      if(!Modernizr.svg){
+        var src = $('img[src$="svg"]').attr('src');
+        src = src.replace('svg','png');
+        $('img[src$="svg"]').attr('src',src);
+      }
+      Modernizr.load({
+        test: Modernizr.placeholder,
+        nope: ['jquery.textPlaceholder.js'], 
 
-      // // "Big search"...
-      // if($(".bigSearch .search").val() === "") {
-      //   $(".bigSearch .search").val("Search ...");
-      // }
-      // $(".bigSearch .search").focus(function() {
-      //   if(this.value === "Search ...") {
-      //     this.value = "";
-      //   }
-      // });
-      // $(".bigSearch .search").blur(function() {
-      //   if(this.value === "") {
-      //     this.value = "Search ...";
-      //   }
-
-      // });
-      // $('.label.second').show();
-      // $('#allRadio').click(function(){
-      //      $(".label.second").show();
-      //      $(".label.first").hide();
-      //      $(".advsearch").attr('href','http://64.94.37.110:1701/primo_library/libweb/action/search.do?mode=Advanced');
-
-      //  });
-      //  $('#nucatRadio').click(function(){
-      //      $(".label.first").show();
-      //      $(".label.second").hide();
-      //      $(".advsearch").attr('href','http://nucat.lib.neu.edu/search/X');
-      //  });
+      });
+      if(!Modernizr.placeholder){
+        $('body').append('<style>.text-placeholder {color: #333 !important}</style>');
+        $("[placeholder]").textPlaceholder();
+      }
     },
     initAccordions: function() {
       $(".accordion > li").each(function(i, el) {
