@@ -72,7 +72,7 @@ stylesheets-conditional[lte IE 6][all][]  = css/ie6.css
 
 ;scripts[] = js/script.js
 scripts[] = js/main.min.js
-scripts[] = js/modernizr.min.js
+
 
 
 

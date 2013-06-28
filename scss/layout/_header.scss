@@ -39,13 +39,17 @@ Header
   .form-text {
     height: 16px;
     width: 190px;
-    line-height: 16px;
     margin: 0;
     padding: 6px 5px 4px;
     border: 1px solid #666;
-    font: italic 1.4em / 1.25em "Times New Roman", Times, Georgia, serif;
+    font-size:  1.4em;
+    line-height:1.25em;
+    font-family: "Times New Roman", Times, Georgia, serif;
+    font-style: normal;
     color: #666;
-    background: url(../images/style/textfieldbg.gif) no-repeat left top transparent;
+    @include box-shadow($input-inset-box-shadow);
+    @include border-radius($component-large-border-radius);
+    @include placeholder($placeholder-color);
   }
   .typeMode {
     color: #000;
