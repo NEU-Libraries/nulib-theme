@@ -1,0 +1,33 @@
+///
+/// Column Two
+///~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#columnTwo {
+  img, iframe {
+    border: 1px solid #999;
+    margin-bottom: 1em;
+  }
+  h2 {
+    margin-top: 0;
+  }
+}
+
+#columnOne h2, #columnTwo h2 {
+  margin-top: 0;
+  font: normal 1.5em / 1.1em HelveticaNeue67MdCn, Verdana, sans-serif;
+  color: #333;
+}
+
+#columnOne h2 a {
+  color: #333;
+}
+
+#columnTwo .button {
+  margin-bottom: 9px;
+  img {
+    margin-bottom: 0;
+  }
+  &.give img {
+    border: 0;
+  }
+}

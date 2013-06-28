@@ -67,6 +67,7 @@
         height: 45px;
         width: 350px;
         border: 1px solid #666;
+        float: left;
         @include typeMode;
         @include box-shadow($big-search-input-box-shadow);
         @include border-radius($component-large-border-radius);
@@ -84,7 +85,6 @@
         :-ms-input-placeholder {
             @include placeholder;
         }
-        float: left;
     }
     [name="search_scope"]{
       font: 15px / 12px Tahoma, Geneva, Verdana, sans-serif;

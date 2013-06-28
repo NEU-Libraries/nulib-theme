@@ -1,0 +1,75 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Header
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#mainLogo a {
+  float: left;
+  margin-left: -15px;
+  display: block;
+  background: url(../images/style/lib_logo.gif) no-repeat left top transparent;
+  height: 112px;
+  width: 432px;
+}
+
+.special #mainLogo a {
+  margin-left: -50px;
+  background: url(../images/style-special/lib_logo.gif) no-repeat left top transparent;
+}
+
+#mainLogo span {
+  position: absolute;
+  left: -999em;
+}
+
+#block-search-by-page-1 {
+  position: absolute;
+  top: 58px;
+  left: 699px;
+}
+
+.special #block-search-by-page-1 {
+  left: 734px;
+}
+
+#block-search-by-page-1 {
+  .form-item {
+    float: left;
+    margin: 0;
+  }
+  .form-text {
+    height: 16px;
+    width: 190px;
+    line-height: 16px;
+    margin: 0;
+    padding: 6px 5px 4px;
+    border: 1px solid #666;
+    font: italic 1.4em / 1.25em "Times New Roman", Times, Georgia, serif;
+    color: #666;
+    background: url(../images/style/textfieldbg.gif) no-repeat left top transparent;
+  }
+  .typeMode {
+    color: #000;
+    font-style: normal;
+  }
+  .form-submit {
+    margin: 0;
+    border: 0 none;
+    text-indent: -999em;
+    text-transform: capitalize;
+    /* IE fix */
+    height: 27px;
+    width: 14px;
+    background: url(../images/style/search_arrow.gif) no-repeat left top transparent;
+  }
+}
+
+.special {
+  #block-search-by-page-1 .form-submit {
+    background: url(../images/style-special/search_arrow.gif) no-repeat left top transparent;
+  }
+  .region-navigation-wrapper {
+    background: #3f3f3f url(../images/style/navbg.gif) repeat-x left top;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+  }
+}

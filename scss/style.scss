@@ -9,7 +9,15 @@
 @import 'navigation.scss';
 @import 'views-styles.scss';
 @import 'nodes.scss';
-@import 'layout.scss';
+
+
+@import 'layout/page';
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/main-content';
+@import 'layout/column-two';
+@import 'layout/footer';
+
 @import 'modules.scss';
 @import 'templates.scss';
 @import 'comments.scss';
