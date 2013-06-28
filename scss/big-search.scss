@@ -73,13 +73,15 @@
     .form-submit {
         float: left;
         margin: 0 0 0 6px;
-        border: 0 none;
+        font-size: 0;
         text-indent: -999em;
         text-transform: capitalize;
         /*IE fix */
-        height: 51px;
-        width: 18px;
-        background: url(../images/style/search_big_arrow.gif) no-repeat left top;
+        // height: 51px;
+        // width: 18px;
+        //background: url(../images/style/search_big_arrow.gif) no-repeat left top;
+        background-color: transparent;
+        @include triangle(25px, $red, right);
     }
 }
 
@@ -168,7 +170,6 @@
         font-family: Arial,sans-serif;
         font-size: .909em;
         /* 10px */
-        margin: 0 0 24px;
         .label {
             margin: 2px 0 5px;
             font: normal 1.4em / 1.1em HelveticaNeue67MdCn, Verdana, sans-serif;

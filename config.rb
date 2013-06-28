@@ -23,3 +23,7 @@ color_output = false
 # preferred_syntax = :sass
 # and then run:
 # sass-convert -R --from scss --to sass scss scss && rm -rf sass && mv scss sass
+
+
+require 'bourbon-compass'
+require 'neat-compass'
