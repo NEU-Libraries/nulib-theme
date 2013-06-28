@@ -76,8 +76,15 @@
     }
 }
 
-
-
+@mixin svg-background($img) {
+  $png: '#{$img}.png';
+  $svg: '#{$img}.svg';
+  
+  background-image: image-url($png);
+  background-image: none, image-url($svg);
+  background-repeat: no-repeat;
+  @include background-size(contain);
+}
 
 
 

@@ -1,3 +1,4 @@
+  
 //// Colors
 //
 // Web Color Pallet
@@ -114,6 +115,11 @@ $input-inset-box-shadow: inset 0 0 10px $light-gray;
 $placeholder-color: $darker-light-gray;
 
 
+// Branding
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+$nu-libraries-logo: 'library-logo/nu-libraries-lockup-color';
+
 // Big Search Homepage
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 
@@ -125,6 +131,14 @@ $big-search-input-border-radius: $component-large-border-radius;
 $big-search-placeholder-color: $placeholder-color;
 $big-search-placeholder-font: italic 28px / 1 "Times New Roman", Times, Georgia, serif;
 
+
+//Gateway pages.
+$big-search-gateway-select-width: 40%;
+$big-search-gateway-select-font-size: 1.3em;
+
+
+$big-search-gateway-search-width: 50%;
+$big-search-gateway-search-placeholder-font-size: 1.3em;
 $big-search-svg-width: 34%;
 $big-search-svg-margin: 0 0 0 0;
 

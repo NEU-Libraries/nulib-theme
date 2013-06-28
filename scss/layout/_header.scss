@@ -2,13 +2,32 @@
 Header
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-#mainLogo a {
-  float: left;
-  margin-left: -15px;
+// #mainLogo a {
+//   float: left;
+//   margin-left: -15px;
+//   display: block;
+//   background: url($nu-libraries-logo) no-repeat left top transparent;
+//   height: 112px;
+//   width: 432px;
+// }
+
+.main-logo a{
+  width: 340px;
+  height: 55px;
+  position: relative;
+  top: 30px;
+  left: 10px;
+  
   display: block;
-  background: url(../images/style/lib_logo.gif) no-repeat left top transparent;
-  height: 112px;
-  width: 432px;
+  background: image-url($nu-libraries-logo + '.svg') no-repeat top left;
+  @include background-size(contain);
+  span{
+    @include hide-text();
+  }
+}
+
+.no-svg .main-logo a{
+  background: image-url($nu-libraries-logo + '.png') no-repeat top left;
 }
 
 .special #mainLogo a {
@@ -47,7 +66,7 @@ Header
     font-family: "Times New Roman", Times, Georgia, serif;
     font-style: normal;
     color: #666;
-    @include box-shadow($input-inset-box-shadow);
+    box-shadow: $input-inset-box-shadow;
     @include border-radius($component-large-border-radius);
     @include placeholder($placeholder-color);
   }

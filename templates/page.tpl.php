@@ -73,7 +73,7 @@
 ?>
 <div id="containerheader">
   <div id="header" class="clearfix">
-    <div id="mainLogo">
+    <div class="main-logo">
       <a href="/"><span>Northeastern University - University Libraries</span></a>
     </div>
     <?php print render($page['header']); ?>
