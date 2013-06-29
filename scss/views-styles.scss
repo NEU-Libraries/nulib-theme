@@ -92,7 +92,7 @@
   h2{
     text-indent: -2000em;
     background: url('/sites/all/themes/nulib/images/style/construction.png') top right no-repeat;
-    background-image: url('/sites/all/themes/nulib/images/style/construction.svg');
+    background: none, url('/sites/all/themes/nulib/images/style/construction.svg') top right no-repeat;
     background-size: 262px 96px;
     display: block;
     width: 262px;

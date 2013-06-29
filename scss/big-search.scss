@@ -50,7 +50,7 @@
     margin: 0;
     padding: 4px 10px 2px;
     height: 45px;
-    width: 350px;
+    width: 345px;
     border: 1px solid #666;
     float: left;
     @include typeMode($big-search-text-color, $big-search-input-font-size);
@@ -62,7 +62,6 @@
     font-family: Tahoma, Geneva, Verdana, sans-serif;
     font-size: 15px;
     padding: $input-padding;
-    vertical-align: middle;
     float: left;
     clear: right;
     height: 52.5px;

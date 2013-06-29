@@ -78,21 +78,21 @@
       });
       $neu.initModernizr();
     },
-    
     initModernizr: function() {
-      if(!Modernizr.svg){
-        var src = $('img[src$="svg"]').attr('src');
-        src = src.replace('svg','png');
-        $('img[src$="svg"]').attr('src',src);
+      if(!Modernizr.svg && $('img[src$="svg"]').length > 0){
+          var src = $('img[src$="svg"]').attr('src');
+          src = src.replace('svg','png');
+          $('img[src$="svg"]').attr('src',src);
       }
-      Modernizr.load({
-        test: Modernizr.placeholder,
-        nope: 'jquery.textPlaceholder.js', 
-
-      });
+      var themepath = 'sites/all/themes/nulib';
       if(!Modernizr.placeholder){
-        $('body').append('<style>.text-placeholder {color: #333 !important}</style>');
-        $("[placeholder]").textPlaceholder();
+        Modernizr.load({
+           load: themepath + '/js/jquery.textPlaceholder.js',
+           complete: function(){
+              $('body').prepend('<style>.text-placeholder {color: #333 !important}</style>');
+              $("[placeholder]").textPlaceholder();
+            }
+        });
       }
     },
     initAccordions: function() {

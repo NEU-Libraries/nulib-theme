@@ -28,6 +28,7 @@ Header
 
 .no-svg .main-logo a{
   background: image-url($nu-libraries-logo + '.png') no-repeat top left;
+  background-size: auto auto;
 }
 
 
