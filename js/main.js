@@ -14,9 +14,9 @@
       $(".region-navigation .container-inline select option[value='/']").empty();
 
       $neu.initSideNavigation();
-      //$neu.initSearchHandling();
+  
       $neu.initAccordions();
-      $neu.initMegaMenu();
+      //$neu.initMegaMenu();
 
       if($(".carousel").length > 0){
         $neu.initCarousels();

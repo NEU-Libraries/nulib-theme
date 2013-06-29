@@ -12,7 +12,7 @@
     }
   }
   background-color: #e5e4e1;
-  width: 616px;
+  width: 624px;
   padding: 15px 20px 0 20px;
   position: relative;
   color: $black;
@@ -48,9 +48,9 @@
   }
   .search {
     margin: 0;
-    padding: 4px 10px 2px;
-    height: 45px;
-    width: 345px;
+    padding: 14px 10px;
+    max-height: 45px;
+    width: 377px;
     border: 1px solid #666;
     float: left;
     @include typeMode($big-search-text-color, $big-search-input-font-size);
@@ -60,14 +60,17 @@
   }
   [name="search_scope"] {
     font-family: Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 15px;
-    padding: $input-padding;
+    font-size: 14px;
+    line-height: inherit;
+    padding: $input-large-padding;
     float: left;
     clear: right;
     height: 52.5px;
     border: 1px solid $darkest-gray;
+    border-radius: $input-large-border-radius;
     background-color: $white;
     margin-left: 5px;
+    max-width: 220px;
   }
   .form-submit {
     @include hide-text;
@@ -93,9 +96,10 @@
     }
     a {
       display: block;
-      padding: 0 0 0 15px;
+      padding: 0 15px 0 0;
+      margin-right: 0.4em;
       color: $big-search-link-color;
-      background: url(../images/style/icon_offsite.gif) no-repeat 0 2px transparent;
+      background: url(../images/style/icon_offsite.gif) no-repeat right 2px transparent;
     }
   }
   .search-links {
@@ -108,9 +112,9 @@
       float: left;
     }
     &.help {
-      padding-left: 17px;
+      padding-right: 17px;
       display: block;
-      background: url(../images/style/icon_help.gif) no-repeat 0 3px transparent;
+      background: url(../images/style/icon_help.gif) no-repeat right  transparent;
     }
   }
 }
@@ -120,7 +124,7 @@
 }
 
 .bigSearch.block-jump {
-  width: 309px;
+  width: 313px;
   float: left;
 }
 

@@ -80,16 +80,20 @@
       left: -999em;
       width: 900px;
       color: #333;
-      border-top: 5px solid #c00;
-      border-bottom: 1px solid #e3e3e3;
+      margin-top: -1px;
+      border-top: none;
+      border: 1px solid #e3e3e3;
       background: #EEEEEE;
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.98);
+
       overflow: hidden;
       opacity: 0;
       -moz-transition: height .6s ease, opacity .6s ease;
       -webkit-transition: height .6s ease, opacity .6s ease;
       transition: height .6s ease, opacity .6s ease;
       z-index: 998;
+      box-shadow: 0 0 10px $darker-light-gray;
+      @include border-bottom-radius(3px);
     }
   }
   &.contextual-links-region {
@@ -119,6 +123,7 @@
         margin: 0;
       }
     }
+    
     li {
       float: none;
       padding: 3px 0 4px;

@@ -91,12 +91,16 @@
   padding-top: 1em;
   h2{
     text-indent: -2000em;
-    background: url('/sites/all/themes/nulib/images/style/construction.png') top right no-repeat;
-    background: none, url('/sites/all/themes/nulib/images/style/construction.svg') top right no-repeat;
-    background-size: 262px 96px;
+    
+    background: url('/sites/all/themes/nulib/images/style/construction.svg') top right no-repeat;
+    background-size: 205px 75px;
     display: block;
-    width: 262px;
-    height: 96px;
+    width: 205px;
+    height: 75px;
+    margin: 0 auto;
+    .no-svg &{
+      background: url('/sites/all/themes/nulib/images/style/construction.png') top right no-repeat;
+    }
   }
   ul{
     padding: 0;

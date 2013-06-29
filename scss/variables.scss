@@ -109,7 +109,9 @@ $component-small-border-radius: 2px;
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 $input-inset-box-shadow: inset 0 0 10px $light-gray;
-$input-padding: 8px 15px;
+$input-padding: 6px 8px;
+$input-large-padding: 16px 10px;
+$input-large-border-radius: $component-large-border-radius;
 // Placeholder
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 $placeholder-color: $darker-light-gray;
@@ -125,11 +127,11 @@ $nu-libraries-logo: 'library-logo/nu-libraries-lockup-color';
 
 $big-search-link-color: $black;
 $big-search-text-color: $black;
-$big-search-input-font-size: 20px;
+$big-search-input-font-size: 19px;
 $big-search-input-box-shadow: $input-inset-box-shadow;
 $big-search-input-border-radius: $component-large-border-radius;
 $big-search-placeholder-color: $placeholder-color;
-$big-search-placeholder-font: italic 28px / 1 "Times New Roman", Times, Georgia, serif;
+$big-search-placeholder-font: italic 25px / 1 "Times New Roman", Times, Georgia, serif;
 
 
 //Gateway pages.
@@ -139,7 +141,7 @@ $big-search-gateway-select-font-size: 1.3em;
 
 $big-search-gateway-search-width: 50%;
 $big-search-gateway-search-placeholder-font-size: 1.3em;
-$big-search-svg-width: 34%;
+$big-search-svg-width: 209px;
 $big-search-svg-margin: 0 0 0 0;
 
 $special-big-search-bg: $medium-taupe;
