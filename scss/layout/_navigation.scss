@@ -82,7 +82,8 @@
       color: #333;
       border-top: 5px solid #c00;
       border-bottom: 1px solid #e3e3e3;
-      background: url(../images/style/megamenu_bg.png) repeat-y left top transparent;
+      background: #EEEEEE;
+      background: rgba(255, 255, 255, 0.95);
       overflow: hidden;
       opacity: 0;
       -moz-transition: height .6s ease, opacity .6s ease;

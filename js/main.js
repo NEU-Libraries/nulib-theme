@@ -87,7 +87,7 @@
       }
       Modernizr.load({
         test: Modernizr.placeholder,
-        nope: ['jquery.textPlaceholder.js'], 
+        nope: 'jquery.textPlaceholder.js', 
 
       });
       if(!Modernizr.placeholder){

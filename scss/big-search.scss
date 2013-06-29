@@ -59,14 +59,16 @@
     @include placeholder-search;
   }
   [name="search_scope"] {
-    font: 15px / 12px Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    padding: $input-padding;
+    vertical-align: middle;
     float: left;
     clear: right;
     height: 52.5px;
     border: 1px solid $darkest-gray;
     background-color: $white;
     margin-left: 5px;
-    padding: 0 5px;
   }
   .form-submit {
     @include hide-text;

@@ -20,7 +20,7 @@ Header
   
   display: block;
   background: image-url($nu-libraries-logo + '.svg') no-repeat top left;
-  @include background-size(contain);
+  background-size: contain;
   span{
     @include hide-text();
   }
