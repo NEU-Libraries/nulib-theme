@@ -14,9 +14,9 @@
       $(".region-navigation .container-inline select option[value='/']").empty();
 
       $neu.initSideNavigation();
-      $neu.initSearchHandling();
+  
       $neu.initAccordions();
-      $neu.initMegaMenu();
+      //$neu.initMegaMenu();
 
       if($(".carousel").length > 0){
         $neu.initCarousels();
@@ -37,28 +37,7 @@
 
       $(".typicalTable tbody tr:odd").addClass("odd");
 
-      $(".bigSearch .search").click(function(){
-        $(this).addClass("typeMode");
-        return false;
-      });
-      $("#block-search-by-page-1 .form-text").click(function(){
-        $(this).addClass("typeMode");
-        return false;
-      });
 
-
-      //Search Area - change text when radio button's selected.
-      $(".searchAll").click(function(){
-        $(this).parent().parent().siblings("h4").text("Search journal articles and NuCat library catalog");
-      });
-      $(".bigSearch .radios .first").click(function(){
-        $(this).parent().parent().siblings("h4.first").show();
-        $(this).parent().parent().siblings("h4.second").hide();
-      });
-      $(".bigSearch .radios .second").click(function(){
-        $(this).parent().parent().siblings("h4.first").hide();
-        $(this).parent().parent().siblings("h4.second").show();
-      });
 
       $(".region-navigation .container-inline select option:first").addClass("hideOption");
       /*$(".region-navigation .container-inline select option[value='/']").attr("disabled","disabled");*/
@@ -97,50 +76,24 @@
           });
         }
       });
+      $neu.initModernizr();
     },
-    initSearchHandling: function() {
-      // Search input handling
-      if($("#block-search-by-page-1 .form-text").val() === "") {
-        $("#block-search-by-page-1 .form-text").val("Search Library Site ...");
+    initModernizr: function() {
+      if(!Modernizr.svg && $('img[src$="svg"]').length > 0){
+          var src = $('img[src$="svg"]').attr('src');
+          src = src.replace('svg','png');
+          $('img[src$="svg"]').attr('src',src);
       }
-      $("#block-search-by-page-1 .form-text").focus(function() {
-        if(this.value === "Search Library Site ...") {
-          this.value = "";
-        }
-      });
-      $("#block-search-by-page-1 .form-text").blur(function() {
-        if(this.value === "") {
-          this.value = "Search Library Site ...";
-        }
-      });
-
-      // "Big search"...
-      if($(".bigSearch .search").val() === "") {
-        $(".bigSearch .search").val("Search ...");
+      var themepath = 'sites/all/themes/nulib';
+      if(!Modernizr.placeholder){
+        Modernizr.load({
+           load: themepath + '/js/jquery.textPlaceholder.js',
+           complete: function(){
+              $('body').prepend('<style>.text-placeholder {color: #333 !important}</style>');
+              $("[placeholder]").textPlaceholder();
+            }
+        });
       }
-      $(".bigSearch .search").focus(function() {
-        if(this.value === "Search ...") {
-          this.value = "";
-        }
-      });
-      $(".bigSearch .search").blur(function() {
-        if(this.value === "") {
-          this.value = "Search ...";
-        }
-
-      });
-      $('.label.second').show();
-      $('#allRadio').click(function(){
-           $(".label.second").show();
-           $(".label.first").hide();
-           $(".advsearch").attr('href','http://64.94.37.110:1701/primo_library/libweb/action/search.do?mode=Advanced');
-
-       });
-       $('#nucatRadio').click(function(){
-           $(".label.first").show();
-           $(".label.second").hide();
-           $(".advsearch").attr('href','http://nucat.lib.neu.edu/search/X');
-       });
     },
     initAccordions: function() {
       $(".accordion > li").each(function(i, el) {
@@ -160,23 +113,6 @@
       }, function() {
         $(this).not(".containsActive").removeClass("open").addClass("closed");
       });
-    },
-    initMegaMenu: function() {
-      $(".megaMenu").each(function() {
-        $(this).css("height", "auto");
-        var height = $(this).height() + "px";
-        $(this).attr("data-height", height).css("height", "0");
-        var top = ($($("#block-nice-menus-1 li.menuparent")[0]).height() + 6) + "px";
-        $(this).css("top", top);
-      });
-      $("#block-nice-menus-1 li").hover(function() {
-        $(this).children(".megaMenu").css("height", $(this).children(".megaMenu").attr("data-height"));
-        $('.bigSearch .search').attr("disabled", "disabled");
-      }, function() {
-        $(this).children(".megaMenu").css("height", "0");
-        $('.bigSearch .search').removeAttr("disabled");
-      });
-
     },
     initCarousels: function() {
       if(($(".carouselTrack .item").length === 1) || ($(".carouselTrack .item").length === 0)){

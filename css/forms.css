@@ -2,76 +2,70 @@
  * @file
  * Form Styling
  */
-
-
-.form-item /* Wrapper for a form element (or group of form elements) and its label */ {
+/* line 6, ../scss/forms.scss */
+.form-item {
   margin: 1.5em 0;
 }
-
-.form-item input.error,
-.form-item textarea.error,
-.form-item select.error /* Highlight the form elements that caused a form submission error */ {
+/* line 8, ../scss/forms.scss */
+.form-item input.error, .form-item textarea.error, .form-item select.error {
   border: 1px solid #c00;
 }
-
-.form-item label /* The label for a form element */ {
+/* line 11, ../scss/forms.scss */
+.form-item label {
   display: block;
   font-weight: bold;
 }
-
-.form-item label.option /* The label for a radio button or checkbox */ {
+/* line 14, ../scss/forms.scss */
+.form-item label.option {
   display: inline;
   font-weight: normal;
 }
 
-.form-required /* The part of the label that indicates a required field */ {
+/* line 21, ../scss/forms.scss */
+.form-required {
   color: #c00;
 }
 
-.form-item .description /* The descriptive help text (separate from the label) */ {
+/* line 25, ../scss/forms.scss */
+.form-item .description {
   font-size: 0.85em;
 }
 
-.form-checkboxes .form-item,
-.form-radios .form-item /* Pack groups of checkboxes and radio buttons closer together */ {
-  margin: 0; /* Drupal core uses "0.4em 0" */
+/* line 29, ../scss/forms.scss */
+.form-checkboxes .form-item, .form-radios .form-item {
+  margin: 0;
+  /* Drupal core uses "0.4em 0" */
 }
 
-.form-submit /* The submit button */ {
-}
-
-.container-inline div,
-.container-inline label /* Inline labels and form divs */ {
+/* line 37, ../scss/forms.scss */
+.container-inline div, .container-inline label {
   display: inline;
 }
-
-.tips /* Tips for Drupal's input formats */ {
-}
-
 
 /*
  * Password confirmation
  */
-.password-parent,
-.confirm-parent {
+/* line 48, ../scss/forms.scss */
+.password-parent, .confirm-parent {
   margin: 0;
 }
-
 
 /*
  * Search (search-block-form.tpl.php)
  */
-#block-search-form /* Wrapper for the search form */ {
-}
-
-
 /*
  * Drupal's default login form block
  */
+/* line 62, ../scss/forms.scss */
 #user-login-form {
-  text-align: left; /* LTR */
+  text-align: left;
+  /* LTR */
 }
-
+/* line 65, ../scss/forms.scss */
+#user-login-form ul {
+  margin-bottom: 0;
+  /* Position OpenID's ul next to the rest of the links. */
+}
 
 /*
  * OpenID
@@ -79,47 +73,46 @@
  * The default styling for the OpenID login link seems to assume Garland's
  * styling of list items.
  */
-
-#user-login-form ul /* OpenID creates a new ul above the login form's links. */ {
-  margin-bottom: 0; /* Position OpenID's ul next to the rest of the links. */
-}
-
-html.js #user-login-form li.openid-link,
-#user-login-form li.openid-link /* The "Log in using OpenID" link. */ {
+/* line 78, ../scss/forms.scss */
+html.js #user-login-form li.openid-link {
   margin-top: 1.5em;
-  margin-left: -20px; /* LTR */ /* Un-do some of the padding on the ul list. */
+  margin-left: -20px;
+  /* LTR */
+  /* Un-do some of the padding on the ul list. */
 }
 
-#user-login-form li.user-link /* The "Cancel OpenID login" link. */ {
+/* line 86, ../scss/forms.scss */
+#user-login-form li.openid-link {
+  margin-top: 1.5em;
+  margin-left: -20px;
+}
+/* line 92, ../scss/forms.scss */
+#user-login-form li.user-link {
   margin-top: 1.5em;
 }
 
+/* line 97, ../scss/forms.scss */
 #user-login ul {
   margin: 1.5em 0;
 }
 
-
-/*
- * Drupal admin tables
- *
- * We overrode these styles in html-reset.css, but restore them for the admin
- * section of the site.
- */
-
+/* line 109, ../scss/forms.scss */
 form th {
-  text-align: left; /* LTR */
-  padding-right: 1em; /* LTR */
+  text-align: left;
+  /* LTR */
+  padding-right: 1em;
+  /* LTR */
   border-bottom: 3px solid #ccc;
 }
-
+/* line 116, ../scss/forms.scss */
 form tbody {
   border-top: 1px solid #ccc;
 }
-
+/* line 119, ../scss/forms.scss */
 form tr.even {
   background-color: #fff;
 }
-
+/* line 122, ../scss/forms.scss */
 form table .item-list ul {
   margin: 0;
 }

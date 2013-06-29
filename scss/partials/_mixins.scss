@@ -1,0 +1,89 @@
+@mixin vendorize($property, $value) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
+  #{$property}: $value;
+}
+
+
+@mixin linkTextOffscreen() {
+    text-indent: -9999px;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    font-size: 0;
+    text-align: start;
+}
+
+
+@mixin hoverActiveFocus($property, $value) {
+    &:hover, &:active, &:focus {
+        #{$property}: $value;
+    }
+}
+
+
+@mixin placeholder($color) {
+  &:-moz-placeholder{
+    color: $color;
+    font-style: italic !important;
+  }
+  &::-moz-placeholder{
+    color: $color;
+    font-style: italic !important;
+  }
+  &:-ms-input-placeholder{
+    color: $color;
+    font-style: italic !important;
+  }
+  &::-webkit-input-placeholder{
+    color: $color;
+    font-style: italic !important;
+  }
+  
+}
+
+@mixin typeMode($font-color, $font-size) {
+    color: $font-color;
+    font-style: normal;
+    font-size: $font-size;
+    line-height: 1;
+    vertical-align: middle !important;
+}
+
+@mixin placeholder-base {
+    font: $big-search-placeholder-font;
+    color: $big-search-placeholder-color;
+    vertical-align: middle;
+}
+
+@mixin placeholder-search{
+    &::-webkit-input-placeholder {
+        @include placeholder-base;
+    }
+    &:-moz-placeholder {
+        /* Firefox 18- */
+        @include placeholder-base;
+    }
+    &::-moz-placeholder {
+        /* Firefox 19+ */
+        @include placeholder-base;
+    }
+    &:-ms-input-placeholder {
+        @include placeholder-base;
+    }
+}
+
+@mixin svg-background($img) {
+  $png: '#{$img}.png';
+  $svg: '#{$img}.svg';
+  
+  background-image: image-url($png);
+  background-image: none, image-url($svg);
+  background-repeat: no-repeat;
+  @include background-size(contain);
+}
+
+
+

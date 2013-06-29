@@ -10,7 +10,6 @@
  * @see http://snook.ca/archives/html_and_css/no_css_reset/
  */
 
-
 /*
  * Fonts
  *
@@ -25,23 +24,25 @@
  * across different browsers.
  */
 body {
-  font-size: 100%; /* Fixes exaggerated text resizing in IE6 and IE7 */
+    font-size: 100%;
+    /* Fixes exaggerated text resizing in IE6 and IE7 */
 }
 
 #skip-to-nav,
 #page {
-  /*
-   * To use a 12px font size on the page, delete the 14px declarations.
-   * to use a 14px font size on the page, delete the 12px declarations.
-   */
-
-  /* Use a 12px base font size with a 18px line height */
-  font-size: 0.75em; /* 16px x .75 = 12px */
-  line-height: 1.5em; /* 12px x 1.5 = 18px */
-
-  /* Use a 14px base font size with a 21px line height */
-  font-size: 0.875em; /* 16px x .875 = 14px */
-  line-height: 1.5em; /* 14px x 1.5 = 21px */
+    /*
+     * To use a 12px font size on the page, delete the 14px declarations.
+     * to use a 14px font size on the page, delete the 12px declarations.
+    /* Use a 12px base font size with a 18px line height */
+    font-size: 0.75em;
+    /* 16px x .75 = 12px */
+    line-height: 1.5em;
+    /* 12px x 1.5 = 18px */
+    /* Use a 14px base font size with a 21px line height */
+    font-size: 0.875em;
+    /* 16px x .875 = 14px */
+    line-height: 1.5em;
+    /* 14px x 1.5 = 21px */
 }
 
 /*
@@ -109,8 +110,7 @@ fieldset {
   font-family: "Courier New", "DejaVu Sans Mono", monospace;
 
    */
-
-  font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+    font-family: Verdana, Tahoma, "DejaVu Sans", sans-serif;
 }
 
 pre,
@@ -119,7 +119,7 @@ kbd,
 samp,
 tt,
 var {
-  font-family: "Courier New", "DejaVu Sans Mono", monospace;
+    font-family: "Courier New", "DejaVu Sans Mono", monospace;
 }
 
 /*
@@ -130,120 +130,148 @@ var {
  * the line heights of any larger fonts be a multiple of 1.5 ems. For more
  * information, see http://24ways.org/2006/compose-to-a-vertical-rhythm
  */
+
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl,
 hr, table, fieldset {
-  margin: 1.5em 0;
+    margin: 1.5em 0;
 }
 
 /* Headings */
 h1 {
-  font-size: 2em;
-  line-height: 1.5em;
-  margin: 0.75em 0;
-  /* 0.75em is equivalent to 1.5em in the page's base font. font. Remember, a
-     margin specified in ems is relative to the element's font-size, not to the
-     pages' base font size. So, for example, if we want a 1.5em margin (relative
-     to the base font), we have to divide that length by the element's
-     font-size:  1.5em / 2em = 0.5em  */
+    font-size: 2em;
+    line-height: 1.5em;
+    margin: 0.75em 0;
+    /* 0.75em is equivalent to 1.5em in the page's base font. font. Remember, a
+       margin specified in ems is relative to the element's font-size, not to the
+       pages' base font size. So, for example, if we want a 1.5em margin (relative
+       to the base font), we have to divide that length by the element's
+       font-size:  1.5em / 2em = 0.5em  */
 }
 
 h2 {
-  font-size: 1.5em;
-  margin: 1em 0; /* Equivalent to 1.5em in the page's base font: 1.5 / 1.5 = 1em */
+    font-size: 1.5em;
+    margin: 1em 0;
+    /* Equivalent to 1.5em in the page's base font: 1.5 / 1.5 = 1em */
 }
 
 h3 {
-  font-size: 1.3em;
-  margin: 1.154em 0; /* Equivalent to 1.5em in the page's base font: 1.5 / 1.3 = 1.154 */
+    font-size: 1.3em;
+    margin: 1.154em 0;
+    /* Equivalent to 1.5em in the page's base font: 1.5 / 1.3 = 1.154 */
 }
 
 h4,
 h5,
 h6 {
-  font-size: 1.1em;
-  margin: 1.364em 0; /* Equivalent to 1.5em in the page's base font: 1.5 / 1.1 = 1.364 */
+    font-size: 1.1em;
+    margin: 1.364em 0;
+    /* Equivalent to 1.5em in the page's base font: 1.5 / 1.1 = 1.364 */
 }
 
 /* Other block-level elements */
-p {
-}
+p {}
 
 blockquote {
-  margin-left: 2em;
-  margin-right: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
 pre {
-  font-size: 1.1em; /* Monospace fonts can be hard to read */
-  margin: 1.364em 0; /* Equivalent to 1.5em in the page's base font: 1.5 / 1.1 = 1.364 */
+    font-size: 1.1em;
+    /* Monospace fonts can be hard to read */
+    margin: 1.364em 0;
+    /* Equivalent to 1.5em in the page's base font: 1.5 / 1.1 = 1.364 */
 }
 
 hr {
-  height: 1px;
-  border: 1px solid #666;
+    height: 1px;
+    border: 1px solid #666;
 }
 
-address {
-}
+address {}
 
 /*
  * Lists
  *
  * We need to standardize the list item indentation.
  */
+
 ul,
 ol {
-  margin-left: 0; /* LTR */
-  padding-left: 2em; /* LTR */
+    margin-left: 0;
+    /* LTR */
+    padding-left: 2em;
+    /* LTR */
 }
 
-.item-list ul /* Drupal overrides */ {
-  margin: 1.5em 0;
-  padding: 0 0 0 2em; /* LTR */
+.item-list ul {
+    margin: 1.5em 0;
+    padding: 0 0 0 2em;
+    /* LTR */
 }
 
 ul ul, ul ol,
 ol ol, ol ul,
 .item-list ul ul, .item-list ul ol,
 .item-list ol ol, .item-list ol ul {
-  margin: 0;
+    margin: 0;
 }
 
 li {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .item-list ul li,
 ul.menu li,
 li.expanded,
 li.collapsed,
-li.leaf /* Drupal override */ {
-  margin: 0;
-  padding: 0;
+li.leaf {
+    margin: 0;
+    padding: 0;
 }
 
-ul          { list-style-type: disc; }
-ul ul       { list-style-type: circle; }
-ul ul ul    { list-style-type: square; }
-ul ul ul ul { list-style-type: circle; }
-ol          { list-style-type: decimal; }
-ol ol       { list-style-type: lower-alpha; }
-ol ol ol    { list-style-type: decimal; }
-
-dl {
+ul {
+    list-style-type: disc;
 }
+
+ul ul {
+    list-style-type: circle;
+}
+
+ul ul ul {
+    list-style-type: square;
+}
+
+ul ul ul ul {
+    list-style-type: circle;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+ol ol {
+    list-style-type: lower-alpha;
+}
+
+ol ol ol {
+    list-style-type: decimal;
+}
+
+dl {}
 
 dt {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 dd {
-  margin: 0 0 0 2em; /* LTR */
-  padding: 0;
+    margin: 0 0 0 2em;
+    /* LTR */
+    padding: 0;
 }
 
 /*
@@ -253,76 +281,63 @@ dd {
  * forms, so we override this default CSS. (We set it back in forms.css.)
  */
 table {
-  border-collapse: collapse;
-  /* width: 100%; */ /* Prevent cramped-looking tables */
+    border-collapse: collapse;
+    /* width: 100%; */
+    /* Prevent cramped-looking tables */
 }
 
 th {
-  text-align: left; /* LTR */
-  padding: 0;
-  border-bottom: none;
+    text-align: left;
+    /* LTR */
+    padding: 0;
+    border-bottom: none;
 }
 
 tbody {
-  border-top: none;
+    border-top: none;
 }
 
-thead {
-}
+thead {}
 
-tfoot {
-}
+tfoot {}
 
-caption {
-}
+caption {}
 
-colgroup {
-}
+colgroup {}
 
-col {
-}
+col {}
 
-tr {
-}
+tr {}
 
-td {
-}
+td {}
 
 /*
  * Forms
  */
 form {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 fieldset {
-  padding: 0.5em;
+    padding: 0.5em;
 }
 
-legend {
-}
+legend {}
 
-label {
-}
+label {}
 
-input {
-}
+input {}
 
-select {
-}
+select {}
 
-optgroup {
-}
+optgroup {}
 
-option {
-}
+option {}
 
-textarea {
-}
+textarea {}
 
-button {
-}
+button {}
 
 /*
  * Links
@@ -330,67 +345,53 @@ button {
  * The order of link states are based on Eric Meyer's article:
  * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
  */
-a:link {
-}
+a:link {}
 
-a:visited {
-}
+a:visited {}
 
 a:hover,
-a:focus {
-}
+a:focus {}
 
-a:active {
-}
+a:active {}
 
 /*
  * Other inline elements
  */
 img {
-  border: 0;
-  /* vertical-align: bottom; */ /* Suppress the space beneath the baseline */
+    border: 0;
+    // /* vertical-align: bottom; */
+    // /* Suppress the space beneath the baseline */
 }
 
-abbr, /* Abbreviations */
+abbr,
 acronym {
-  border-bottom: 1px dotted #666;
-  cursor: help;
-  white-space: nowrap;
+    border-bottom: 1px dotted #666;
+    cursor: help;
+    white-space: nowrap;
 }
 
-q {
-}
+// q {}
 
-cite {
-}
+// cite {}
 
-strong, b {
-}
+// strong, b {}
 
-em, i {
-}
+// em, i {}
 
-code,
-kbd,
-samp,
-tt,
-var /* Code, keyboard input, sample output, teletype, variable */ {
-}
+// code,
+// kbd,
+// samp,
+// tt,
+// var {}
 
-del {
-}
+// del {}
 
-ins {
-}
+// ins {}
 
-big {
-}
+// big {}
 
-small {
-}
+// small {}
 
-sub {
-}
+// sub {}
 
-sup {
-}
+// sup {}

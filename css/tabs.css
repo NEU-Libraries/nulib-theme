@@ -7,15 +7,16 @@
  * Compare this with default CSS found in the system module's stylesheet (a copy
  * of which is in drupal6-reference.css, line 510.)
  */
-
-
+/* line 11, ../scss/tabs.scss */
 div.tabs {
   margin: 0 0 5px 0;
 }
 
+/* line 15, ../scss/tabs.scss */
 ul.primary {
   margin: 0;
-  padding: 0 0 0 10px; /* LTR */
+  padding: 0 0 0 10px;
+  /* LTR */
   border-width: 0;
   list-style: none;
   white-space: nowrap;
@@ -23,17 +24,21 @@ ul.primary {
   background: url(../images/tab-bar.png) repeat-x left bottom;
 }
 
+/* line 26, ../scss/tabs.scss */
 ul.primary li {
-  float: left; /* LTR */
+  float: left;
+  /* LTR */
   margin: 0;
   padding: 0;
 }
 
+/* line 33, ../scss/tabs.scss */
 ul.primary li a {
   display: block;
   height: 24px;
   margin: 0;
-  padding: 0 0 0 5px; /* width of tab-left.png */
+  padding: 0 0 0 5px;
+  /* width of tab-left.png */
   border-width: 0;
   font-weight: bold;
   text-decoration: none;
@@ -42,9 +47,11 @@ ul.primary li a {
   background: url(../images/tab-left.png) no-repeat left -38px;
 }
 
+/* line 47, ../scss/tabs.scss */
 ul.primary li a .tab {
   display: block;
-  height: 20px; /* 24px (parent) - 4px (padding) */
+  height: 20px;
+  /* 24px (parent) - 4px (padding) */
   margin: 0;
   padding: 4px 13px 0 6px;
   border-width: 0;
@@ -52,6 +59,7 @@ ul.primary li a .tab {
   background: url(../images/tab-right.png) no-repeat right -38px;
 }
 
+/* line 59, ../scss/tabs.scss */
 ul.primary li a:hover,
 ul.primary li a:focus {
   border-width: 0;
@@ -59,11 +67,13 @@ ul.primary li a:focus {
   background: url(../images/tab-left.png) no-repeat left -76px;
 }
 
+/* line 66, ../scss/tabs.scss */
 ul.primary li a:hover .tab,
 ul.primary li a:focus .tab {
   background: url(../images/tab-right.png) no-repeat right -76px;
 }
 
+/* line 72, ../scss/tabs.scss */
 ul.primary li.active a,
 ul.primary li.active a:hover,
 ul.primary li.active a:focus {
@@ -73,28 +83,35 @@ ul.primary li.active a:focus {
   background: url(../images/tab-left.png) no-repeat left 0;
 }
 
+/* line 81, ../scss/tabs.scss */
 ul.primary li.active a .tab,
 ul.primary li.active a:hover .tab,
 ul.primary li.active a:focus .tab {
   background: url(../images/tab-right.png) no-repeat right 0;
 }
 
+/* line 85, ../scss/tabs.scss */
 ul.secondary {
   margin: 0;
-  padding: 0 0 0 5px; /* LTR */
+  padding: 0 0 0 5px;
+  /* LTR */
   border-bottom: 1px solid #c0c0c0;
   list-style: none;
   white-space: nowrap;
   background: url(../images/tab-secondary-bg.png) repeat-x left bottom;
 }
 
+/* line 95, ../scss/tabs.scss */
 ul.secondary li {
-  float: left; /* LTR */
+  float: left;
+  /* LTR */
   margin: 0 5px 0 0;
   padding: 5px 0;
-  border-right: none; /* LTR */
+  border-right: none;
+  /* LTR */
 }
 
+/* line 104, ../scss/tabs.scss */
 ul.secondary a {
   display: block;
   height: 24px;
@@ -106,19 +123,23 @@ ul.secondary a {
   background: url(../images/tab-secondary.png) repeat-x left -56px;
 }
 
+/* line 115, ../scss/tabs.scss */
 ul.secondary a .tab {
   display: block;
-  height: 18px; /* 24px (parent) - 6px (padding) */
+  height: 18px;
+  /* 24px (parent) - 6px (padding) */
   margin: 0;
   padding: 3px 8px;
   line-height: 18px;
 }
 
+/* line 125, ../scss/tabs.scss */
 ul.secondary a:hover,
 ul.secondary a:focus {
   background: url(../images/tab-secondary.png) repeat-x left bottom;
 }
 
+/* line 131, ../scss/tabs.scss */
 ul.secondary a.active,
 ul.secondary a.active:hover,
 ul.secondary a.active:focus {

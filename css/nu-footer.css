@@ -1,0 +1,90 @@
+/* NU footer */
+/* line 3, ../scss/nu-footer.scss */
+#block-block-22 {
+  margin: 30px 0 0 -170px;
+}
+
+/* line 7, ../scss/nu-footer.scss */
+#nu-footer {
+  border-top: 1px solid #666;
+  padding-top: 20px;
+  background: none repeat scroll 0 0 #E9E8E5;
+  height: auto;
+  width: 900px;
+  margin: 0 auto;
+  letter-spacing: .03em;
+  vertical-align: middle;
+  line-height: 16px;
+}
+/* line 8, ../scss/nu-footer.scss */
+#nu-footer * {
+  font-family: helvetica,arial,sans-serif;
+}
+
+/* line 22, ../scss/nu-footer.scss */
+.special #nu-footer {
+  background: none repeat scroll 0 0 white;
+}
+
+/* line 27, ../scss/nu-footer.scss */
+#nu-footer img {
+  margin: 0;
+  padding: 10px 0px 0px 0px;
+  vertical-align: middle;
+}
+/* line 32, ../scss/nu-footer.scss */
+#nu-footer .links {
+  float: left;
+  width: 510px;
+  margin-top: 5px;
+}
+/* line 37, ../scss/nu-footer.scss */
+#nu-footer .social-networking-icons {
+  margin-left: 125px;
+  float: left;
+  width: 66px;
+}
+/* line 42, ../scss/nu-footer.scss */
+#nu-footer p, #nu-footer a {
+  font-size: 10px;
+  color: #666666;
+}
+/* line 46, ../scss/nu-footer.scss */
+#nu-footer p {
+  clear: both;
+  width: 600px;
+  margin: 5px 0 0 150px;
+  text-align: center;
+}
+/* line 53, ../scss/nu-footer.scss */
+#nu-footer a.logo {
+  background: url("../images/nu-footer/logo-red.png") no-repeat scroll left top transparent;
+  display: inline;
+  float: left;
+  height: 17px;
+  width: 173px;
+  text-decoration: none;
+  font-color: none;
+  padding: 0 10px 0;
+  margin-top: 6px;
+  margin-left: 6px;
+}
+/* line 64, ../scss/nu-footer.scss */
+#nu-footer a.logo:hover {
+  background: url("../images/nu-footer/NUlogo-rollover-footer.png") no-repeat scroll left top transparent;
+}
+/* line 68, ../scss/nu-footer.scss */
+#nu-footer a.facebook img {
+  float: right;
+  padding-top: 6px;
+  text-decoration: none;
+  font-color: none;
+}
+/* line 74, ../scss/nu-footer.scss */
+#nu-footer a.twitter img, #nu-footer a.youtube img {
+  float: right;
+  padding-left: 6px;
+  padding-top: 6px;
+  text-decoration: none;
+  font-color: none;
+}

@@ -248,7 +248,6 @@ textarea:focus {
 input {
   &[type=button]:hover!, &[type=submit]:hover!, &[type=reset]:hover! {}
   &[type=text][disabled], &[type=button][disabled], &[type=submit][disabled], &[type=reset][disabled] {
-    background-color: #e2e2e2;
     color: #666;
   }
 }

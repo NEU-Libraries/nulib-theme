@@ -1,16 +1,150 @@
-$searchUrlColor: #444;
+  
+//// Colors
+//
+// Web Color Pallet
+//
 
-@mixin placeholder($color) {
-  &:-moz-placeholder {
-    color: $color;
-    font-style: italic;
-  }
-  &:-ms-input-placeholder {
-    color: $color;
-    font-style: italic;
-  }
-  &:-webkit-input-placeholder {
-    color: $color;
-    font-style: italic;
-  }
-}
+// Red
+// #cc0000 
+// rgb 204 0 0
+$red: #cc0000;
+
+// Black
+// #000000 
+// rgb 0 0 0
+$black: #000000;
+
+
+// Light Black
+// #242424
+// rgb 36 36 36
+$light-black: #242424;
+
+// Darkest Gray
+// #333333
+// rgb 51 51 51
+$darkest-gray: #333333;
+
+// Darker Gray
+// #4e4e4e
+// rgb 78 78 78
+$darker-gray: #4e4e4e;
+
+
+// Dark Gray
+// #666666
+// rgb 102 102 102
+$dark-gray: #666666;
+
+
+// Medium Gray
+// #7d7d7d
+// rgb 125 125 125
+$meidum-gray: #7d7d7d;
+
+// Darker Light Gray
+// #c3c3c3
+// rgb 195 195 195
+$darker-light-gray: #c3c3c3;
+
+
+// Light Gray
+// #dedede
+// rgb 222 222 222
+$light-gray: #dedede;
+
+
+// Lighter Gray
+// #eeeeee
+// rgb 238 238 238
+$lighter-gray: #eeeeee;
+
+// Lightest Gray
+// #f8f8f8
+// rgb 248 248 248
+$lightest-gray: #f8f8f8;
+
+// White
+// #ffffff
+// rgb 256 256 256
+$white: #ffffff;
+
+// Dark Taupe
+// #c4b996
+// rgb 196 185 150
+$dark-taupe: #c4b996;
+
+// Medium Taupe
+// #d1cbb5
+// rgb 209 203 181
+$medium-taupe: #d1cbb5;
+
+// Light Taupe
+// #e6e3d6
+// rgb 230 227 214
+$light-taupe: #e6e3d6;
+
+// Lightest Taupe
+// #f2f1ea
+// rgb 242 241 234
+$lightest-taupe: #f2f1ea;
+
+
+$searchUrlColor: $darker-gray;
+
+
+// Components
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// Default sizing
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+$component-large-border-radius: 5px;
+$component-default-border-radius: 3px;
+$component-small-border-radius: 2px;
+
+
+
+
+// Forms 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+$input-inset-box-shadow: inset 0 0 10px $light-gray;
+$input-padding: 6px 8px;
+$input-large-padding: 16px 10px;
+$input-large-border-radius: $component-large-border-radius;
+// Placeholder
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+$placeholder-color: $darker-light-gray;
+
+
+// Branding
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+$nu-libraries-logo: 'library-logo/nu-libraries-lockup-color';
+
+// Big Search Homepage
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+
+$big-search-link-color: $black;
+$big-search-text-color: $black;
+$big-search-input-font-size: 19px;
+$big-search-input-box-shadow: $input-inset-box-shadow;
+$big-search-input-border-radius: $component-large-border-radius;
+$big-search-placeholder-color: $placeholder-color;
+$big-search-placeholder-font: italic 25px / 1 "Times New Roman", Times, Georgia, serif;
+
+
+//Gateway pages.
+$big-search-gateway-select-width: 40%;
+$big-search-gateway-select-font-size: 1.3em;
+
+
+$big-search-gateway-search-width: 50%;
+$big-search-gateway-search-placeholder-font-size: 1.3em;
+$big-search-svg-width: 209px;
+$big-search-svg-margin: 0 0 0 0;
+
+$special-big-search-bg: $medium-taupe;
+
+
+

@@ -1,12 +1,61 @@
+/* line 6, ../scss/corrections.scss */
 .field-collection-container,
 .field-collection-container .field-items .field-item,
 .field-collection-view,
 .block {
   border: none;
   margin: 0;
-  padding:0;
+  padding: 0;
 }
 
+/* line 12, ../scss/corrections.scss */
 .region-sidebar-first {
   min-height: 500px;
+}
+
+/* line 16, ../scss/corrections.scss */
+.field-name-field-user-photo img {
+  max-width: 128px;
+  height: auto;
+}
+
+/* line 21, ../scss/corrections.scss */
+.search-form .form-text {
+  margin-bottom: 0;
+}
+
+/* Fixing the overflow issues */
+/* line 27, ../scss/corrections.scss */
+.no-sidebars #mainContent {
+  padding: 0;
+}
+
+/* line 32, ../scss/corrections.scss */
+tr.even {
+  background-color: #efefef;
+}
+
+/* line 35, ../scss/corrections.scss */
+tr.odd {
+  background-color: #ffffff;
+}
+
+/* line 38, ../scss/corrections.scss */
+img {
+  width: auto\9;
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 50, ../scss/corrections.scss */
+#autocomplete {
+  z-index: 9999;
+  background-color: #FFF;
+}
+/* line 53, ../scss/corrections.scss */
+#autocomplete ul {
+  padding: 4px;
 }

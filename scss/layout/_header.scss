@@ -1,0 +1,90 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Header
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+// #mainLogo a {
+//   float: left;
+//   margin-left: -15px;
+//   display: block;
+//   background: url($nu-libraries-logo) no-repeat left top transparent;
+//   height: 112px;
+//   width: 432px;
+// }
+
+.main-logo a{
+  width: 340px;
+  height: 55px;
+  position: relative;
+  top: 30px;
+  left: 10px;
+  
+  display: block;
+  background: image-url($nu-libraries-logo + '.svg') no-repeat top left;
+  background-size: contain;
+  span{
+    @include hide-text();
+  }
+}
+
+.no-svg .main-logo a{
+  background: image-url($nu-libraries-logo + '.png') no-repeat top left;
+  background-size: auto auto;
+}
+
+
+#block-search-by-page-1 {
+  position: absolute;
+  top: 58px;
+  left: 699px;
+}
+
+.special #block-search-by-page-1 {
+  left: 734px;
+}
+
+#block-search-by-page-1 {
+  .form-item {
+    float: left;
+    margin: 0;
+  }
+  .form-text {
+    height: 16px;
+    width: 190px;
+    margin: 0;
+    padding: 6px 5px 4px;
+    border: 1px solid #666;
+    font-size:  1.4em;
+    line-height:1.25em;
+    font-family: "Times New Roman", Times, Georgia, serif;
+    font-style: normal;
+    color: #666;
+    box-shadow: $input-inset-box-shadow;
+    @include border-radius($component-large-border-radius);
+    @include placeholder($placeholder-color);
+  }
+  .typeMode {
+    color: #000;
+    font-style: normal;
+  }
+  .form-submit {
+    margin: 0;
+    border: 0 none;
+    text-indent: -999em;
+    text-transform: capitalize;
+    /* IE fix */
+    height: 27px;
+    width: 14px;
+    background: url(../images/style/search_arrow.gif) no-repeat left top transparent;
+  }
+}
+
+.special {
+  #block-search-by-page-1 .form-submit {
+    background: url(../images/style-special/search_arrow.gif) no-repeat left top transparent;
+  }
+  .region-navigation-wrapper {
+    background: #3f3f3f url(../images/style/navbg.gif) repeat-x left top;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+  }
+}

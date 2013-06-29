@@ -1,0 +1,35 @@
+// Footer
+// ------------------------------------
+
+#block-block-9 {
+  position: absolute;
+  top: 0;
+  left: 37px;
+  a.logo {
+    display: block;
+    background: url(../images/style/fdlp_logo.png) no-repeat left top transparent;
+    height: 59px;
+    width: 161px;
+    text-indent: -99999em;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#block-block-10 p {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+.region-footer a {
+  color: #666;
+}
+
+#block-block-10 p {
+  &.last, &:last-child {
+    margin-right: 0;
+  }
+}
