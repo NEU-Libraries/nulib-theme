@@ -114,23 +114,6 @@
         $(this).not(".containsActive").removeClass("open").addClass("closed");
       });
     },
-    initMegaMenu: function() {
-      $(".megaMenu").each(function() {
-        $(this).css("height", "auto");
-        var height = $(this).height() + "px";
-        $(this).attr("data-height", height).css("height", "0");
-        var top = ($($("#block-nice-menus-1 li.menuparent")[0]).height() + 6) + "px";
-        $(this).css("top", top);
-      });
-      $("#block-nice-menus-1 li").hover(function() {
-        $(this).children(".megaMenu").css("height", $(this).children(".megaMenu").attr("data-height"));
-        $('.bigSearch .search').attr("disabled", "disabled");
-      }, function() {
-        $(this).children(".megaMenu").css("height", "0");
-        $('.bigSearch .search').removeAttr("disabled");
-      });
-
-    },
     initCarousels: function() {
       if(($(".carouselTrack .item").length === 1) || ($(".carouselTrack .item").length === 0)){
         return false;
