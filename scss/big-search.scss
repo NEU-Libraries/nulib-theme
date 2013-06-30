@@ -50,7 +50,7 @@
     margin: 0;
     padding: 14px 10px;
     max-height: 45px;
-    width: 377px;
+    width: 350px;
     border: 1px solid #666;
     float: left;
     @include typeMode($big-search-text-color, $big-search-input-font-size);
@@ -70,7 +70,7 @@
     border-radius: $input-large-border-radius;
     background-color: $white;
     margin-left: 5px;
-    max-width: 220px;
+    width: 220px;
   }
   .form-submit {
     @include hide-text;
