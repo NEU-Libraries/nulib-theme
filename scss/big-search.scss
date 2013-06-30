@@ -50,7 +50,7 @@
     margin: 0;
     padding: 14px 10px;
     max-height: 45px;
-    width: 377px;
+    width: 350px;
     border: 1px solid #666;
     float: left;
     @include typeMode($big-search-text-color, $big-search-input-font-size);
@@ -70,7 +70,7 @@
     border-radius: $input-large-border-radius;
     background-color: $white;
     margin-left: 5px;
-    max-width: 220px;
+    width: 220px;
   }
   .form-submit {
     @include hide-text;
@@ -283,7 +283,8 @@
       font-size: $big-search-gateway-select-font-size;
       @include ellipsis();
     }
-    .form-submit {
+    .form-submit,
+    .submit {
       margin: 0 0 0 5px;
       width: 12px;
       height: 35px;
@@ -304,5 +305,45 @@
   }
   .bigBrowse {
     background-color: #f4f4f4;
+  }
+}
+
+.archives{
+  .bigSearch{
+    .search{
+      padding: 1px 8px 2px;
+      height: 30px;
+      width: 375px;
+      font-size: 1.8em;
+      &:-moz-placeholder{
+        font-size: 1em;
+      }
+      &::-moz-placeholder{
+        font-size: 1em;
+      }
+      &:-ms-input-placeholder{
+        font-size: 1em;
+      }
+      &::-webkit-input-placeholder{
+        font-size: 1em;
+      }
+    }
+    .submit{
+      margin: 0 0 0 5px;
+      width: 12px;
+      height: 35px;
+      border: 0 none;
+      text-indent: -999em;
+      text-transform: capitalize;
+    }
+    .help{
+      background-position: 0 6px;
+      padding: 4px 23px 0 17px;
+      clear: right;
+      float: right;
+    }
+    .radios{
+      display:none;
+    }
   }
 }

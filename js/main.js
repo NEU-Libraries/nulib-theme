@@ -87,7 +87,7 @@
       var themepath = 'sites/all/themes/nulib';
       if(!Modernizr.placeholder){
         Modernizr.load({
-           load: themepath + '/js/jquery.textPlaceholder.js',
+           load: themepath + '/js/jquery.textPlaceholder.min.js',
            complete: function(){
               $('body').prepend('<style>.text-placeholder {color: #333 !important}</style>');
               $("[placeholder]").textPlaceholder();

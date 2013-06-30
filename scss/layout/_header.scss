@@ -19,16 +19,24 @@ Header
   left: 10px;
   
   display: block;
-  background: image-url($nu-libraries-logo + '.svg') no-repeat top left;
-  background-size: contain;
+  //background: image-url($nu-libraries-logo + '.svg') no-repeat top left;
+  //background-size: contain;
   span{
     @include hide-text();
   }
+
+}
+
+.special .main-logo svg * {
+    fill: #FFFFFF !important;
 }
 
 .no-svg .main-logo a{
   background: image-url($nu-libraries-logo + '.png') no-repeat top left;
   background-size: auto auto;
+  .special &{
+    background: image-url('style-special/lib_logo.gif') no-repeat top left;
+  }
 }
 
 
