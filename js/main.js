@@ -87,7 +87,7 @@
       var themepath = 'sites/all/themes/nulib';
       if(!Modernizr.placeholder){
         Modernizr.load({
-           load: themepath + '/js/jquery.textPlaceholder.js',
+           load: themepath + '/js/jquery.textPlaceholder.min.js',
            complete: function(){
               $('body').prepend('<style>.text-placeholder {color: #333 !important}</style>');
               $("[placeholder]").textPlaceholder();
@@ -202,28 +202,6 @@
       if($(this).hasClass("toggle")) { followLink = $neu.toggleSideNav($(this)); }
       $(this).blur();
       });
-    },
-    searchThis: function(){
-         //getting the variables from the search box.
-         var searchTerm = $('#search').val();
-         var gaSearchTerm = searchTerm;
-         searchTerm = encodeURIComponent(searchTerm);
-         var $scope = $('.bigsearch :radio:checked').val();
-
-         var makeURL = function(){
-           var url="";
-           if ($scope ==="all"){
-            url += "http://northeastern-primo.hosted.exlibrisgroup.com/primo_library/libweb/action/search.do?dscnt=0&frbg=&scp.scps=scope%3A%28%22NEU%22%29%2Cprimo_central_multiple_fe&vl(freeText0)=";
-            url += searchTerm;
-            url += "&fn=search&vid=NU";
-           return url;
-           }
-           else{
-             url = "http://nucat.lib.neu.edu/search~/a?searchtype=X&SORT=D&searcharg=(" + searchTerm + ")";
-             return url;
-           }
-          };
-          window.location = makeURL();
     }
   };
 

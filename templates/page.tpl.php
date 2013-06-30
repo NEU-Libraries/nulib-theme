@@ -74,7 +74,13 @@
 <div id="containerheader">
   <div id="header" class="clearfix">
     <div class="main-logo">
-      <a href="/"><span>Northeastern University - University Libraries</span></a>
+      <a href="/">
+        
+        <?php 
+          include(__DIR__ . '/../images/library-logo/nu-libraries-lockup-color.svg');
+        ?>
+        
+      </a>
     </div>
     <?php print render($page['header']); ?>
   </div>
