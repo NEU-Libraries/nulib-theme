@@ -54,7 +54,7 @@ $primoUrl = variable_get('primo_search_block_url', 'onesearch.northeastern.edu')
 
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
     <?php if ($title): ?>
-      <a href="<?php print $primoUrl?>">
+      <a href="http://<?php print $primoUrl?>" title="Scholar OneSearch | Homepage">
         <img class="svg svg-logo" src="/sites/all/themes/nulib/images/scholar-one-search/scholar-one-search.svg"  alt="<?php print $title; ?>"/>
       </a>
     <?php endif; ?>
