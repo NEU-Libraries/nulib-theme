@@ -17,15 +17,24 @@
   position: relative;
   color: $black;
   display: inline-block;
-  .svg-logo {
-    width: $big-search-svg-width;
-    margin: $big-search-svg-margin;
-  }
+
   .nav {
     display: inline-block;
     float: left;
     width: 50%;
     margin: 0 0 0 0;
+  }
+}
+
+.svg.scholar-one-search{
+  width: $big-search-svg-width;
+  height: 17px;
+  display: block;
+  background: image-url('scholar-one-search/scholar-one-search.svg') no-repeat top left;
+  background-size: contain;
+  margin: $big-search-svg-margin;
+  .no-svg & {
+    background-image: image-url('scholar-one-search/scholar-one-search.png');
   }
 }
 
