@@ -1,8 +1,0 @@
-#source: ./docs
-destination: ./docs/_site
-layouts: ./docs/_layouts
-
-name: Northeastern Unviersity Libraries
-pygments: true
-
-

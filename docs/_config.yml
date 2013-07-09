@@ -1,2 +1,5 @@
+destination: ./_site
+layouts: ./_layouts
+
 name: Northeastern Unviersity Libraries
 pygments: true
