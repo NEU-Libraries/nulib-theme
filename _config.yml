@@ -1,6 +1,6 @@
-source: ./_docs
-destination: ./_docs/_site
-layouts: ./_docs/_layouts
+source: ./docs
+destination: ./docs/_site
+layouts: ./docs/_layouts
 
 name: Northeastern Unviersity Libraries
 pygments: true
