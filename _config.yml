@@ -1,4 +1,4 @@
-source: ./docs
+#source: ./docs
 destination: ./docs/_site
 layouts: ./docs/_layouts
 
