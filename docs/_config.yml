@@ -3,3 +3,4 @@ layouts: ./_layouts
 
 name: Northeastern Unviersity Libraries
 pygments: true
+url: http://nu-lts.github.io/nulib-theme/
