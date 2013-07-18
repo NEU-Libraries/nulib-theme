@@ -60,13 +60,13 @@
     border: 1px solid #666;
     font: 1.4em/1.25em "Times New Roman",Times,Georgia,serif;
     color: #000;
-    //@todo .box-shadow(inset 0 0 2px #666);
+    box-shadow: inset 0 0 2px #666;
     @include placeholder(#666);
   }
   .form-submit {
     margin:0;
     border:0 none;
-    text-indent:-999em;
+    text-indent: -999em;
     text-transform:capitalize;  //IE fix 
     height: 27px;
     width: 14px;

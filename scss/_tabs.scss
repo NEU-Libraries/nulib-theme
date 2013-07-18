@@ -1,12 +1,12 @@
-/**
- * @file
- * Tabs Styling
- *
- * Adds styles for the primary and secondary tabs.
- *
- * Compare this with default CSS found in the system module's stylesheet (a copy
- * of which is in drupal6-reference.css, line 510.)
- */
+//
+// @file
+// Tabs Styling
+//
+// Adds styles for the primary and secondary tabs.
+//
+//  Compare this with default CSS found in the system module's stylesheet (a copy
+//  of which is in drupal6-reference.css, line 510.)
+//   
 
 div.tabs {
     margin: 0 0 5px 0;
@@ -15,7 +15,6 @@ div.tabs {
 ul.primary {
     margin: 0;
     padding: 0 0 0 10px;
-    /* LTR */
     border-width: 0;
     list-style: none;
     white-space: nowrap;
@@ -25,7 +24,6 @@ ul.primary {
 
 ul.primary li {
     float: left;
-    /* LTR */
     margin: 0;
     padding: 0;
 }
@@ -35,7 +33,6 @@ ul.primary li a {
     height: 24px;
     margin: 0;
     padding: 0 0 0 5px;
-    /* width of tab-left.png */
     border-width: 0;
     font-weight: bold;
     text-decoration: none;
