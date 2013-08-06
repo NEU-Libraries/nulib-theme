@@ -60,21 +60,32 @@
  * @see template_process()
  */
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js ie6 ie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 ie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 ie" lang="en"> <![endif]-->
 <!--[if IE 9]>    <html class="no-js ie9 ie" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="rating" content="general" />
 	<meta name="expires" content="never" />
 	<meta name="language" content="en" />
 	<meta http-equiv="Content-Language" content="en" />
 	<meta name="Distribution" content="Global" />
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/sites/all/themes/nulib/ico/apple-touch-icon-144x144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/sites/all/themes/nulib/ico/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/sites/all/themes/nulib/ico/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/sites/all/themes/nulib/ico/apple-touch-icon-57x57-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="/sites/all/themes/nulib/ico/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon" href="/sites/all/themes/nulib/ico/apple-touch-icon-precomposed.png">
+
 
   <?php print $styles; ?>
   <?php print $scripts; ?>

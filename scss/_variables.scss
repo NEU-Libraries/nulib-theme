@@ -1,16 +1,16 @@
-  
+
 //// Colors
 //
 // Web Color Pallet
 //
 
 // Red
-// #cc0000 
+// #cc0000
 // rgb 204 0 0
 $red: #cc0000;
 
 // Black
-// #000000 
+// #000000
 // rgb 0 0 0
 $black: #000000;
 
@@ -93,11 +93,14 @@ $lightest-taupe: #f2f1ea;
 $searchUrlColor: $darker-gray;
 
 
+// Body Background
+$bodyBackgroundColor: #e9e8e5;
+
 // Components
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // Default sizing
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $component-large-border-radius: 5px;
 $component-default-border-radius: 3px;
 $component-small-border-radius: 2px;
@@ -105,7 +108,7 @@ $component-small-border-radius: 2px;
 
 
 
-// Forms 
+// Forms
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 $input-inset-box-shadow: inset 0 0 10px $light-gray;
@@ -113,17 +116,17 @@ $input-padding: 6px 8px;
 $input-large-padding: 16px 10px;
 $input-large-border-radius: $component-large-border-radius;
 // Placeholder
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 $placeholder-color: $darker-light-gray;
 
 
 // Branding
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 $nu-libraries-logo: 'library-logo/nu-libraries-lockup-color';
 
 // Big Search Homepage
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 $big-search-link-color: $black;
 $big-search-text-color: $black;
