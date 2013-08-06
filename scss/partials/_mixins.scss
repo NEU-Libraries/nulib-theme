@@ -7,6 +7,14 @@
 }
 
 
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
 @mixin linkTextOffscreen() {
     text-indent: -9999px;
     overflow: hidden;
@@ -41,7 +49,7 @@
     color: $color;
     font-style: italic !important;
   }
-  
+
 }
 
 @mixin typeMode($font-color, $font-size) {
@@ -79,12 +87,28 @@
 @mixin svg-background($img) {
   $png: '#{$img}.png';
   $svg: '#{$img}.svg';
-  
+
   background-image: image-url($png);
   background-image: none, image-url($svg);
   background-repeat: no-repeat;
   @include background-size(contain);
 }
 
+
+@mixin nulib-search-block {
+    height: 16px;
+    width: 190px;
+    margin: 0;
+    padding: 6px 5px 4px;
+    border: 1px solid #666;
+    font-size:  1.4em;
+    line-height:1.25em;
+    font-family: "Times New Roman", Times, Georgia, serif;
+    font-style: normal;
+    color: #666;
+    box-shadow: $input-inset-box-shadow;
+    @include border-radius($component-large-border-radius);
+    @include placeholder($placeholder-color);
+}
 
 

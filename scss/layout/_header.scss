@@ -17,10 +17,8 @@ Header
   position: relative;
   top: 30px;
   left: 10px;
-  
+
   display: block;
-  //background: image-url($nu-libraries-logo + '.svg') no-repeat top left;
-  //background-size: contain;
   span{
     @include hide-text();
   }
@@ -51,24 +49,13 @@ Header
 }
 
 #block-search-by-page-1 {
+
   .form-item {
     float: left;
     margin: 0;
   }
   .form-text {
-    height: 16px;
-    width: 190px;
-    margin: 0;
-    padding: 6px 5px 4px;
-    border: 1px solid #666;
-    font-size:  1.4em;
-    line-height:1.25em;
-    font-family: "Times New Roman", Times, Georgia, serif;
-    font-style: normal;
-    color: #666;
-    box-shadow: $input-inset-box-shadow;
-    @include border-radius($component-large-border-radius);
-    @include placeholder($placeholder-color);
+    @include nulib-search-block;
   }
   .typeMode {
     color: #000;

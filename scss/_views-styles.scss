@@ -1,11 +1,3 @@
-/**
- * @file
- * Views Styling
- */
-
-
-
-
 .view-search-node-index{
   h4{
     font-size: 1.2em;
@@ -25,7 +17,7 @@
     position: absolute;
     top: 50px;
     left: 693px;
-    width: 218px;
+    width: 225px;
   }
   label, .description{
       position: absolute !important;
@@ -47,27 +39,19 @@
   left: 734px;
 }
 #block-views-exp-search-node-index-page-1, #views-exposed-form-search-user-index-page {
+
   .form-item {
     float: left;
     margin: 0;
   }
   .form-text {
-    height: 16px;
-    width: 190px;
-    line-height: 16px;
-    margin:0;
-    padding:6px 5px 4px;
-    border: 1px solid #666;
-    font: 1.4em/1.25em "Times New Roman",Times,Georgia,serif;
-    color: #000;
-    box-shadow: inset 0 0 2px #666;
-    @include placeholder(#666);
+    @include nulib-search-block;
   }
   .form-submit {
     margin:0;
     border:0 none;
     text-indent: -999em;
-    text-transform:capitalize;  //IE fix 
+    text-transform:capitalize;  //IE fix
     height: 27px;
     width: 14px;
     background:url(../images/style/search_arrow.gif) no-repeat left top transparent;
@@ -76,7 +60,7 @@
     background:url(../images/style-special/search_arrow.gif) no-repeat left top transparent;
   }
 }
-  
+
 .views-exposed-form .views-exposed-widget{
   float: none;
   padding: 0;
@@ -91,7 +75,7 @@
   padding-top: 1em;
   h2{
     text-indent: -2000em;
-    
+
     background: url('/sites/all/themes/nulib/images/style/construction.svg') top right no-repeat;
     background-size: 205px 75px;
     display: block;
@@ -116,9 +100,7 @@
     font-size: 12px;
   }
 }
-/**
- * End construction updates block styling. 
- */
+// End construction updates block styling.
 
 
 .view-id-search_user_index {

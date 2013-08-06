@@ -60,9 +60,9 @@
   }
   [name="search_scope"] {
     font-family: Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 14px;
-    line-height: inherit;
+    font-size: 15px;
     padding: $input-large-padding;
+    line-height: 1;
     float: left;
     clear: right;
     height: 52.5px;
@@ -261,19 +261,12 @@
       height: 30px;
       width: $big-search-gateway-search-width;
       font-size: 1.6em;
-      line-height: 1em;
+      line-height: 1;
       @include ellipsis();
-      &:-moz-placeholder{
+      @include input-placeholder{
         font-size: $big-search-gateway-search-placeholder-font-size;
-      }
-      &::-moz-placeholder{
-        font-size: $big-search-gateway-search-placeholder-font-size;
-      }
-      &:-ms-input-placeholder{
-        font-size: $big-search-gateway-search-placeholder-font-size;
-      }
-      &::-webkit-input-placeholder{
-        font-size: $big-search-gateway-search-placeholder-font-size;
+        padding: 0;
+        margin: 0;
       }
     }
 
@@ -281,7 +274,7 @@
       height: 35px;
       width: $big-search-gateway-select-width;
       font-size: $big-search-gateway-select-font-size;
-      @include ellipsis();
+      padding: 3px;
     }
     .form-submit,
     .submit {

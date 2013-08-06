@@ -24,5 +24,4 @@ color_output = false
 # and then run:
 # sass-convert -R --from scss --to sass scss scss && rm -rf sass && mv scss sass
 
-
-require 'bourbon-compass'
+environment = :production
