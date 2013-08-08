@@ -1,3 +1,9 @@
+/* line 1, ../scss/libraries/_base.scss */
+.item-list ul li, ul.menu li, li.expanded, li.collapsed, li.leaf {
+  margin: 0;
+  padding: 0;
+}
+
 /* line 17, ../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -1235,7 +1241,7 @@ body.special {
   float: right;
   margin: -50px 10px 0 0;
   padding: 14px 5px 126px;
-  font: 1em / 1.5em Verdana, Arial, sans-serif;
+  font: 1.03em / 1.6em Verdana, Arial, sans-serif;
   width: 195px;
   background-color: #f0efee;
 }
@@ -1649,15 +1655,16 @@ Header
   margin: 6px 4px;
   width: 180px;
   font-size: 1.2em;
+  background-color: #FFFFFF;
 }
-/* line 236, ../scss/layout/_navigation.scss */
+/* line 237, ../scss/layout/_navigation.scss */
 .region-navigation .container-inline select {
   position: relative;
   z-index: 100;
   margin-top: 3px;
 }
 
-/* line 243, ../scss/layout/_navigation.scss */
+/* line 244, ../scss/layout/_navigation.scss */
 .hideOption {
   color: #fff !important;
   display: none !important;
@@ -2192,7 +2199,7 @@ Modules
 /* line 184, ../scss/components/_modules.scss */
 .textbox p,
 #columnTwo .block-aggregator p {
-  line-height: 1.3em;
+  line-height: 1.42em;
 }
 
 /* line 187, ../scss/components/_modules.scss */
