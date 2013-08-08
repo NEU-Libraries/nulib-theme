@@ -1,1 +1,6 @@
 @import "compass/reset";
+
+.item-list ul li, ul.menu li, li.expanded, li.collapsed, li.leaf {
+  margin: 0;
+  padding: 0;
+}

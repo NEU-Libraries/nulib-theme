@@ -112,3 +112,27 @@
 }
 
 
+// @mixin btn(
+//   $btn-color: $lightest-gray,
+//   $btn-size: 'defualt';
+//   $btn-highlight-color: lighten($btn-color, 10%),
+//   $btn-bg-color: $dark-gray,
+//   $btn-highlight-bg-color: lighten($btn-bg-color, 10%),
+//   $btn-padding: 0.25em 0.4em,
+//   $btn-border-radius: 0.2em
+//   )
+//   {
+//     @include border-radius($btn-border-radius);
+//     padding: $btn-padding;
+//     font-size:
+//     background: $btn-bg-color;
+//     background-image: none;
+//     color: $btn-color;
+//     &:hover,
+//     &:focus,
+//     &:active{
+//       background: $btn-highlight-bg-color;
+//       color: $btn-highlight-color;
+//     }
+// }
+

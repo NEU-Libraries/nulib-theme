@@ -1,0 +1,48 @@
+.node-bookplate{
+  .field-name-field-db-image{
+    float: left;
+    margin: 0 1.5em 1.5em 0;
+  }
+  .field-type-text,
+  .field-type-text-with-summary,
+  .field-type-link-field,
+  .field-type-date{
+
+  }
+}
+
+.bookplate-grid{
+  *{
+    @include box-sizing(border-box);
+  }
+  .views-row{
+    width: 100%;
+    clear: both;
+  }
+  .views-column{
+    padding-right: 5px;
+    padding-left: 5px;
+    width: 25%;
+    float: left;
+  }
+  .views-exposed-widget{
+    float: left;
+    width: 25%;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: 12px;
+    input,
+    select{
+      display: block;
+      width: 100%;
+    }
+  }
+  input.form-submit{
+    font-weight: inherit;
+    width: auto;
+    height: auto;
+    background-image: none;
+
+    @include sassy-button();
+  }
+}
