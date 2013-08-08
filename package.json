@@ -1,0 +1,26 @@
+{
+  "name": "nulib",
+  "version": "0.0.0",
+  "description": "Northeastern Libraries Style Guide",
+  "main": "ckeditor.config.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nu-lts/nulib-theme"
+  },
+  "keywords": [
+    "theme",
+    "drupal"
+  ],
+  "author": "",
+  "license": "BSD",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-compass": "~0.3.0",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-jekyll": "~0.3.8"
+  }
+}

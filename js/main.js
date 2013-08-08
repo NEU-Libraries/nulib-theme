@@ -1,3 +1,27 @@
+// Avoid `console` errors in browsers that lack a console.
+// @link https://raw.github.com/h5bp/html5-boilerplate/master/js/plugins.js
+(function() {
+    var method;
+    var noop = function () {};
+    var methods = [
+        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+        'timeStamp', 'trace', 'warn'
+    ];
+    var length = methods.length;
+    var console = (window.console = window.console || {});
+
+    while (length--) {
+        method = methods[length];
+
+        // Only stub undefined methods.
+        if (!console[method]) {
+            console[method] = noop;
+        }
+    }
+}());
+
 (function($){
 
   var $neu = {
@@ -14,7 +38,7 @@
       $(".region-navigation .container-inline select option[value='/']").empty();
 
       $neu.initSideNavigation();
-  
+
       $neu.initAccordions();
       //$neu.initMegaMenu();
 
@@ -230,7 +254,7 @@ $.fn.vAlign = function() {
   };
 })(jQuery);
 
-
+//Redirect mobile site if sreenwidth is less than or equal to 699.
 if ((screen.width <= 699) && (document.location.href === "http://library.northeastern.edu/")){
   document.location = "http://www.lib.neu.edu/m";
 }

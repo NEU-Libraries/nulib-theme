@@ -1,21 +1,22 @@
-
-
+// Global SCSS file for NU Libraries Theme
+//
+//
+//
 @import 'screen.scss';
 @import 'variables.scss';
 @import 'partials/mixins';
-@import 'branding/northeastern-logo';
 
 @import 'html-reset.scss';
 @import 'reset-base.scss';
 @import 'page-backgrounds.scss';
 @import 'tabs.scss';
 @import 'pages.scss';
-@import 'blocks.scss';
-@import 'navigation.scss';
+@import 'components/blocks.scss';
+@import 'components/navigation.scss';
 @import 'views-styles.scss';
 @import 'nodes.scss';
 
-
+//layout
 @import 'layout/page';
 @import 'layout/header';
 @import 'layout/navigation';
@@ -24,13 +25,15 @@
 @import 'layout/column-two';
 @import 'layout/footer';
 
-@import 'modules.scss';
+@import 'components/modules.scss';
 @import 'templates.scss';
-@import 'comments.scss';
-@import 'forms.scss';
-@import 'fields.scss';
+@import 'components/comments.scss';
+@import 'components/forms.scss';
+@import 'components/fields.scss';
 @import 'corrections.scss';
 @import 'ie-styles.scss';
-@import 'big-search.scss';
+
+//components
+@import 'components/big-search.scss';
 @import 'nu-footer.scss';
 @import 'nulib.scss';
