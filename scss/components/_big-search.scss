@@ -47,18 +47,20 @@
     color: $big-search-link-color;
   }
   .search {
+    @include typeMode($big-search-text-color, $big-search-input-font-size);
+    @include box-shadow($big-search-input-box-shadow);
+    @include border-radius($component-large-border-radius);
+    @include placeholder-search;
     margin: 0;
     padding: 14px 10px;
     max-height: 45px;
-    width: 350px;
+    width: 349px;
     border: 1px solid #666;
     float: left;
-    @include typeMode($big-search-text-color, $big-search-input-font-size);
-    box-shadow: $big-search-input-box-shadow;
-    @include border-radius($component-large-border-radius);
-    @include placeholder-search;
   }
   [name="search_scope"] {
+    @include border-radius($input-large-border-radius);
+    @include box-shadow($big-search-input-box-shadow);
     font-family: Tahoma, Geneva, Verdana, sans-serif;
     font-size: 15px;
     padding: $input-large-padding;
@@ -67,7 +69,6 @@
     clear: right;
     height: 52.5px;
     border: 1px solid $darkest-gray;
-    border-radius: $input-large-border-radius;
     background-color: $white;
     margin-left: 5px;
     width: 220px;

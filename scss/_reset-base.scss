@@ -2,6 +2,13 @@
 Reset + Base, all wrapped into one goodie
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+html{
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
 a {
   color: #c00;
   text-decoration: none;
