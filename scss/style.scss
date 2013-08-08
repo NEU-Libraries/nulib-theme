@@ -1,10 +1,9 @@
 // Global SCSS file for NU Libraries Theme
-//
-//
-//
-@import 'screen.scss';
-@import 'variables.scss';
-@import 'partials/mixins';
+
+@import "compass";
+@import "libraries/base.scss";
+@import 'libraries/variables.scss';
+@import 'libraries/mixins.scss';
 
 @import 'html-reset.scss';
 @import 'reset-base.scss';
@@ -26,6 +25,7 @@
 @import 'layout/footer';
 
 @import 'components/modules.scss';
+@import 'components/social-networking-menu.scss';
 @import 'templates.scss';
 @import 'components/comments.scss';
 @import 'components/forms.scss';
@@ -37,3 +37,7 @@
 @import 'components/big-search.scss';
 @import 'nu-footer.scss';
 @import 'nulib.scss';
+
+
+//sections
+@import 'sections/bookplates.scss';
