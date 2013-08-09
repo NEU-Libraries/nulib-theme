@@ -1,3 +1,7 @@
+@function em($px, $base: $base-font-size) {
+    @return ($px / $base) * 1em;
+}
+
 @mixin vendorize($property, $value) {
   -webkit-#{$property}: $value;
   -moz-#{$property}: $value;
@@ -111,28 +115,57 @@
     @include placeholder($placeholder-color);
 }
 
+@mixin link-transition($link-color: $link-color, $link-hover-color: $link-hover-color){
+  @include single-transition(color, 0.5s);
+  color: $link-color;
+  text-decoration: none;
+  &:link, &:visited {
+    color: $link-color;
+    text-decoration: none;
+  }
+  &:hover, &:focus, &:active {
+    @include single-transition(color, 0.5s);
+    outline: 0 none;
+    text-decoration: underline;
+    color: $link-hover-color;
+  }
+}
 
-// @mixin btn(
-//   $btn-color: $lightest-gray,
-//   $btn-size: 'defualt';
-//   $btn-highlight-color: lighten($btn-color, 10%),
-//   $btn-bg-color: $dark-gray,
-//   $btn-highlight-bg-color: lighten($btn-bg-color, 10%),
-//   $btn-padding: 0.25em 0.4em,
-//   $btn-border-radius: 0.2em
-//   )
-//   {
-//     @include border-radius($btn-border-radius);
-//     padding: $btn-padding;
-//     font-size:
-//     background: $btn-bg-color;
-//     background-image: none;
-//     color: $btn-color;
-//     &:hover,
-//     &:focus,
-//     &:active{
-//       background: $btn-highlight-bg-color;
-//       color: $btn-highlight-color;
-//     }
-// }
+
+
+@mixin img-polaroid{
+  @include box-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
+  padding: em(4px);
+  background-color: $white;
+  border: em(1px) solid #ccc;
+  border: em(1px) solid rgba(0, 0, 0, 0.2);
+}
+
+@mixin img-rounded{
+  @inlcude border-radius($border-radius-large);
+}
+
+
+
+
+// Perfect circle
+@mixin img-circle {
+  border-radius: 500px; // crank the border-radius so it works with most reasonably sized images
+}
+
+@mixin thumbnail{
+  @include single-transition(all .2s ease-in-out);
+  @include border-radius($thumbnail-border-radius);
+  padding: 4px;
+  line-height: $line-height-base;
+  background-color: $thumbnail-bg;
+  border: 1px solid $thumbnail-border;
+  img{
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
 

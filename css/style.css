@@ -80,72 +80,79 @@ html {
 /* line 8, ../scss/_reset-base.scss */
 body {
   min-height: 100%;
+  font-size: 1em;
 }
 
-/* line 12, ../scss/_reset-base.scss */
+/* line 13, ../scss/_reset-base.scss */
 a {
-  color: #c00;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+  color: #cc0000;
   text-decoration: none;
 }
-/* line 15, ../scss/_reset-base.scss */
+/* line 122, ../scss/libraries/_mixins.scss */
 a:link, a:visited {
-  color: #c00;
+  color: #cc0000;
   text-decoration: none;
 }
-/* line 19, ../scss/_reset-base.scss */
-a:hover {
-  text-decoration: underline;
-}
-/* line 22, ../scss/_reset-base.scss */
-a:focus, a:active {
+/* line 126, ../scss/libraries/_mixins.scss */
+a:hover, a:focus, a:active {
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
   outline: 0 none;
+  text-decoration: underline;
+  color: #990000;
 }
 
-/* line 27, ../scss/_reset-base.scss */
+/* line 17, ../scss/_reset-base.scss */
 em, i {
   font-style: italic;
 }
 
-/* line 31, ../scss/_reset-base.scss */
+/* line 21, ../scss/_reset-base.scss */
 strong, b {
   font-weight: bold;
 }
 
-/* line 35, ../scss/_reset-base.scss */
+/* line 25, ../scss/_reset-base.scss */
 p, code {
   margin: 0;
   padding: 0 0 1.2em;
 }
 
-/* line 40, ../scss/_reset-base.scss */
+/* line 30, ../scss/_reset-base.scss */
 p.image-holder {
   padding: 0;
 }
 
-/* line 44, ../scss/_reset-base.scss */
+/* line 34, ../scss/_reset-base.scss */
 #mainContent p {
   padding: 0 0 .5em;
 }
 
-/* line 48, ../scss/_reset-base.scss */
+/* line 38, ../scss/_reset-base.scss */
 ol, ul, dl {
   margin: 0 0 1.5em;
   padding: 0;
 }
 
-/* line 53, ../scss/_reset-base.scss */
+/* line 43, ../scss/_reset-base.scss */
 dt {
   margin: 0;
   padding: 0;
 }
 
-/* line 61, ../scss/_reset-base.scss */
+/* line 49, ../scss/_reset-base.scss */
 dl dd {
   margin: 0 0 .7em;
   padding: 0;
 }
 
-/* line 66, ../scss/_reset-base.scss */
+/* line 54, ../scss/_reset-base.scss */
 blockquote, q {
   margin: 0;
   padding: 20px 16px 10px 47px;
@@ -155,36 +162,36 @@ blockquote, q {
   background: #ecebe8 url(../images/style/bigquote.gif) top left no-repeat;
 }
 
-/* line 76, ../scss/_reset-base.scss */
+/* line 64, ../scss/_reset-base.scss */
 .special blockquote, .special q {
   background: #f2f1ea url(../images/style-special/bigquote.gif) top left no-repeat;
 }
 
-/* line 82, ../scss/_reset-base.scss */
+/* line 70, ../scss/_reset-base.scss */
 q:before, q:after {
   content: '';
 }
 
-/* line 87, ../scss/_reset-base.scss */
+/* line 75, ../scss/_reset-base.scss */
 blockquote cite, q cite {
   display: block;
 }
 
-/* line 91, ../scss/_reset-base.scss */
+/* line 79, ../scss/_reset-base.scss */
 h1 {
   margin: 0 0 8px;
   padding: 0;
   font: normal 1.9em / 1.1em HelveticaNeue67MdCn, Verdana, sans-serif;
 }
 
-/* line 97, ../scss/_reset-base.scss */
+/* line 85, ../scss/_reset-base.scss */
 h2 {
   font: normal 18px / 1.1em HelveticaNeue67MdCn, Verdana, sans-serif;
   margin: 10px 0 5px;
   padding: 0;
 }
 
-/* line 103, ../scss/_reset-base.scss */
+/* line 91, ../scss/_reset-base.scss */
 h3 {
   color: #000000;
   font: 18px / 1.1em "Times New Roman", Times, Georgia, sans-serif;
@@ -192,7 +199,7 @@ h3 {
   padding: 0;
 }
 
-/* line 110, ../scss/_reset-base.scss */
+/* line 98, ../scss/_reset-base.scss */
 h4 {
   color: #000000;
   font: 1.2em / 1.1em Verdana, Arial, sans-serif;
@@ -200,13 +207,13 @@ h4 {
   padding: 0;
 }
 
-/* line 117, ../scss/_reset-base.scss */
+/* line 105, ../scss/_reset-base.scss */
 #columnTwo h4 {
   font: normal 1.5em / 1.1em HelveticaNeue67MdCn, Verdana, sans-serif;
   color: #333;
 }
 
-/* line 122, ../scss/_reset-base.scss */
+/* line 110, ../scss/_reset-base.scss */
 #columnOne h2 {
   font: normal normal 1.5em / 1.1em HelveticaNeue67MdCn, Verdana, sans-serif;
   margin: 10px 0 5px;
@@ -214,7 +221,7 @@ h4 {
   color: #333;
 }
 
-/* line 129, ../scss/_reset-base.scss */
+/* line 117, ../scss/_reset-base.scss */
 h5 {
   font: bold 1em / 1.1em Verdana, Arial, sans-serif;
   margin: 10px 0 5px;
@@ -223,7 +230,7 @@ h5 {
   text-transform: uppercase;
 }
 
-/* line 137, ../scss/_reset-base.scss */
+/* line 125, ../scss/_reset-base.scss */
 h6 {
   font: bold 1em / 1.1em Verdana, Arial, sans-serif;
   margin: 10px 0 5px;
@@ -231,13 +238,13 @@ h6 {
   color: #666;
 }
 
-/* line 144, ../scss/_reset-base.scss */
+/* line 132, ../scss/_reset-base.scss */
 caption {
   margin: 0.5em;
   text-align: left;
 }
 
-/* line 149, ../scss/_reset-base.scss */
+/* line 137, ../scss/_reset-base.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -247,7 +254,7 @@ table {
   background-color: white;
 }
 
-/* line 158, ../scss/_reset-base.scss */
+/* line 146, ../scss/_reset-base.scss */
 th, td {
   margin: 0;
   padding: 4px 5px 3px;
@@ -255,53 +262,53 @@ th, td {
   text-align: left;
 }
 
-/* line 165, ../scss/_reset-base.scss */
+/* line 153, ../scss/_reset-base.scss */
 th {
   font-weight: bold;
   vertical-align: bottom;
 }
 
-/* line 170, ../scss/_reset-base.scss */
+/* line 158, ../scss/_reset-base.scss */
 td {
   vertical-align: top;
 }
 
-/* line 174, ../scss/_reset-base.scss */
+/* line 162, ../scss/_reset-base.scss */
 tr.evenRow td {
   background-color: #fafafa;
 }
 
-/* line 179, ../scss/_reset-base.scss */
+/* line 167, ../scss/_reset-base.scss */
 tbody tr:hover td, tbody tr:hover th {
   background: #ecebe8;
 }
 
-/* line 185, ../scss/_reset-base.scss */
+/* line 173, ../scss/_reset-base.scss */
 .special tbody tr:hover td, .special tbody tr:hover th {
   background: #eee;
 }
 
-/* line 190, ../scss/_reset-base.scss */
+/* line 178, ../scss/_reset-base.scss */
 form {
   display: block;
   margin: 0;
   padding: 0;
 }
 
-/* line 196, ../scss/_reset-base.scss */
+/* line 184, ../scss/_reset-base.scss */
 fieldset {
   padding: 0.5em;
   margin: 1em 0;
   border: 1px solid #ccc;
 }
 
-/* line 202, ../scss/_reset-base.scss */
+/* line 190, ../scss/_reset-base.scss */
 legend {
   padding: 0 0.25em;
   font-weight: bold;
 }
 
-/* line 207, ../scss/_reset-base.scss */
+/* line 195, ../scss/_reset-base.scss */
 label, .webform-client-form label {
   margin: 0;
   padding: 3px;
@@ -309,7 +316,7 @@ label, .webform-client-form label {
   vertical-align: middle;
 }
 
-/* line 214, ../scss/_reset-base.scss */
+/* line 202, ../scss/_reset-base.scss */
 textarea {
   margin: 0 0 1em;
   padding: 0;
@@ -320,7 +327,7 @@ textarea {
   border: 1px solid #999;
 }
 
-/* line 224, ../scss/_reset-base.scss */
+/* line 212, ../scss/_reset-base.scss */
 select {
   margin: 0 0 1em;
   vertical-align: middle;
@@ -329,11 +336,11 @@ select {
   border: 1px solid #999;
 }
 
-/* line 232, ../scss/_reset-base.scss */
+/* line 220, ../scss/_reset-base.scss */
 input {
   vertical-align: middle;
 }
-/* line 234, ../scss/_reset-base.scss */
+/* line 222, ../scss/_reset-base.scss */
 input.form-text {
   margin: 0 0 1em;
   padding: 2px 3px;
@@ -341,63 +348,97 @@ input.form-text {
   color: #333;
   border: 1px solid #999;
 }
-/* line 241, ../scss/_reset-base.scss */
+/* line 229, ../scss/_reset-base.scss */
 input[type=button], input[type=submit], input[type=reset] {
+  font-size: 1.1em;
+  padding: 0.3em 1.5em;
+  color: white;
+  display: inline-block;
   cursor: pointer;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF666666', endColorstr='#FF333333');
+  background-color: #666666;
+  border: 0;
 }
-/* line 244, ../scss/_reset-base.scss */
+/* line 15, ../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/sassy-buttons-0.2/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+  text-decoration: none;
+}
+/* line 42, ../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/sassy-buttons-0.2/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+  background-color: #595959;
+}
+/* line 44, ../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/sassy-buttons-0.2/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+input[type=button]:active, input[type=submit]:active, input[type=reset]:active {
+  background-color: #525252;
+}
+/* line 6, ../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/sassy-buttons-0.2/stylesheets/sassy-buttons/_sassy-button-pseudo-states.sass */
+input[type=button].disabled, input[type=button][disabled], input[type=submit].disabled, input[type=submit][disabled], input[type=reset].disabled, input[type=reset][disabled] {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
+  background: false;
+  cursor: default;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 76, ../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/sassy-buttons-0.2/stylesheets/_sassy-buttons.sass */
+input[type=button]::-moz-focus-inner, input[type=submit]::-moz-focus-inner, input[type=reset]::-moz-focus-inner {
+  padding: 0 !important;
+  margin: -1px !important;
+}
+/* line 232, ../scss/_reset-base.scss */
 input[type=text]:focus {
   color: black;
   border: 1px solid black;
 }
 
-/* line 250, ../scss/_reset-base.scss */
+/* line 238, ../scss/_reset-base.scss */
 textarea:focus {
   color: black;
   border: 1px solid black;
 }
 
-/* line 257, ../scss/_reset-base.scss */
+/* line 245, ../scss/_reset-base.scss */
 input[type=text][disabled], input[type=button][disabled], input[type=submit][disabled], input[type=reset][disabled] {
   color: #666;
 }
 
-/* line 263, ../scss/_reset-base.scss */
+/* line 251, ../scss/_reset-base.scss */
 label input, label select, label textarea {
   margin: 0 0.5em;
 }
-/* line 267, ../scss/_reset-base.scss */
+/* line 255, ../scss/_reset-base.scss */
 label input[type="radio"], label input[type="checkbox"] {
   margin: 0 0.5em 0 0;
 }
 
-/* line 273, ../scss/_reset-base.scss */
-img {
-  margin: 0 0 1.2em;
-  border: 0;
-}
-
-/* line 278, ../scss/_reset-base.scss */
+/* line 262, ../scss/_reset-base.scss */
 pre {
   margin: 0 0 1.2em;
   padding: 0;
   font-size: 1em;
 }
 
-/* line 284, ../scss/_reset-base.scss */
+/* line 268, ../scss/_reset-base.scss */
 address, cite, code, dfn, var {
   font-style: normal;
   font-weight: normal;
 }
 
-/* line 289, ../scss/_reset-base.scss */
+/* line 273, ../scss/_reset-base.scss */
 abbr, acronym {
   font-variant: normal;
   cursor: help;
   border-bottom: 1px dotted #000;
 }
 
-/* line 295, ../scss/_reset-base.scss */
+/* line 279, ../scss/_reset-base.scss */
 sup {
   vertical-align: text-top;
   font-size: 0.6em;
@@ -405,30 +446,30 @@ sup {
   top: -0.4em;
 }
 
-/* line 302, ../scss/_reset-base.scss */
+/* line 286, ../scss/_reset-base.scss */
 sub {
   vertical-align: text-bottom;
 }
 
-/* line 306, ../scss/_reset-base.scss */
+/* line 290, ../scss/_reset-base.scss */
 .left {
   float: left;
   margin: 0 12px 10px 0;
 }
 
-/* line 311, ../scss/_reset-base.scss */
+/* line 295, ../scss/_reset-base.scss */
 #columnTwo .left img {
   margin-bottom: 0;
 }
 
-/* line 315, ../scss/_reset-base.scss */
+/* line 299, ../scss/_reset-base.scss */
 .right {
   float: right;
   margin: 0 0 10px 12px;
 }
 
 /* CLEARFIX: SEE: http://perishablepress.com/press/2009/12/06/new-clearfix-hack/ */
-/* line 322, ../scss/_reset-base.scss */
+/* line 306, ../scss/_reset-base.scss */
 .spotlight:after, .clearfix:after {
   visibility: hidden;
   display: block;
@@ -438,18 +479,18 @@ sub {
   height: 0;
 }
 
-/* line 333, ../scss/_reset-base.scss */
+/* line 317, ../scss/_reset-base.scss */
 * html .clearfix, * html .spotlight {
   zoom: 1;
 }
-/* line 338, ../scss/_reset-base.scss */
+/* line 322, ../scss/_reset-base.scss */
 *:first-child + html .clearfix, *:first-child + html .spotlight {
   zoom: 1;
 }
 
 /* IE6 */
 /* IE7 */
-/* line 347, ../scss/_reset-base.scss */
+/* line 331, ../scss/_reset-base.scss */
 br.clearfix {
   clear: both;
   width: 100%;
@@ -457,18 +498,18 @@ br.clearfix {
   overflow: hidden;
 }
 
-/* line 354, ../scss/_reset-base.scss */
+/* line 338, ../scss/_reset-base.scss */
 .clear {
   clear: both;
   height: 0;
 }
 
-/* line 359, ../scss/_reset-base.scss */
+/* line 343, ../scss/_reset-base.scss */
 .clear-both {
   clear: both;
 }
 
-/* line 363, ../scss/_reset-base.scss */
+/* line 347, ../scss/_reset-base.scss */
 hr {
   margin: 0 0 1.2em;
   border: 0 none;
@@ -490,7 +531,7 @@ hr {
   font-style: normal;
 }
 
-/* line 386, ../scss/_reset-base.scss */
+/* line 370, ../scss/_reset-base.scss */
 .arrow a, a.arrow {
   padding-left: 10px;
   background: url(../images/style/redarrow2.gif) 0 3px no-repeat;
@@ -947,22 +988,22 @@ html.js #block-views-exp-search-node-index-page-1 input.throbbing, html.js #view
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 36, ../scss/libraries/_mixins.scss */
+/* line 40, ../scss/libraries/_mixins.scss */
 #block-views-exp-search-node-index-page-1 .form-text:-moz-placeholder, #views-exposed-form-search-user-index-page .form-text:-moz-placeholder {
   color: #c3c3c3;
   font-style: italic !important;
 }
-/* line 40, ../scss/libraries/_mixins.scss */
+/* line 44, ../scss/libraries/_mixins.scss */
 #block-views-exp-search-node-index-page-1 .form-text::-moz-placeholder, #views-exposed-form-search-user-index-page .form-text::-moz-placeholder {
   color: #c3c3c3;
   font-style: italic !important;
 }
-/* line 44, ../scss/libraries/_mixins.scss */
+/* line 48, ../scss/libraries/_mixins.scss */
 #block-views-exp-search-node-index-page-1 .form-text:-ms-input-placeholder, #views-exposed-form-search-user-index-page .form-text:-ms-input-placeholder {
   color: #c3c3c3;
   font-style: italic !important;
 }
-/* line 48, ../scss/libraries/_mixins.scss */
+/* line 52, ../scss/libraries/_mixins.scss */
 #block-views-exp-search-node-index-page-1 .form-text::-webkit-input-placeholder, #views-exposed-form-search-user-index-page .form-text::-webkit-input-placeholder {
   color: #c3c3c3;
   font-style: italic !important;
@@ -1286,46 +1327,46 @@ Header
   left: 10px;
   display: block;
 }
-/* line 22, ../scss/layout/_header.scss */
+/* line 21, ../scss/layout/_header.scss */
 .main-logo a span {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
 }
 
-/* line 28, ../scss/layout/_header.scss */
+/* line 27, ../scss/layout/_header.scss */
 .special .main-logo svg * {
   fill: #FFFFFF !important;
 }
 
-/* line 32, ../scss/layout/_header.scss */
+/* line 31, ../scss/layout/_header.scss */
 .no-svg .main-logo a {
   background: url('../images/library-logo/nu-libraries-lockup-color.png?1372620342') no-repeat top left;
   background-size: auto auto;
 }
-/* line 35, ../scss/layout/_header.scss */
+/* line 34, ../scss/layout/_header.scss */
 .special .no-svg .main-logo a {
   background: url('../images/style-special/lib_logo.gif?1372695689') no-repeat top left;
 }
 
-/* line 41, ../scss/layout/_header.scss */
+/* line 40, ../scss/layout/_header.scss */
 #block-search-by-page-1 {
   position: absolute;
   top: 58px;
   left: 699px;
 }
 
-/* line 47, ../scss/layout/_header.scss */
+/* line 46, ../scss/layout/_header.scss */
 .special #block-search-by-page-1 {
   left: 734px;
 }
 
-/* line 53, ../scss/layout/_header.scss */
+/* line 52, ../scss/layout/_header.scss */
 #block-search-by-page-1 .form-item {
   float: left;
   margin: 0;
 }
-/* line 57, ../scss/layout/_header.scss */
+/* line 56, ../scss/layout/_header.scss */
 #block-search-by-page-1 .form-text {
   height: 16px;
   width: 190px;
@@ -1344,32 +1385,32 @@ Header
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 36, ../scss/libraries/_mixins.scss */
+/* line 40, ../scss/libraries/_mixins.scss */
 #block-search-by-page-1 .form-text:-moz-placeholder {
   color: #c3c3c3;
   font-style: italic !important;
 }
-/* line 40, ../scss/libraries/_mixins.scss */
+/* line 44, ../scss/libraries/_mixins.scss */
 #block-search-by-page-1 .form-text::-moz-placeholder {
   color: #c3c3c3;
   font-style: italic !important;
 }
-/* line 44, ../scss/libraries/_mixins.scss */
+/* line 48, ../scss/libraries/_mixins.scss */
 #block-search-by-page-1 .form-text:-ms-input-placeholder {
   color: #c3c3c3;
   font-style: italic !important;
 }
-/* line 48, ../scss/libraries/_mixins.scss */
+/* line 52, ../scss/libraries/_mixins.scss */
 #block-search-by-page-1 .form-text::-webkit-input-placeholder {
   color: #c3c3c3;
   font-style: italic !important;
 }
-/* line 60, ../scss/layout/_header.scss */
+/* line 59, ../scss/layout/_header.scss */
 #block-search-by-page-1 .typeMode {
   color: #000;
   font-style: normal;
 }
-/* line 64, ../scss/layout/_header.scss */
+/* line 63, ../scss/layout/_header.scss */
 #block-search-by-page-1 .form-submit {
   margin: 0;
   padding: 0;
@@ -1382,11 +1423,11 @@ Header
   background: url(../images/style/search_arrow.gif) no-repeat left top transparent;
 }
 
-/* line 78, ../scss/layout/_header.scss */
+/* line 77, ../scss/layout/_header.scss */
 .special #block-search-by-page-1 .form-submit {
   background: url(../images/style-special/search_arrow.gif) no-repeat left top transparent;
 }
-/* line 81, ../scss/layout/_header.scss */
+/* line 80, ../scss/layout/_header.scss */
 .special .region-navigation-wrapper {
   background: #3f3f3f url(../images/style/navbg.gif) repeat-x left top;
   border-top: 1px solid #000;
@@ -4087,6 +4128,15 @@ form table .item-list ul {
   margin: 0;
 }
 
+/* line 2, ../scss/components/_pager.scss */
+.pager > li {
+  border: 1px solid #c3c3c3;
+}
+/* line 4, ../scss/components/_pager.scss */
+.pager > li > * {
+  padding: 0.2em 0.5em;
+}
+
 /* line 6, ../scss/_corrections.scss */
 .field-collection-container,
 .field-collection-container .field-items .field-item,
@@ -4394,27 +4444,27 @@ img {
   border: 1px solid #666;
   float: left;
 }
-/* line 71, ../scss/libraries/_mixins.scss */
+/* line 75, ../scss/libraries/_mixins.scss */
 .bigSearch .search::-webkit-input-placeholder {
   font: italic 22px/1 "Times New Roman", Times, Georgia, serif;
   color: #c3c3c3;
   vertical-align: middle;
 }
-/* line 74, ../scss/libraries/_mixins.scss */
+/* line 78, ../scss/libraries/_mixins.scss */
 .bigSearch .search:-moz-placeholder {
   /* Firefox 18- */
   font: italic 22px/1 "Times New Roman", Times, Georgia, serif;
   color: #c3c3c3;
   vertical-align: middle;
 }
-/* line 78, ../scss/libraries/_mixins.scss */
+/* line 82, ../scss/libraries/_mixins.scss */
 .bigSearch .search::-moz-placeholder {
   /* Firefox 19+ */
   font: italic 22px/1 "Times New Roman", Times, Georgia, serif;
   color: #c3c3c3;
   vertical-align: middle;
 }
-/* line 82, ../scss/libraries/_mixins.scss */
+/* line 86, ../scss/libraries/_mixins.scss */
 .bigSearch .search:-ms-input-placeholder {
   font: italic 22px/1 "Times New Roman", Times, Georgia, serif;
   color: #c3c3c3;
@@ -4648,31 +4698,31 @@ img {
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
-/* line 11, ../scss/libraries/_mixins.scss */
+/* line 15, ../scss/libraries/_mixins.scss */
 .region-content-top .bigSearch .search.placeholder {
   font-size: 0.85em;
   padding: 0;
   margin: 0;
 }
-/* line 12, ../scss/libraries/_mixins.scss */
+/* line 16, ../scss/libraries/_mixins.scss */
 .region-content-top .bigSearch .search:-moz-placeholder {
   font-size: 0.85em;
   padding: 0;
   margin: 0;
 }
-/* line 13, ../scss/libraries/_mixins.scss */
+/* line 17, ../scss/libraries/_mixins.scss */
 .region-content-top .bigSearch .search::-moz-placeholder {
   font-size: 0.85em;
   padding: 0;
   margin: 0;
 }
-/* line 14, ../scss/libraries/_mixins.scss */
+/* line 18, ../scss/libraries/_mixins.scss */
 .region-content-top .bigSearch .search:-ms-input-placeholder {
   font-size: 0.85em;
   padding: 0;
   margin: 0;
 }
-/* line 15, ../scss/libraries/_mixins.scss */
+/* line 19, ../scss/libraries/_mixins.scss */
 .region-content-top .bigSearch .search::-webkit-input-placeholder {
   font-size: 0.85em;
   padding: 0;
@@ -5354,46 +5404,106 @@ ul.calendar-links {
 
 /* line 2, ../scss/sections/_bookplates.scss */
 .node-bookplate .field-name-field-db-image {
+  -webkit-transition: all 0.2s ease-in-out, 1s;
+  -moz-transition: all 0.2s ease-in-out, 1s;
+  -o-transition: all 0.2s ease-in-out, 1s;
+  transition: all 0.2s ease-in-out, 1s;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  padding: 4px;
+  line-height: 1;
+  background-color: white;
+  border: 1px solid #dddddd;
   float: left;
   margin: 0 1.5em 1.5em 0;
 }
+/* line 163, ../scss/libraries/_mixins.scss */
+.node-bookplate .field-name-field-db-image img {
+  margin-left: auto;
+  margin-right: auto;
+}
 
-/* line 15, ../scss/sections/_bookplates.scss */
+/* line 12, ../scss/sections/_bookplates.scss */
 .bookplate-grid * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 18, ../scss/sections/_bookplates.scss */
+/* line 16, ../scss/sections/_bookplates.scss */
+.bookplate-grid h4,
+.bookplate-grid em {
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  display: inline-block;
+}
+/* line 22, ../scss/sections/_bookplates.scss */
+.bookplate-grid em {
+  margin-bottom: 0.375em;
+}
+/* line 25, ../scss/sections/_bookplates.scss */
+.bookplate-grid h4 {
+  font-size: 1.3em;
+  font-weight: 500;
+}
+/* line 29, ../scss/sections/_bookplates.scss */
 .bookplate-grid .views-row {
   width: 100%;
   clear: both;
 }
-/* line 22, ../scss/sections/_bookplates.scss */
-.bookplate-grid .views-column {
-  padding-right: 5px;
-  padding-left: 5px;
-  width: 25%;
-  float: left;
-}
-/* line 28, ../scss/sections/_bookplates.scss */
-.bookplate-grid .views-exposed-widget {
-  float: left;
-  width: 25%;
-  padding-right: 5px;
-  padding-left: 5px;
-  font-size: 12px;
-}
 /* line 35, ../scss/sections/_bookplates.scss */
+.bookplate-grid .views-column,
+.bookplate-grid .views-exposed-widget {
+  width: 23%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  float: left;
+}
+/* line 41, ../scss/sections/_bookplates.scss */
+.bookplate-grid .views-column {
+  -webkit-transition: all 0.2s ease-in-out, 1s;
+  -moz-transition: all 0.2s ease-in-out, 1s;
+  -o-transition: all 0.2s ease-in-out, 1s;
+  transition: all 0.2s ease-in-out, 1s;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  padding: 4px;
+  line-height: 1;
+  background-color: white;
+  border: 1px solid #dddddd;
+  width: 31.33333%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  padding: 0.3125em;
+}
+/* line 163, ../scss/libraries/_mixins.scss */
+.bookplate-grid .views-column img {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 48, ../scss/sections/_bookplates.scss */
+.bookplate-grid .views-exposed-widget {
+  font-size: 1.2em;
+}
+/* line 51, ../scss/sections/_bookplates.scss */
 .bookplate-grid .views-exposed-widget input,
 .bookplate-grid .views-exposed-widget select {
   display: block;
   width: 100%;
 }
-/* line 40, ../scss/sections/_bookplates.scss */
+/* line 57, ../scss/sections/_bookplates.scss */
 .bookplate-grid input.form-submit {
   font-weight: inherit;
-  width: auto;
+  width: 100%;
   height: auto;
   background-image: none;
   font-size: 1.1em;
@@ -5437,4 +5547,14 @@ ul.calendar-links {
 .bookplate-grid input.form-submit::-moz-focus-inner {
   padding: 0 !important;
   margin: -1px !important;
+}
+/* line 66, ../scss/sections/_bookplates.scss */
+.bookplate-grid img {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  width: 100%;
+  height: auto;
 }

@@ -70,16 +70,16 @@
 function nulib_preprocess_html(&$variables, $hook) {
   // We need to update the body classes in order to generate a sidebar if there are blocks in
   // the sidebar_second_top region.
-  if (!empty($variables['page']['sidebar_second_top']) && empty($variables['page']['sidebar_second'])) { 
+  if (!empty($variables['page']['sidebar_second_top']) && empty($variables['page']['sidebar_second'])) {
     if (in_array('one-sidebar sidebar-first', $variables['classes_array'])) {
-      // If the page knows that there is one sidebar and it's the left sidebar, then we update the classes array to 
+      // If the page knows that there is one sidebar and it's the left sidebar, then we update the classes array to
       // indicate two sidebars
       $variables['classes_array'] = array_diff($variables['classes_array'], array('one-sidebar sidebar-first'));
-      $variables['classes_array'][]  = 'two-sidebars';              
+      $variables['classes_array'][]  = 'two-sidebars';
     } else {
       // Since this page doesn't have any blocks in sidebar_second and the above case handles there being one sidebar,
-      // then this page must have no sidebars.  We should configure it to display the right sidebar. 
-      $variables['classes_array'][]  = 'one-sidebar sidebar-second';              
+      // then this page must have no sidebars.  We should configure it to display the right sidebar.
+      $variables['classes_array'][]  = 'one-sidebar sidebar-second';
     }
   }
 }
@@ -100,12 +100,12 @@ function nulib_preprocess_page(&$variables, $hook) {
   }
 }
 function nulib_preprocess_user_profile(&$variables) {
-  // We are unable to set the spamspan option for the user profile email field, so we 
-  // set it manually here.   
+  // We are unable to set the spamspan option for the user profile email field, so we
+  // set it manually here.
   $this_user = $variables['elements']['#account'];
   $variables['protected_email'] = spamspan($this_user->mail);
 }
-  
+
 /**
 * Override or insert variables into the node templates.
 *
@@ -114,52 +114,52 @@ function nulib_preprocess_user_profile(&$variables) {
 * @param $hook
 *   The name of the template being rendered ("node" in this case.)
 */
-function nulib_preprocess_node(&$variables, $hook) { 
+function nulib_preprocess_node(&$variables, $hook) {
   // Look for preprocess functions on a per content-type basis
   $function = __FUNCTION__ . '_' . $variables['node']->type;
   if (function_exists($function)) {
     $function($variables, $hook);
   }
-  if ($variables['page']) { 
+  if ($variables['page']) {
     // If we are displayiing this node as its own page, make the node body resizable.
     $variables['classes_array'][] = 'resizable';
   }
 }
 function nulib_preprocess_node_event(&$variables, $hook) {
   if (!$variables['teaser']) {
-    $node = $variables['node'];    
-    
+    $node = $variables['node'];
+
     $variables['img_type'] = field_fetch_value_fetch('node', $variables['node'], 'field_ev_image_orientation', 0);
-    
+
     // Get the "to" value for this event
     $to = field_fetch_value_fetch('node', $variables['node'], 'field_ev_date', 0, 'value2');
     $to_for_comparison = substr($to, 0, 10);
-    
+
     // Get today's date
     $now = format_date(time(), 'custom', 'Y-m-d');
-    
+
     // If the event ends today or in the future, create our links
     if (strtotime($now) <= strtotime($to_for_comparison)) {
       // Get the "to" value as a UTC string
       $to = strtotime($to . ' UTC');
       $to = format_date($to, 'custom', 'Ymd\THis', variable_get('date_default_timezone', 0));
-                         
+
       // Get the "from" value as a UTC string
       $from = field_fetch_value_fetch('node', $variables['node'], 'field_ev_date', 0);
       $from = strtotime($from . ' UTC');
       $from = format_date($from, 'custom', 'Ymd\THis', variable_get('date_default_timezone', 0));
-      
+
       // Transform the title so that it doesn't break links
       $event_title = str_replace(' ','+',$node->title);
-      
+
       // Create the "Add to Google Calendar" link
       $variables['google_link'] = "http://www.google.com/calendar/event?action=TEMPLATE&text=$event_title&dates=$from/$to&location=NU+Library&trp=false&sprop=website:library.northeastern.edu&sprop;=name:NU+Library";
-      
-      
+
+
       // Create the "Register this event" link if the node indicates we should
       $rsvp = field_fetch_value_fetch('node', $variables['node'], 'field_ev_rsvp', 0);
       if ($rsvp) {
-        $variables['register_link'] = "/news-events/calendar/register-for-an-event?event=$event_title";  
+        $variables['register_link'] = "/news-events/calendar/register-for-an-event?event=$event_title";
       }
     }
   }
@@ -175,7 +175,7 @@ function nulib_preprocess_node_showcase_onecol(&$variables, $hook) {
       );
     _build_field_collection_admin_nav($variables, $options);
   }
-  
+
   // Build carousel navigation dots for the number of items we have.
   $item_num = count($variables['field_sc_onecol_item']);
   $variables['carousel_nav'] = _build_carousel_nav($item_num);
@@ -191,12 +191,12 @@ function nulib_preprocess_node_showcase_twocol(&$variables, $hook) {
       );
     _build_field_collection_admin_nav($variables, $options);
   }
-  
+
   // Build carousel navigation dots for the number of items we have.
   $item_num = count($variables['field_sc_twocol_item']);
   $variables['carousel_nav'] = _build_carousel_nav($item_num);
 }
-function nulib_preprocess_node_exhibit(&$variables, $hook) { 
+function nulib_preprocess_node_exhibit(&$variables, $hook) {
   if ($variables['page']) {
     if (user_is_logged_in()){
       // Load up an array with the string values needed for this exhibit's admin nav for the carousel.
@@ -225,13 +225,13 @@ function nulib_preprocess_node_exhibit(&$variables, $hook) {
     }
 
     // Check to see if there are any tabs for this exhibit
-    if (isset($variables['field_ex_tab_item'])) {    
+    if (isset($variables['field_ex_tab_item'])) {
       $items = $variables['field_ex_tab_item'];
       $tab_areas = array();
       $tab_titles = array();
       if (count($items) == 1) {
         $fc = field_collection_item_load($items[0]['value']);
-        $tab_title = field_fetch_value_fetch('field_collection', $fc, 'field_ex_tab_item_title', 0);  
+        $tab_title = field_fetch_value_fetch('field_collection', $fc, 'field_ex_tab_item_title', 0);
         $tab_area = field_fetch_value_fetch('field_collection', $fc, 'field_ev_tab_item_area', 0);
         $tab_areas[] = "<div class='tab-title-single'>$tab_title</div>$tab_area";
       } else {
@@ -243,11 +243,11 @@ function nulib_preprocess_node_exhibit(&$variables, $hook) {
           // We always begin with the first tab selected.
           $selected = ($idx == 0) ? ' selected' : '';
           $j = $idx + 1;
-          $tab_areas[] = "<div id='tab-$j' class='tabBody clearfix$selected'>$tab_area</div>"; 
+          $tab_areas[] = "<div id='tab-$j' class='tabBody clearfix$selected'>$tab_area</div>";
         }
         $variables['tab_nav']  = _build_tab_nav($tab_titles);
       }
-      $variables['tab_area'] = implode($tab_areas); 
+      $variables['tab_area'] = implode($tab_areas);
     }
   }
 }
@@ -290,33 +290,33 @@ function nulib_preprocess_node_take_action(&$variables, $hook) {
     $expandable_item_num = count($expandable_items);
     if ($expandable_item_num > 0) {
       // On the home page, the first expandable item is open
-      $class = ($variables['is_front']) ? "open" : "closed"; 
+      $class = ($variables['is_front']) ? "open" : "closed";
       $expandable_items[0] = _make_li($expandable_items[0], "first $class");
       for ($j = 1; $j <= $expandable_item_num - 2; $j++) {
         $expandable_items[$j] = _make_li($expandable_items[$j], 'closed');
-      }  
+      }
       $expandable_items[$expandable_item_num - 1] = _make_li($expandable_items[$expandable_item_num - 1], 'last closed');
       $variables['accordion'] = "<ul class='accordion'>" . implode($expandable_items) . "</ul>";
-    }  
+    }
     if (count($plain_items) > 0) {
       $variables['largeList'] = "<ul class='largeList'>" . implode($plain_items) . "</ul>";
-    }  
+    }
   }
 }
 function nulib_preprocess_node_link_list(&$variables, $hook) {
-  // Link lists are styled differently based on type, so we set the classes array here. 
-  $type = field_fetch_value_fetch('node', $variables['node'], 'field_ll_type', 0);  
+  // Link lists are styled differently based on type, so we set the classes array here.
+  $type = field_fetch_value_fetch('node', $variables['node'], 'field_ll_type', 0);
   $variables['type'] = $type;
   $variables['classes_array'][] = $type;
   if ($type == 'also_in_the_library') {
-    $variables['classes_array'][] = 'textureBox';   
+    $variables['classes_array'][] = 'textureBox';
   } else {
-    $variables['classes_array'][] = 'textbox';   
+    $variables['classes_array'][] = 'textbox';
   }
 }
 function nulib_preprocess_node_spotlight(&$variables, $hook) {
   $variables['sl_type'] = field_fetch_value_fetch('node', $variables['node'], 'field_sl_type', 0);
-  
+
   // Spotlight widgets have different h-tags for their header based on their placement, so we set this here.
   // We also need this value on the template to determine which image to use, if this spotlight is type image.
   $variables['sl_placement'] = field_fetch_value_fetch('node', $variables['node'], 'field_sl_placement', 0);
@@ -324,10 +324,10 @@ function nulib_preprocess_node_spotlight(&$variables, $hook) {
     $variables['spotlight_body'] = '<h2>Spotlight</h2>';
   } else {
     $variables['spotlight_sidebar'] = '<h4>Spotlight</h4>';
-  }  
+  }
 }
 function nulib_preprocess_node_search_box(&$variables, $hook) {
-  $external_links = field_fetch_value_fetch('node', $variables['node'], 'field_sb_external_links');   
+  $external_links = field_fetch_value_fetch('node', $variables['node'], 'field_sb_external_links');
   if (count($external_links) > 0){
     $variables['classes_array'][] = 'external_links';
   }
@@ -348,22 +348,22 @@ function nulib_preprocess_node_giving_item(&$variables, $hook) {
 
 function nulib_preprocess_node_resource(&$variables, $hook) {
   $resource_url = $variables['field_resource_link_plain']['und'][0]['value'];
-  $icons = field_fetch_value_fetch('node', $variables['node'], 'field_resource_icon'); 
+  $icons = field_fetch_value_fetch('node', $variables['node'], 'field_resource_icon');
   $icons = implode(array_map('_make_icon', $icons));
-  $variables['title_line'] = 
+  $variables['title_line'] =
     "<h2>". l($variables['title'], $resource_url, array('html'=>True,)) . "</h2>" .
     $icons;
-  $variables['more_info'] = 
+  $variables['more_info'] =
       field_fetch_value_fetch('node', $variables['node'], 'field_resource_description', 0);
-  $detailed_subjects = field_fetch_value_fetch('node', $variables['node'], 'field_resource_detailed_subjects', NULL); 
-  if (!$variables['page'] && count($detailed_subjects) > 0) { 
-    $detailed_subjects = implode(', ', array_map('_get_term_name', $detailed_subjects)); 
-    $variables['more_info'] .= 
+  $detailed_subjects = field_fetch_value_fetch('node', $variables['node'], 'field_resource_detailed_subjects', NULL);
+  if (!$variables['page'] && count($detailed_subjects) > 0) {
+    $detailed_subjects = implode(', ', array_map('_get_term_name', $detailed_subjects));
+    $variables['more_info'] .=
       "<div class='field field-name-field-resource-type field-type-taxonomy-term-reference field-label-inline clearfix'>
         <div class='field-label'>Detailed subjects:&nbsp;</div>
         <div class='field-items'>" . $detailed_subjects. "</div>
       </div>";
-  } 
+  }
 }
 
 /**
@@ -375,8 +375,8 @@ function nulib_preprocess_node_resource(&$variables, $hook) {
 *   An array holding the item_name and title_field for the type of field collection we are dealing with.
 */
 function _build_field_collection_admin_nav(&$variables, $options) {
-  $item_name = $options['item_name'];  
-  $node = $variables['node'];      
+  $item_name = $options['item_name'];
+  $node = $variables['node'];
   $label = $options['admin_nav_label'];
   $edit_section = '';
   $edit_links = array();
@@ -398,7 +398,7 @@ function _build_field_collection_admin_nav(&$variables, $options) {
           $title = (isset($options['title_field'])) ? field_fetch_value_fetch('field_collection', $fc, $options['title_field'], 0) : NULL;
           if (!$title) {
             // Some field collections don't have good fields to use as titles here, so if we haven't
-            // found a title, just use a default one. 
+            // found a title, just use a default one.
             $j = $idx + 1;
             $title = "Item $j";
           }
@@ -408,13 +408,13 @@ function _build_field_collection_admin_nav(&$variables, $options) {
           $delete_link = l('delete', $fc->path() . '/' . 'delete', array('query' => $dest));
           $edit_links[] = "$title:&nbsp;&nbsp;&nbsp;&nbsp;$edit_link&nbsp;&nbsp;$delete_link";
         }
-      }  
+      }
     }
   }
-  
-  $path = 'field-collection/' . str_replace('_', '-', $item_name) . '/add/node/' . $node->nid;   
-  $edit_links[] = l('add new item', $path, array('query' => $dest)); 
-  
+
+  $path = 'field-collection/' . str_replace('_', '-', $item_name) . '/add/node/' . $node->nid;
+  $edit_links[] = l('add new item', $path, array('query' => $dest));
+
   // Build and return the HTML for a nice display of the admin links
   $edit_links = array_map('_make_li', $edit_links);
   $variables[$options['key']] = "<h4>Edit $label items</h4><ul>" . implode($edit_links) . '</ul>';
@@ -454,7 +454,7 @@ function _build_tab_nav($tab_titles) {
     $tab_nav_items[] = "<li><a href='#tab-$j'$selected>$tab_title</a></li>";
   }
   // Return the assembled unordered list.
-  return '<ul class="tabNav clearfix">' . implode($tab_nav_items) . '</ul>'; 
+  return '<ul class="tabNav clearfix">' . implode($tab_nav_items) . '</ul>';
 }
 
 /**
@@ -480,7 +480,7 @@ $variables['sample_variable'] = t('Lorem ipsum.');
 *   The name of the template being rendered ("block" in this case).
 */
 function nulib_preprocess_block(&$variables, $hook) {
-  // Figure out which block we are dealing with. 
+  // Figure out which block we are dealing with.
   $elements = $variables['elements'];
   if (isset($elements['#bundle'])) {
     $key = $elements['#bundle'];
@@ -489,7 +489,7 @@ function nulib_preprocess_block(&$variables, $hook) {
   } elseif (isset($elements['#block'])) {
     $key = $elements['#block']->module;
   }
-  if (isset($key)){ 
+  if (isset($key)){
     $block = $variables['block'];
     switch ($key) {
       case 'showcase_twocol':
@@ -512,23 +512,23 @@ function nulib_preprocess_block(&$variables, $hook) {
       case 'spotlight':
         // We never want to display the subject for a spotlight, since that is manually set to "Spotlight" when we preprocess the node.
         $variables['block'] = _set_block_subject($block);
-        // Spotlight widgets are styled based on where they are placed, so place a class in the the array to help with that. 
+        // Spotlight widgets are styled based on where they are placed, so place a class in the the array to help with that.
         $region = $variables['block']->region;
         $styles = array('content' => 'spotMain', 'content_top' => 'spotMain', 'sidebar_second' => 'textbox');
         if (isset($styles[$region])) {
           $variables['classes_array'][] = $styles[$region];
-        } 
+        }
         break;
       case 'primo_search_block':
 
         array_push($variables['classes_array'],'bigSearch');
-        break;    
+        break;
       case 'jump':
         $variables['bigBrowse'] = "";
         if ($block->delta != 'menu-menu-audience') {
           $variables['classes_array'][] = 'bigSearch';
           $variables['bigBrowse'] = 'bigBrowse';
-        } 
+        }
         break;
     }
   }
@@ -542,7 +542,7 @@ function nulib_preprocess_views_view(&$variables) {
     // Build carousel navigation dots for the number of items we have.
     $variables['carousel_nav'] = _build_carousel_nav($item_num);
   }
-}  
+}
 /**
 * Themes field collection items printed using the field_collection_view formatter, via the Field Collection module.
 */
@@ -551,7 +551,7 @@ function nulib_field_collection_view($variables) {
 
   //Default implementation:
   //return '<div' . drupal_attributes($element['#attributes']) . '>' . $element['#children'] . '</div>';
-  
+
   // Instead, we strip out the containing div, so that all of iFactory's javascript implementations work.
   return $element['#children'];
 }
@@ -578,8 +578,8 @@ function nulib_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
   if (!empty($breadcrumb)) {
     // Grab the last breadcrumb -- we want to style it differently
-    $last = array_pop($breadcrumb); 
-    
+    $last = array_pop($breadcrumb);
+
     // Wrap each element of the array in li-tags
     $breadcrumb = array_map('_make_li', $breadcrumb);
     // Do the same to the last breadcrumb, but give it a special class
@@ -603,7 +603,7 @@ function nulib_menu_link(array $variables) {
     $disclosure = '<span href="" class="toggle">+/-</span>';
     $sub_menu = drupal_render($element['#below']);
     $classes = $element['#attributes']['class'];
-    $classes[] = 'expandable';    
+    $classes[] = 'expandable';
     if (in_array('active-trail', $classes) && !in_array('active', $classes)) {
       $classes[] = 'open';
     } else {
@@ -672,16 +672,16 @@ function nulib_jump_quickly_form($variables) {
  *
  * @ingroup themeable
  */
-function nulib_aggregator_block_item($variables) { 
+function nulib_aggregator_block_item($variables) {
   // The default implementation of this function returns the external link to the item.
   // return '<a href="' . check_url($variables['item']->link) . '">' . check_plain($variables['item']->title) . "</a>\n";
-  
+
   // Our site calls instead for the date, author and a bit of the description to be presented.
   $item = $variables['item'];
   $title = $item->title;
   $author = $item->author;
   $description = $item->description;
-  
+
   // Pull out the author thumbnail, which is placed on the beginning of the description.
   $thumbnail_end = strpos($description, '/>');
   $thumbnail = substr($description, 0, $thumbnail_end + 2);
@@ -693,14 +693,14 @@ function nulib_aggregator_block_item($variables) {
     // If the thumbnail isn't formatted as we expect, leave it in the description.
     $thumbnail = '';
   }
-  
-  // Truncate the description at 400 characters. 
+
+  // Truncate the description at 400 characters.
   $description = truncate_utf8($description, 190, TRUE, FALSE);
   // If the description does not end with a paragraph, then add an ellipsis.
   if (substr($description, -4, 4) != '</p>') {
     $description .= '&#8230;';
   }
-  $link = $item->link;       
+  $link = $item->link;
   // Transform the Unix timestamp into a nice date format
   $date = date('M j, Y', $item->timestamp);
   return "
@@ -711,11 +711,11 @@ function nulib_aggregator_block_item($variables) {
       <div class='description'>$description</div>
       <p><a href='$link' class='arrow'>Read More</a></p>
       <div class='clearfix'></div>
-    </div>"; 
-  
+    </div>";
+
 }
 function nulib_more_link ($array) {
-  // When this is the more link being constructed for the Snell Snippets widget, 
+  // When this is the more link being constructed for the Snell Snippets widget,
   // return the empty string so that it is not presented.
    if (stristr( $array['url'], 'aggregator')) {
       return "";
@@ -764,7 +764,7 @@ function nulib_nice_menus($variables) {
     $mlid = $variables['mlid'];
     $direction = $variables['direction'];
     $depth = $variables['depth'];
-    $menu = $variables['menu'];   
+    $menu = $variables['menu'];
     if ($menu_tree = theme('nice_menus_tree', array('menu_name' => $menu_name, 'mlid' => $mlid, 'depth' => $depth, 'menu' => $menu))) {
       if ($menu_tree['content']) {
         $output['content'] = '<ul class="nice-menu nice-menu-' . $direction . '" id="nice-menu-' . $id . '">' . $menu_tree['content'] . '</ul>' . "\n";
@@ -787,7 +787,7 @@ function nulib_nice_menus($variables) {
  * @ingroup themeable
  */
 function nulib_file_icon($variables) {
-  $file = $variables['file'];  
+  $file = $variables['file'];
   // If we are dealing with a PDF, then direct the File module to find the file icon in the theme icons folder.
   // This is the only part of the standard function that we've changed.
   if ($variables['file']->filemime == 'application/pdf') {
@@ -803,7 +803,7 @@ function nulib_file_icon($variables) {
 
 /**
 * List all field render functions below.
-* Many functions simply return the markup, which keeps layers of drupal-created divs 
+* Many functions simply return the markup, which keeps layers of drupal-created divs
 * from breaking iFactory's layout.
 * In other cases, we want to wrap the field in HTML for styling purposes.
 */
@@ -821,8 +821,8 @@ function nulib_field__field_ex_car_item_type($variables) {
 }
 function nulib_field__field_ll_link($variables) {
   // Turn the link list into an unordered list
-  $type = field_fetch_value_fetch('node', $variables['element']['#object'], 'field_ll_type', 0);   
-  $links = array(); 
+  $type = field_fetch_value_fetch('node', $variables['element']['#object'], 'field_ll_type', 0);
+  $links = array();
   foreach ($variables['items'] as $item) {
     $links[]  = _make_li(render($item));
   }
@@ -840,7 +840,7 @@ function nulib_field__field_sl_video($variables) {
   $markup = _field_markup($variables);
   // Return the video with a class based on its placement, if needed.
   if ($placement == 'body') {
-    return "<div class='photo left'>$markup</div>"; 
+    return "<div class='photo left'>$markup</div>";
   } else {
     return $markup;
   }
@@ -885,29 +885,7 @@ function nulib_field__field_resource_subject($variables){
 
   // Render the items.
   $output .= '<div class="field-items"' . $variables['content_attributes'] . '>';
-  $subjects = array(); 
-  foreach ($variables['items'] as $item) {
-    $subjects[]  = $item['#markup'];
-  }
-  $output .= implode(', ', $subjects);
-  $output .= '</div>';
-
-  // Render the top-level DIV.
-  $output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . '>' . $output . '</div>';
-
-  return $output;
-} 
-function nulib_field__field_user_det_subject($variables){      
-  $output = '';
-
-  // Render the label, if it's not hidden.
-  if (!$variables['label_hidden']) {
-    $output .= '<div class="field-label"' . $variables['title_attributes'] . '>Subjects:&nbsp;</div>';
-  }
-
-  // Render the items.
-  $output .= '<div class="field-items"' . $variables['content_attributes'] . '>';
-  $subjects = array(); 
+  $subjects = array();
   foreach ($variables['items'] as $item) {
     $subjects[]  = $item['#markup'];
   }
@@ -919,8 +897,30 @@ function nulib_field__field_user_det_subject($variables){
 
   return $output;
 }
-// The spamspan option with the Drupal admin gui is broken, so we use the functionality manually here.   
-function nulib_field__field_pr_contact_email($variables){      
+function nulib_field__field_user_det_subject($variables){
+  $output = '';
+
+  // Render the label, if it's not hidden.
+  if (!$variables['label_hidden']) {
+    $output .= '<div class="field-label"' . $variables['title_attributes'] . '>Subjects:&nbsp;</div>';
+  }
+
+  // Render the items.
+  $output .= '<div class="field-items"' . $variables['content_attributes'] . '>';
+  $subjects = array();
+  foreach ($variables['items'] as $item) {
+    $subjects[]  = $item['#markup'];
+  }
+  $output .= implode(', ', $subjects);
+  $output .= '</div>';
+
+  // Render the top-level DIV.
+  $output = '<div class="' . $variables['classes'] . '"' . $variables['attributes'] . '>' . $output . '</div>';
+
+  return $output;
+}
+// The spamspan option with the Drupal admin gui is broken, so we use the functionality manually here.
+function nulib_field__field_pr_contact_email($variables){
   return spamspan(_field_markup($variables));
 }
 // Utility functions
@@ -956,7 +956,7 @@ function _get_image_with_style($vars, $field_name, $style_name, $entity){
     'title'      => $title,
   );
   // Return the HTML for the properly styled image
-  return theme_image_style($options); 
+  return theme_image_style($options);
 }
 
 /**
@@ -964,8 +964,8 @@ function _get_image_with_style($vars, $field_name, $style_name, $entity){
  *
  * Sets a placeholder for the exposed search form for search_api_views.
  */
-function nulib_form_alter(&$form, &$form_state, $form_id) { 
-  
+function nulib_form_alter(&$form, &$form_state, $form_id) {
+
   if($form_id == 'search_by_page_form'){
     $form['keys']['#attributes'] = array('placeholder' => t('Search Library Site ...'));
   }
@@ -992,4 +992,19 @@ function nulib_field__field_resource_mobile_link_plain__resource(&$variables){
   return '<div class="field_resource_mobile_link_plain__resource">'.$link.'</div>';
 }
 
-
+/**
+ * Field theme function for the Digital Bookplate - Donors
+ */
+function nulib_field__field_db_donors(&$variables){
+  $listItems = array();
+  foreach($variables['items'] as $item){
+    $listItems[]= $item['#markup'];
+  }
+  $list = array(
+    'items' => $listItems,
+    'title' => $variables['label'],
+    'type' => 'ul',
+    'attributes' => array('class' => $variables['classes']),
+  );
+  return theme_item_list($list);
+}

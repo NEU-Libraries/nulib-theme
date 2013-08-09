@@ -1,0 +1,8 @@
+.pager{
+  > li {
+    border: 1px solid $darker-light-gray;
+    > * {
+      padding: 0.2em 0.5em;
+    }
+  }
+}
