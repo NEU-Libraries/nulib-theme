@@ -1,6 +1,6 @@
 /* line 17, ../../../../../../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, .node-bookplate .field-label, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -192,7 +192,7 @@ h2 {
 }
 
 /* line 91, ../scss/_reset-base.scss */
-h3 {
+h3, .node-bookplate .field-label {
   color: #000000;
   font: 18px / 1.1em "Times New Roman", Times, Georgia, sans-serif;
   margin: 10px 0 5px;
@@ -773,7 +773,8 @@ h2.node-title,
 h2.block-title,
 h2.title,
 h2.comment-form,
-h3.title {
+h3.title,
+.node-bookplate .title.field-label {
   margin: 0;
 }
 
@@ -830,16 +831,6 @@ ul.links.inline {
 ul.links li {
   padding: 0 1em 0 0;
   /* LTR */
-}
-
-/* line 175, ../scss/_pages.scss */
-.item-list .pager {
-  padding: 0;
-}
-
-/* line 179, ../scss/_pages.scss */
-.item-list .pager li {
-  padding: 0 0.5em;
 }
 
 /*
@@ -2480,7 +2471,7 @@ Modules
 }
 
 /* line 371, ../scss/components/_modules.scss */
-#landCar.carousel .text h3 {
+#landCar.carousel .text h3, #landCar.carousel .text .node-bookplate .field-label, .node-bookplate #landCar.carousel .text .field-label {
   margin: 2px 10px 14px 0;
 }
 
@@ -3659,7 +3650,7 @@ input#edit-mollom-captcha {
 
 /*>>>>>>>>>>>>>>>  News & Events <<<<<<<<<<<<<<<<<<<<<<<<*/
 /* line 885, ../scss/_templates.scss */
-.page-news-events-polls h3 {
+.page-news-events-polls h3, .page-news-events-polls .node-bookplate .field-label, .node-bookplate .page-news-events-polls .field-label {
   font-style: italic;
 }
 
@@ -3731,7 +3722,7 @@ input#edit-mollom-captcha {
 }
 
 /* line 948, ../scss/_templates.scss */
-.view-library-staff-directories h3.views-field {
+.view-library-staff-directories h3.views-field, .view-library-staff-directories .node-bookplate .views-field.field-label, .node-bookplate .view-library-staff-directories .views-field.field-label {
   margin: 0 0 5px 0;
   line-height: 1em;
 }
@@ -4128,13 +4119,89 @@ form table .item-list ul {
   margin: 0;
 }
 
-/* line 2, ../scss/components/_pager.scss */
-.pager > li {
-  border: 1px solid #c3c3c3;
+/* line 1, ../scss/components/_pager.scss */
+.item-list .pager li {
+  padding: 0;
 }
-/* line 4, ../scss/components/_pager.scss */
-.pager > li > * {
-  padding: 0.2em 0.5em;
+
+/* line 8, ../scss/components/_pager.scss */
+.pagination, .pager {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+/* line 14, ../scss/components/_pager.scss */
+.pagination > li, .pager > li {
+  display: inline;
+}
+/* line 19, ../scss/components/_pager.scss */
+.pagination > li > a,
+.pagination > li > span, .pagination > li.pager-ellipsis, .pagination > li.pager-current, .pager > li > a,
+.pager > li > span, .pager > li.pager-ellipsis, .pager > li.pager-current {
+  float: left;
+  padding: 6px 10px;
+  line-height: 1;
+  text-decoration: none;
+  background-color: white;
+  border: 1px solid #dddddd;
+  border-left-width: 0;
+}
+/* line 31, ../scss/components/_pager.scss */
+.pagination > li:first-child,
+.pagination > li:first-child > a,
+.pagination > li:first-child > span, .pager > li:first-child,
+.pager > li:first-child > a,
+.pager > li:first-child > span {
+  border-left-width: 1px;
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+/* line 38, ../scss/components/_pager.scss */
+.pagination > li:last-child > a,
+.pagination > li:last-child > span, .pager > li:last-child > a,
+.pager > li:last-child > span {
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+/* line 47, ../scss/components/_pager.scss */
+.pagination > li > a:hover,
+.pagination > li > a:focus,
+.pagination > .active > a,
+.pagination > .active > span, .pager > li > a:hover,
+.pager > li > a:focus,
+.pager > .active > a,
+.pager > .active > span {
+  background-color: whitesmoke;
+}
+/* line 52, ../scss/components/_pager.scss */
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .pager-current, .pager > .active > a,
+.pager > .active > span,
+.pager > .pager-current {
+  color: #999999;
+  cursor: default;
+}
+/* line 61, ../scss/components/_pager.scss */
+.pagination > .disabled > span,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus, .pager > .disabled > span,
+.pager > .disabled > a,
+.pager > .disabled > a:hover,
+.pager > .disabled > a:focus {
+  color: #999999;
+  background-color: white;
+  cursor: not-allowed;
 }
 
 /* line 6, ../scss/_corrections.scss */
@@ -4332,7 +4399,7 @@ img {
   margin-top: 20px;
 }
 /* line 128, ../scss/_ie-styles.scss */
-.ie7 .view-exhibit-lists h3 {
+.ie7 .view-exhibit-lists h3, .ie7 .view-exhibit-lists .node-bookplate .field-label, .node-bookplate .ie7 .view-exhibit-lists .field-label {
   margin-top: 0;
 }
 /* line 131, ../scss/_ie-styles.scss */
@@ -4994,12 +5061,12 @@ ul.calendar-links {
 }
 
 /* line 91, ../scss/_nulib.scss */
-.view-display-id-page_4 .view-content h3 {
+.view-display-id-page_4 .view-content h3, .view-display-id-page_4 .view-content .node-bookplate .field-label, .node-bookplate .view-display-id-page_4 .view-content .field-label {
   border-top: 1px solid #999;
   padding-top: 5px;
 }
 /* line 96, ../scss/_nulib.scss */
-.view-display-id-page_4 .attachment .view-content h3 {
+.view-display-id-page_4 .attachment .view-content h3, .view-display-id-page_4 .attachment .view-content .node-bookplate .field-label, .node-bookplate .view-display-id-page_4 .attachment .view-content .field-label {
   border-top: none;
   padding-top: 0;
   display: inline;
@@ -5010,11 +5077,11 @@ ul.calendar-links {
 }
 
 /* line 109, ../scss/_nulib.scss */
-.view-resource-list.view-display-id-page_4 h3 a:hover {
+.view-resource-list.view-display-id-page_4 h3 a:hover, .view-resource-list.view-display-id-page_4 .node-bookplate .field-label a:hover, .node-bookplate .view-resource-list.view-display-id-page_4 .field-label a:hover {
   text-decoration: none;
 }
 /* line 112, ../scss/_nulib.scss */
-.view-resource-list.view-display-id-page_4 .attachment h3 a:hover {
+.view-resource-list.view-display-id-page_4 .attachment h3 a:hover, .view-resource-list.view-display-id-page_4 .attachment .node-bookplate .field-label a:hover, .node-bookplate .view-resource-list.view-display-id-page_4 .attachment .field-label a:hover {
   text-decoration: underline;
 }
 /* line 116, ../scss/_nulib.scss */
@@ -5150,17 +5217,17 @@ ul.calendar-links {
 
 /* Exhibit lists */
 /* line 239, ../scss/_nulib.scss */
-.view-exhibit-pager .view-header, .view-exhibit-pager .view-content, .view-exhibit-pager h3, .view-exhibit-pager .views-row {
+.view-exhibit-pager .view-header, .view-exhibit-pager .view-content, .view-exhibit-pager h3, .view-exhibit-pager .node-bookplate .field-label, .node-bookplate .view-exhibit-pager .field-label, .view-exhibit-pager .views-row {
   float: left;
 }
 /* line 242, ../scss/_nulib.scss */
-.view-exhibit-pager h3 {
+.view-exhibit-pager h3, .view-exhibit-pager .node-bookplate .field-label, .node-bookplate .view-exhibit-pager .field-label {
   margin: 0 0 0 5px;
   padding: 0 0 0 5px;
   border-left: 1px solid #7a787a;
 }
 /* line 247, ../scss/_nulib.scss */
-.view-exhibit-pager .view-header a, .view-exhibit-pager h3 a {
+.view-exhibit-pager .view-header a, .view-exhibit-pager h3 a, .view-exhibit-pager .node-bookplate .field-label a, .node-bookplate .view-exhibit-pager .field-label a {
   line-height: 11px;
   font: 11px Verdana,Arial,sans-serif;
 }
@@ -5402,7 +5469,7 @@ ul.calendar-links {
   float: left;
 }
 
-/* line 2, ../scss/sections/_bookplates.scss */
+/* line 5, ../scss/sections/_bookplates.scss */
 .node-bookplate .field-name-field-db-image {
   -webkit-transition: all 0.2s ease-in-out, 1s;
   -moz-transition: all 0.2s ease-in-out, 1s;
@@ -5427,12 +5494,27 @@ ul.calendar-links {
 }
 
 /* line 12, ../scss/sections/_bookplates.scss */
+.field-name-field-db-add-materials-link {
+  margin-bottom: 1em;
+}
+
+/* line 16, ../scss/sections/_bookplates.scss */
+.field-name-field-db-materials-link .field-items {
+  list-style: disc;
+  padding-left: 2.5em;
+}
+/* line 20, ../scss/sections/_bookplates.scss */
+.field-name-field-db-materials-link .field-item {
+  display: list-item;
+}
+
+/* line 26, ../scss/sections/_bookplates.scss */
 .bookplate-grid * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 16, ../scss/sections/_bookplates.scss */
+/* line 30, ../scss/sections/_bookplates.scss */
 .bookplate-grid h4,
 .bookplate-grid em {
   overflow: hidden;
@@ -5443,21 +5525,21 @@ ul.calendar-links {
   max-width: 100%;
   display: inline-block;
 }
-/* line 22, ../scss/sections/_bookplates.scss */
+/* line 36, ../scss/sections/_bookplates.scss */
 .bookplate-grid em {
   margin-bottom: 0.375em;
 }
-/* line 25, ../scss/sections/_bookplates.scss */
+/* line 39, ../scss/sections/_bookplates.scss */
 .bookplate-grid h4 {
   font-size: 1.3em;
   font-weight: 500;
 }
-/* line 29, ../scss/sections/_bookplates.scss */
+/* line 43, ../scss/sections/_bookplates.scss */
 .bookplate-grid .views-row {
   width: 100%;
   clear: both;
 }
-/* line 35, ../scss/sections/_bookplates.scss */
+/* line 49, ../scss/sections/_bookplates.scss */
 .bookplate-grid .views-column,
 .bookplate-grid .views-exposed-widget {
   width: 23%;
@@ -5465,7 +5547,7 @@ ul.calendar-links {
   margin-bottom: 2%;
   float: left;
 }
-/* line 41, ../scss/sections/_bookplates.scss */
+/* line 55, ../scss/sections/_bookplates.scss */
 .bookplate-grid .views-column {
   -webkit-transition: all 0.2s ease-in-out, 1s;
   -moz-transition: all 0.2s ease-in-out, 1s;
@@ -5490,22 +5572,19 @@ ul.calendar-links {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 48, ../scss/sections/_bookplates.scss */
-.bookplate-grid .views-exposed-widget {
-  font-size: 1.2em;
-}
-/* line 51, ../scss/sections/_bookplates.scss */
+/* line 64, ../scss/sections/_bookplates.scss */
 .bookplate-grid .views-exposed-widget input,
 .bookplate-grid .views-exposed-widget select {
   display: block;
   width: 100%;
 }
-/* line 57, ../scss/sections/_bookplates.scss */
+/* line 70, ../scss/sections/_bookplates.scss */
 .bookplate-grid input.form-submit {
   font-weight: inherit;
   width: 100%;
   height: auto;
   background-image: none;
+  margin-top: 1.7em !important;
   font-size: 1.1em;
   padding: 0.3em 1.5em;
   color: white;
@@ -5548,7 +5627,7 @@ ul.calendar-links {
   padding: 0 !important;
   margin: -1px !important;
 }
-/* line 66, ../scss/sections/_bookplates.scss */
+/* line 79, ../scss/sections/_bookplates.scss */
 .bookplate-grid img {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;

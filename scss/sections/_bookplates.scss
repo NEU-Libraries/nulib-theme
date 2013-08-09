@@ -1,11 +1,25 @@
 .node-bookplate{
+  .field-label{
+    @extend h3;
+  }
   .field-name-field-db-image{
     @include thumbnail;
     float: left;
     margin: 0 1.5em 1.5em 0;
-
   }
 
+}
+.field-name-field-db-add-materials-link{
+  margin-bottom: 1em;
+}
+.field-name-field-db-materials-link{
+  .field-items{
+    list-style: disc;
+    padding-left: em(40px);
+  }
+  .field-item{
+    display: list-item;
+  }
 }
 
 .bookplate-grid{
@@ -46,7 +60,6 @@
     padding: 0.3125em;
   }
   .views-exposed-widget{
-    font-size: 1.2em;
     input,
     select{
       display: block;
@@ -59,7 +72,7 @@
     width: 100%;
     height: auto;
     background-image: none;
-
+    margin-top: 1.7em !important;
     @include sassy-button;
   }
 

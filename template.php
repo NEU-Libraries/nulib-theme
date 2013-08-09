@@ -991,20 +991,3 @@ function nulib_field__field_resource_mobile_link_plain__resource(&$variables){
   $link = l(t('go to mobile site'),$url,$linkoptions);
   return '<div class="field_resource_mobile_link_plain__resource">'.$link.'</div>';
 }
-
-/**
- * Field theme function for the Digital Bookplate - Donors
- */
-function nulib_field__field_db_donors(&$variables){
-  $listItems = array();
-  foreach($variables['items'] as $item){
-    $listItems[]= $item['#markup'];
-  }
-  $list = array(
-    'items' => $listItems,
-    'title' => $variables['label'],
-    'type' => 'ul',
-    'attributes' => array('class' => $variables['classes']),
-  );
-  return theme_item_list($list);
-}
