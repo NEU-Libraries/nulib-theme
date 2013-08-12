@@ -2,13 +2,11 @@
  * @file
  * RTL companion for the navigation.css file.
  */
-/* line 8, ../scss/navigation-rtl.scss */
 #navigation ul.links,
 #navigation .content ul {
   text-align: right;
 }
 
-/* line 13, ../scss/navigation-rtl.scss */
 #navigation ul.links li,
 #navigation .content li {
   float: right;

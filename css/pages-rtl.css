@@ -5,7 +5,6 @@
 /*
  * Header
  */
-/* line 10, ../scss/pages-rtl.scss */
 #logo {
   float: right;
 }
@@ -13,7 +12,6 @@
 /*
  * Content
  */
-/* line 17, ../scss/pages-rtl.scss */
 ul.links li {
   display: inline-block;
   /* Bug in Safari causes display: inline to fail. */

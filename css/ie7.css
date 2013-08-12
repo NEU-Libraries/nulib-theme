@@ -9,7 +9,6 @@
 /*
  * Tabs
  */
-/* line 18, ../scss/ie7.scss */
 ul.primary li a,
 ul.primary li a .tab,
 ul.secondary li a,
@@ -20,7 +19,6 @@ ul.secondary li a .tab {
 /*
  * Drupal nodes
  */
-/* line 26, ../scss/ie7.scss */
 .node-unpublished > * {
   position: relative;
   /* Otherwise these elements will appear below the "Unpublished" text. */
@@ -29,7 +27,6 @@ ul.secondary li a .tab {
 /*
  * Drupal admin tables
  */
-/* line 36, ../scss/ie7.scss */
 tr.even th,
 tr.even td,
 tr.odd th,

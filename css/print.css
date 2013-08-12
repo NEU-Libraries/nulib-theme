@@ -1,27 +1,22 @@
-/* line 2, ../scss/print.scss */
 a:link, a:visited {
   text-decoration: underline !important;
 }
 
-/* line 8, ../scss/print.scss */
 #site-name a:link, #site-name a:visited {
   text-decoration: none !important;
 }
 
-/* line 13, ../scss/print.scss */
 #content {
   float: none;
   width: 100%;
   margin: 0 !important;
   padding: 0 !important;
 }
-/* line 15, ../scss/print.scss */
 #content a:link:after, #content a:visited:after {
   content: " (" attr(href) ") ";
   font-size: 0.8em;
   font-weight: normal;
 }
-/* line 25, ../scss/print.scss */
 #content .section {
   float: none;
   width: 100%;
@@ -29,20 +24,17 @@ a:link, a:visited {
   padding: 0 !important;
 }
 
-/* line 33, ../scss/print.scss */
 body, #page-wrapper, #page, #main-wrapper, #main {
   color: #000;
   background-color: transparent !important;
   background-image: none !important;
 }
 
-/* line 38, ../scss/print.scss */
 #content {
   color: #000;
   background-color: transparent !important;
   background-image: none !important;
 }
-/* line 42, ../scss/print.scss */
 #content .section {
   color: #000;
   background-color: transparent !important;
@@ -50,7 +42,6 @@ body, #page-wrapper, #page, #main-wrapper, #main {
 }
 
 /* Hide sidebars and nav elements */
-/* line 51, ../scss/print.scss */
 #skip-to-nav, #toolbar, #navigation, .region-sidebar-first, .region-sidebar-second, .region-footer, .breadcrumb, div.tabs, .action-links, .links, .book-navigation, .forum-topic-navigation, .pager, .feed-icons {
   visibility: hidden;
   display: none;
@@ -58,18 +49,15 @@ body, #page-wrapper, #page, #main-wrapper, #main {
 
 /* If you un-comment the "page { overflow-y: hidden; }" ruleset, Firefox clips
    the content after the first page. */
-/* line 59, ../scss/print.scss */
 #page-wrapper {
   overflow-y: visible;
 }
 
 /* Custom print styles */
-/* line 65, ../scss/print.scss */
 .view-filters {
   display: none;
 }
 
-/* line 69, ../scss/print.scss */
 * {
   background: transparent !important;
   color: black !important;
@@ -79,50 +67,41 @@ body, #page-wrapper, #page, #main-wrapper, #main {
 }
 
 /* Black prints faster: sanbeiji.com/archives/953 */
-/* line 79, ../scss/print.scss */
 a {
   color: #444 !important;
   text-decoration: underline;
 }
-/* line 82, ../scss/print.scss */
 a:visited {
   color: #444 !important;
   text-decoration: underline;
 }
-/* line 86, ../scss/print.scss */
 a[href]:after {
   content: " (" attr(href) ")";
 }
 
-/* line 91, ../scss/print.scss */
 abbr[title]:after {
   content: " (" attr(title) ")";
 }
 
-/* line 95, ../scss/print.scss */
 .ir a:after {
   content: "";
 }
 
-/* line 100, ../scss/print.scss */
 a[href^="javascript:"]:after, a[href^="#"]:after {
   content: "";
 }
 
 /* Don't show links for images, or javascript/internal links */
-/* line 107, ../scss/print.scss */
 pre, blockquote {
   border: 1px solid #999;
   page-break-inside: avoid;
 }
 
-/* line 112, ../scss/print.scss */
 thead {
   display: table-header-group;
 }
 
 /* css-discuss.incutio.com/wiki/Printing_Tables */
-/* line 118, ../scss/print.scss */
 tr, img {
   page-break-inside: avoid;
 }
@@ -131,13 +110,11 @@ tr, img {
   margin: 0.5cm;
 }
 
-/* line 127, ../scss/print.scss */
 p, h2, h3 {
   orphans: 3;
   widows: 3;
 }
 
-/* line 132, ../scss/print.scss */
 h2, h3 {
   page-break-after: avoid;
 }

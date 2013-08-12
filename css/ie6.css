@@ -12,13 +12,11 @@
 /*
  * Layout CSS
  */
-/* line 18, ../scss/ie6.scss */
 #main-wrapper {
   zoom: 1;
   /* Otherwise with a liquid layout, sidebars disappear when resizing the windows in IE6 */
 }
 
-/* line 25, ../scss/ie6.scss */
 #content,
 #navigation,
 .region-sidebar-first,
@@ -33,7 +31,6 @@
 /*
  * Tabs - IE6 doesn't support PNGs with alpha transparency.
  */
-/* line 38, ../scss/ie6.scss */
 ul.primary li a,
 ul.primary li a .tab,
 ul.secondary li a,
@@ -42,36 +39,30 @@ ul.secondary li a .tab {
   /* Otherwise the blocks mistakenly get 100% width in IE6 */
 }
 
-/* line 42, ../scss/ie6.scss */
 ul.primary li a {
   background: url(../images/tab-left-ie6.png) no-repeat left -38px;
 }
 
-/* line 46, ../scss/ie6.scss */
 ul.primary li a .tab {
   background: url(../images/tab-right-ie6.png) no-repeat right -38px;
 }
 
-/* line 51, ../scss/ie6.scss */
 ul.primary li a:hover,
 ul.primary li a:focus {
   background: url(../images/tab-left-ie6.png) no-repeat left -76px;
 }
 
-/* line 56, ../scss/ie6.scss */
 ul.primary li a:hover .tab,
 ul.primary li a:focus .tab {
   background: url(../images/tab-right-ie6.png) no-repeat right -76px;
 }
 
-/* line 62, ../scss/ie6.scss */
 ul.primary li.active a,
 ul.primary li.active a:hover,
 ul.primary li.active a:focus {
   background: url(../images/tab-left-ie6.png) no-repeat left 0;
 }
 
-/* line 68, ../scss/ie6.scss */
 ul.primary li.active a .tab,
 ul.primary li.active a:hover .tab,
 ul.primary li.active a:focus .tab {
@@ -81,7 +72,6 @@ ul.primary li.active a:focus .tab {
 /*
  * Wireframes - IE6 doesn't support the outline property.
  */
-/* line 81, ../scss/ie6.scss */
 .with-wireframes #header .section,
 .with-wireframes #content .section,
 .with-wireframes #navigation .section,
