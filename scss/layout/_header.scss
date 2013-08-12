@@ -17,7 +17,6 @@ Header
   position: relative;
   top: 30px;
   left: 10px;
-
   display: block;
   span{
     @include hide-text();
@@ -63,6 +62,7 @@ Header
   }
   .form-submit {
     margin: 0;
+    padding: 0;
     border: 0 none;
     text-indent: -999em;
     text-transform: capitalize;

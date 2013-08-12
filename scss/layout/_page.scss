@@ -1,9 +1,4 @@
 //LAYOUT
-
-html {
-  background-color: white;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -155,7 +150,7 @@ body {
   float: right;
   margin: -50px 10px 0 0;
   padding: 14px 5px 126px;
-  font: 1em / 1.5em Verdana, Arial, sans-serif;
+  font: 1.03em / 1.6em Verdana, Arial, sans-serif;
   width: 195px;
   background-color: #f0efee;
 }
@@ -167,7 +162,6 @@ body {
 .special #footerWrap {
   clear: both;
   border-top: 1px solid #ccc;
-  /*background:url(../images/style/footerbg.gif) repeat-x left bottom #fff;*/
 }
 
 .region-footer {
@@ -180,7 +174,6 @@ body {
 }
 
 .special .region-footer {
-  /* background: url(../images/style/footerbg.gif) repeat-x left bottom #fff;*/
   background-color: #fff;
   border-top: 1px solid #ccc;
   margin-top: -1px;

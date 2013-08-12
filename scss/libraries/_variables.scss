@@ -1,4 +1,4 @@
-
+@import "bootstrap-variables.scss";
 //// Colors
 //
 // Web Color Pallet
@@ -40,7 +40,7 @@ $dark-gray: #666666;
 // Medium Gray
 // #7d7d7d
 // rgb 125 125 125
-$meidum-gray: #7d7d7d;
+$medium-gray: #7d7d7d;
 
 // Darker Light Gray
 // #c3c3c3
@@ -96,6 +96,16 @@ $searchUrlColor: $darker-gray;
 // Body Background
 $bodyBackgroundColor: #e9e8e5;
 
+
+//Base
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+$link-color: $red;
+$link-hover-color: darken($red, 10%);
+
+//type
+$base-font-size: 16px;
+$line-height-base: 1;
+
 // Components
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -104,6 +114,8 @@ $bodyBackgroundColor: #e9e8e5;
 $component-large-border-radius: 5px;
 $component-default-border-radius: 3px;
 $component-small-border-radius: 2px;
+
+
 
 
 
@@ -151,5 +163,18 @@ $big-search-svg-margin: 0 0 0 0;
 
 $special-big-search-bg: $medium-taupe;
 
+////sassy buttons!
+
+$sb-base-color:      $medium-gray;      // Base color of your button
+$sb-second-color:    false;        // Optional second color of button gradient
+$sb-border-radius:   10px;         // Button border radius
+$sb-border-width:    1px;          // Button border width
+$sb-padding:         0.5em 1.5em;  // Button padding
+$sb-font-size:       em(20px);         // Button font-size
+$sb-line-height:     $line-height-base;        // Button line-height
+$sb-text-color:      $white;        // Button text color
+$sb-text-style:      "inset";      // Button text shadow style
+$sb-gradient-style:  "flat";      // Button gradient style
+$sb-auto-states:     true;         // Automatically create pseudo styles
 
 

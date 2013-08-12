@@ -182,7 +182,7 @@ Modules
 }
 .textbox p,
 #columnTwo .block-aggregator p {
-  line-height:1.3em;
+  line-height:1.42em;
 }
 .textbox.address p strong{color:#666666;}
 .textbox.address{padding: 10px 7px;}
@@ -346,10 +346,7 @@ Modules
 #landCar.carousel {
   width: 654px;
 }
-/*#landCar .carouselPos2 {margin-left:-654px;}
-#landCar .carouselPos3 {margin-left:-1308px;}
-#landCar .carouselPos4 {margin-left:-1962px;}
-#landCar .carouselPos5 {margin-left:-2616px;}*/
+
 
 #landCar.carousel .item {
   width: 654px;
@@ -390,79 +387,4 @@ Modules
 }
 
 
-
-/* Large Social Icons Module === === === === === === === === === === === === === === === === === === === === === === === === === */
-.region-social-networking {
-  clear: both;
-  padding-top: 30px;
-}
-#block-menu-menu-social-networking {
-  position: static;
-  height: 26px;
-  width: auto;
-  text-align:right;
-  background: none;
-}
-.dmdsTypical #block-menu-menu-social-networking ,
-.archives #block-menu-menu-social-networking,
-.node-type-poll #block-menu-menu-social-networking,
-.section-services #block-menu-menu-social-networking{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-.section-news-events.node-type-exhibit #block-menu-menu-social-networking{margin-right: 23px;}
-.sidebar-second #block-menu-menu-social-networking,
-.two-sidebars  #block-menu-menu-social-networking {
-  position: absolute;
-  height: 56px;
-  width: 195px;
-  right: 14px;
-  bottom: 6px;
-}
-#block-menu-menu-social-networking h2 {
-  font:normal 1.5em/1.1em HelveticaNeue57Condensed,Verdana,sans-serif;
-  color: #333;
-  float:none;
-  text-align: right;
-  width: auto;
-  margin:0 10px 0 0;
-  display:inline;
-}
-.sidebar-second #block-menu-menu-social-networking h2,
-.two-sidebars #block-menu-menu-social-networking h2 {
-  float: left;
-  width: 38px;
-  margin-top: 0;
-}
-#block-menu-menu-social-networking .content {
-  float: right;
-  width: 232px;
-  margin:0;
-}
-.sidebar-second #block-menu-menu-social-networking .content,
-.two-sidebars #block-menu-menu-social-networking .content {
-  float: left;
-  width: 120px;
-}
-#block-menu-menu-social-networking .content li {
-  float: left;
-  margin: 0 3px 4px 0;
-  list-style: none;
-}
-#block-menu-menu-social-networking .content a {
-  display: block;
-  height: 26px;
-  width: 26px;
-  text-indent: -99999em;
-  background:url(../images/style/social_icons_sprite.png) no-repeat 0 0;
-}
-#block-menu-menu-social-networking ul li a.rss { background-position:0 0px; }
-#block-menu-menu-social-networking ul li a.facebook { background-position:-29px 0px; }
-#block-menu-menu-social-networking ul li a.twitter { background-position:-58px 0px; }
-#block-menu-menu-social-networking ul li a.youtube { background-position:-87px 0px; }
-#block-menu-menu-social-networking ul li a.flickr { background-position:-116px 0px; }
-#block-menu-menu-social-networking ul li a.libx { background-position:-145px 0px; }
-#block-menu-menu-social-networking ul li a.itunes { background-position:-174px 0px; }
-#block-menu-menu-social-networking ul li a.snippets { background-position:-203px 0px; }
 
