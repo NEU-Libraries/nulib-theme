@@ -25,6 +25,7 @@
 @import 'layout/column-two';
 @import 'layout/footer';
 
+@import 'components/summer_construction_block';
 @import 'components/modules.scss';
 @import 'components/social-networking-menu.scss';
 @import 'templates.scss';
@@ -32,6 +33,7 @@
 @import 'components/forms.scss';
 @import 'components/fields.scss';
 @import 'components/pager.scss';
+@import 'components/autocomplete.scss';
 @import 'corrections.scss';
 @import 'ie-styles.scss';
 
@@ -43,3 +45,4 @@
 
 //sections
 @import 'sections/bookplates.scss';
+@import 'sections/search_api_pages';

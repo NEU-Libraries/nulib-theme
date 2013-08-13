@@ -1,0 +1,113 @@
+.view-id-search_user_index {
+  .views-field{
+    clear: right;
+    margin-left: 5em;
+  }
+  .views-field-field-user-photo-square{
+    width: 45px;
+    height: 45px;
+    float: left;
+    margin: 0.5em 1em 1em 0;
+  }
+  .views-field-counter{
+    margin-left: 0;
+    margin-right: 0.5em;
+  }
+}
+.view-search-node-index{
+  h4{
+    font-size: 1.2em;
+    margin-bottom: 0;
+  }
+  .views-field-url{
+    color: $searchUrlColor;
+    font-size: 0.88em;
+  }
+  .views-field-search-api-relevance, .views-field-type{
+    font-size: 0.88em;
+  }
+}
+
+.view-search-user-index,
+.view-search-node-index{
+  .view-header{
+    width: 50%;
+    float: left;
+    margin-bottom: 2em;
+  }
+}
+.view-search-node-index {
+  .views-field-counter{
+    margin-left: -25px;
+  }
+  ol{
+    margin-left: 25px;
+  }
+}
+.view-content{
+  clear: both;
+}
+
+.views-field-counter{
+  @include ellipsis;
+  color: $views-field-counter-color;
+  font-size: $views-field-counter-font-size;
+  line-height: 1.7em;
+  float: left;
+  max-width: 25px;
+  .field-content:after{
+    content: '.';
+  }
+}
+
+#block-views-exp-search-node-index-page-1, #views-exposed-form-search-user-index-page {
+  #header &{
+    position: absolute;
+    top: 50px;
+    left: 693px;
+    width: 235px;
+  }
+  label, .description{
+      position: absolute !important;
+      clip: rect(1px 1px 1px 1px);
+      clip: rect(1px, 1px, 1px, 1px);
+      overflow: hidden;
+      height: 1px;
+  }
+
+}
+
+.special #block-views-exp-search-node-index-page-1 {
+  left: 734px;
+}
+#block-views-exp-search-node-index-page-1, #views-exposed-form-search-user-index-page {
+  float: left;
+  width: 50%;
+  .form-item {
+    float: left;
+    margin: 0;
+  }
+  .form-text {
+    @include nulib-search-block;
+  }
+  .form-submit {
+    margin:0;
+    border:0 none;
+    text-indent: -999em;
+    text-transform:capitalize;  //IE fix
+    height: 27px;
+    width: 14px;
+    background:url(../images/style/search_arrow.gif) no-repeat left top transparent;
+  }
+  .special & .form-submit {
+    background:url(../images/style-special/search_arrow.gif) no-repeat left top transparent;
+  }
+}
+
+.views-exposed-form .views-exposed-widget{
+  float: none;
+  padding: 0;
+}
+.block-facetapi{
+ margin-bottom: 4em;
+}

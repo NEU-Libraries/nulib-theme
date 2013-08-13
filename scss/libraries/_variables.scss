@@ -105,6 +105,10 @@ $link-hover-color: darken($red, 10%);
 //type
 $base-font-size: 16px;
 $line-height-base: 1;
+$text-color: $darkest-gray;
+
+$text-muted-color: $dark-gray;
+
 
 // Components
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -114,6 +118,8 @@ $line-height-base: 1;
 $component-large-border-radius: 5px;
 $component-default-border-radius: 3px;
 $component-small-border-radius: 2px;
+
+
 
 
 
@@ -177,4 +183,6 @@ $sb-text-style:      "inset";      // Button text shadow style
 $sb-gradient-style:  "flat";      // Button gradient style
 $sb-auto-states:     true;         // Automatically create pseudo styles
 
-
+// Search API Pages
+$views-field-counter-color: $text-muted-color;
+$views-field-counter-font-size: 0.9em;
