@@ -5389,37 +5389,35 @@ ul.calendar-links {
 /* line 30, ../scss/sections/_bookplates.scss */
 .bookplate-grid h4,
 .bookplate-grid em {
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   max-width: 100%;
   display: inline-block;
 }
-/* line 36, ../scss/sections/_bookplates.scss */
+/* line 34, ../scss/sections/_bookplates.scss */
 .bookplate-grid em {
   margin-bottom: 0.375em;
 }
-/* line 39, ../scss/sections/_bookplates.scss */
+/* line 37, ../scss/sections/_bookplates.scss */
 .bookplate-grid h4 {
   font-size: 1.3em;
   font-weight: 500;
+  margin: 0 0 0.25em 0;
+  height: 2em;
+  overflow: hidden;
 }
-/* line 43, ../scss/sections/_bookplates.scss */
+/* line 44, ../scss/sections/_bookplates.scss */
 .bookplate-grid .views-row {
   width: 100%;
   clear: both;
 }
-/* line 49, ../scss/sections/_bookplates.scss */
+/* line 50, ../scss/sections/_bookplates.scss */
 .bookplate-grid .views-column,
-.bookplate-grid .views-exposed-widget {
+.bookplate-grid .views-exposed-widgets .views-exposed-widget {
   width: 23%;
   margin-right: 2%;
   margin-bottom: 2%;
   float: left;
 }
-/* line 55, ../scss/sections/_bookplates.scss */
+/* line 56, ../scss/sections/_bookplates.scss */
 .bookplate-grid .views-column {
   -webkit-transition: all 0.2s ease-in-out, 1s;
   -moz-transition: all 0.2s ease-in-out, 1s;
@@ -5444,13 +5442,13 @@ ul.calendar-links {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 64, ../scss/sections/_bookplates.scss */
+/* line 65, ../scss/sections/_bookplates.scss */
 .bookplate-grid .views-exposed-widget input,
 .bookplate-grid .views-exposed-widget select {
   display: block;
   width: 100%;
 }
-/* line 70, ../scss/sections/_bookplates.scss */
+/* line 71, ../scss/sections/_bookplates.scss */
 .bookplate-grid input.form-submit {
   font-weight: inherit;
   width: 100%;
@@ -5499,7 +5497,7 @@ ul.calendar-links {
   padding: 0 !important;
   margin: -1px !important;
 }
-/* line 79, ../scss/sections/_bookplates.scss */
+/* line 80, ../scss/sections/_bookplates.scss */
 .bookplate-grid img {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
