@@ -1,0 +1,85 @@
+.node-bookplate{
+  .field-label{
+    @extend h3;
+  }
+  .field-name-field-db-image{
+    @include thumbnail;
+    float: left;
+    margin: 0 1.5em 1.5em 0;
+  }
+
+}
+.field-name-field-db-add-materials-link{
+  margin-bottom: 1em;
+}
+.field-name-field-db-materials-link{
+  .field-items{
+    list-style: disc;
+    padding-left: em(40px);
+  }
+  .field-item{
+    display: list-item;
+  }
+}
+
+.bookplate-grid{
+  *{
+    @include box-sizing(border-box);
+  }
+  h4,
+  em{
+    max-width: 100%;
+    display: inline-block;
+  }
+  em{
+    margin-bottom: em(6px);
+  }
+  h4{
+    font-size: 1.3em;
+    font-weight: 500;
+    margin: 0 0 0.25em 0;
+    height: 2em;
+    overflow: hidden;
+  }
+  .views-row{
+    width: 100%;
+    clear: both;
+
+  }
+  .views-column,
+  .views-exposed-widgets .views-exposed-widget{
+    width: 23%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    float: left;
+  }
+  .views-column{
+    @include thumbnail;
+    width: ((100% / 3) - 2%) ;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    padding: 0.3125em;
+  }
+  .views-exposed-widget{
+    input,
+    select{
+      display: block;
+      width: 100%;
+
+    }
+  }
+  input.form-submit{
+    font-weight: inherit;
+    width: 100%;
+    height: auto;
+    background-image: none;
+    margin-top: 1.7em !important;
+    @include sassy-button;
+  }
+
+  img{
+    @include border-radius(2px);
+    width: 100%;
+    height: auto;
+  }
+}

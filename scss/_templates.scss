@@ -248,9 +248,7 @@
   }
 }
 
-#mainContent ol {
-  margin-left: 26px;
-}
+
 
 .field-type-text-long table {
   th {
@@ -360,38 +358,14 @@
     margin: 3px 0 0 0;
   }
   input.form-submit {
-    background: url(../images/style/btn_submit.gif) transparent top left no-repeat;
-    width: 65px;
-    height: 30px;
-    padding-bottom: 5px;
-    border: none;
-    font-weight: bold;
-    font-size: 11px;
-    color: #fff;
   }
 }
 
-.poll input.form-submit, .views-exposed-form input.form-submit, .section-search-pages .search-by-page-form input.form-submit, #user-login .form-submit, #proxythis-form .form-submit {
-  background: url(../images/style/btn_submit.gif) transparent top left no-repeat;
-  width: 65px;
-  height: 30px;
-  padding-bottom: 5px;
-  border: none;
-  font-weight: bold;
-  font-size: 11px;
-  color: #fff;
+.form-submit, .poll input.form-submit, .views-exposed-form input.form-submit, .section-search-pages .search-by-page-form input.form-submit, #user-login .form-submit, #proxythis-form .form-submit {
+  @include sassy-button();
 }
 
-#user-pass .form-submit {
-  background: url(../images/style/btn_submit_long.gif) transparent top left no-repeat;
-  width: 197px;
-  height: 30px;
-  padding-bottom: 5px;
-  border: none;
-  font-weight: bold;
-  font-size: 11px;
-  color: #fff;
-}
+
 
 .webform-client-form {
   #webform-component-state, #webform-component-zip-or-postal-code, #webform-component-state label, #webform-component-zip-or-postal-code label {
