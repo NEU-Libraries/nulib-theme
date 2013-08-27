@@ -233,25 +233,27 @@ function nulib_preprocess_node_exhibit(&$variables, $hook) {
       $tab_titles = array();
       if (count($items) == 1) {
         $fc = field_collection_item_load($items[0]['value']);
-        $tab_title = field_fetch_value_fetch('field_collection', $fc, 'field_ex_tab_item_title', 0);
-        $tab_area = field_fetch_value_fetch('field_collection', $fc, 'field_ev_tab_item_area', 0);
+        $tab_title = $fc->field_ex_tab_item_title['und'][0]['safe_value'];
+        $tab_area =$fc->field_ev_tab_item_area['und'][0]['safe_value'];
         $tab_areas[] = "<div class='tab-title-single'>$tab_title</div>$tab_area";
       } else {
         // Go through each item and create the HTML for its body. Then, send the titles to a helper funcion to assemble.
         foreach($items as $idx => $item) {
           $fc = field_collection_item_load($item['value']);
-          $tab_area     = field_fetch_value_fetch('field_collection', $fc, 'field_ev_tab_item_area', 0);
-          $tab_titles[] = field_fetch_value_fetch('field_collection', $fc, 'field_ex_tab_item_title', 0);
+          $tab_area = $fc->field_ev_tab_item_area['und'][0]['safe_value'];
+          $tab_titles[] = $fc->field_ex_tab_item_title['und'][0]['safe_value'];
           // We always begin with the first tab selected.
           $selected = ($idx == 0) ? ' selected' : '';
           $j = $idx + 1;
           $tab_areas[] = "<div id='tab-$j' class='tabBody clearfix$selected'>$tab_area</div>";
+          dpm($fc);
         }
         $variables['tab_nav']  = _build_tab_nav($tab_titles);
       }
       $variables['tab_area'] = implode($tab_areas);
     }
   }
+
 }
 function nulib_preprocess_node_take_action(&$variables, $hook) {
   if ($variables['page']) {
