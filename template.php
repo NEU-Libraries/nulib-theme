@@ -246,7 +246,7 @@ function nulib_preprocess_node_exhibit(&$variables, $hook) {
           $selected = ($idx == 0) ? ' selected' : '';
           $j = $idx + 1;
           $tab_areas[] = "<div id='tab-$j' class='tabBody clearfix$selected'>$tab_area</div>";
-          dpm($fc);
+
         }
         $variables['tab_nav']  = _build_tab_nav($tab_titles);
       }
@@ -316,7 +316,7 @@ function nulib_preprocess_node_link_list(&$variables, $hook) {
   $wrapper = entity_metadata_wrapper('node', $variables['node']);
   // Link lists are styled differently based on type, so we set the classes array here.
   $type = $wrapper -> field_ll_type -> value();
-  dpm($type);
+
   $variables['type'] = $type;
   $variables['classes_array'][] = $type;
   if ($type == 'also_in_the_library') {
@@ -348,11 +348,15 @@ function nulib_preprocess_node_search_box(&$variables, $hook) {
   }
 }
 function nulib_preprocess_node_rotating_feature(&$variables, $hook) {
-  $variables['rf_type']        = field_fetch_value_fetch('node', $variables['node'], 'field_rf_type', 0);
-  $variables['rf_orientation'] = field_fetch_value_fetch('node', $variables['node'], 'field_rf_orientation', 0);
+  $wrapper = entity_metadata_wrapper('node', $variables['node']);
+
+  $variables['rf_type']        = $wrapper -> field_rf_type -> value();
+  $variables['rf_orientation'] = $wrapper -> field_rf_orientation -> value();
 }
 function nulib_preprocess_node_giving_item(&$variables, $hook) {
-  $variables['giv_type'] = field_fetch_value_fetch('node', $variables['node'], 'field_giv_type', 0);
+  $wrapper = entity_metadata_wrapper('node', $variables['node']);
+
+  $variables['giv_type'] =  $wrapper -> field_giv_type -> value();
 }
 
 /**
