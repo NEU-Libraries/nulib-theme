@@ -129,10 +129,11 @@ function nulib_preprocess_node_event(&$variables, $hook) {
   if (!$variables['teaser']) {
     $node = $variables['node'];
 
-    $variables['img_type'] = field_fetch_value_fetch('node', $variables['node'], 'field_ev_image_orientation', 0);
+    $variables['img_type']= $variables['field_ev_image_orientation'];
+
 
     // Get the "to" value for this event
-    $to = field_fetch_value_fetch('node', $variables['node'], 'field_ev_date', 0, 'value2');
+    $to = $variables['field_ev_date']['und'][0]['value2'];
     $to_for_comparison = substr($to, 0, 10);
 
     // Get today's date
@@ -145,7 +146,7 @@ function nulib_preprocess_node_event(&$variables, $hook) {
       $to = format_date($to, 'custom', 'Ymd\THis', variable_get('date_default_timezone', 0));
 
       // Get the "from" value as a UTC string
-      $from = field_fetch_value_fetch('node', $variables['node'], 'field_ev_date', 0);
+      $from = $variables['field_ev_date']['und'][0]['value1'];
       $from = strtotime($from . ' UTC');
       $from = format_date($from, 'custom', 'Ymd\THis', variable_get('date_default_timezone', 0));
 
@@ -157,7 +158,8 @@ function nulib_preprocess_node_event(&$variables, $hook) {
 
 
       // Create the "Register this event" link if the node indicates we should
-      $rsvp = field_fetch_value_fetch('node', $variables['node'], 'field_ev_rsvp', 0);
+
+      $rsvp = $variables['field_ev_rsvp']['und'][0]['value'];
       if ($rsvp) {
         $variables['register_link'] = "/news-events/calendar/register-for-an-event?event=$event_title";
       }
