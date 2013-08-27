@@ -311,20 +311,12 @@ function nulib_preprocess_node_take_action(&$variables, $hook) {
     }
   }
 }
-/**
- *
- */
 
-/**
- * NU
- * @param  [type] $variables [description]
- * @param  [type] $hook      [description]
- * @return [type]            [description]
- */
 function nulib_preprocess_node_link_list(&$variables, $hook) {
   $wrapper = entity_metadata_wrapper('node', $variables['node']);
   // Link lists are styled differently based on type, so we set the classes array here.
-  $type = $wrapper -> field_ll_type -> value();//field_fetch_value_fetch('node', $variables['node'], 'field_ll_type', 0);
+  $type = $wrapper -> field_ll_type -> value();
+  dpm($type);
   $variables['type'] = $type;
   $variables['classes_array'][] = $type;
   if ($type == 'also_in_the_library') {
@@ -334,11 +326,13 @@ function nulib_preprocess_node_link_list(&$variables, $hook) {
   }
 }
 function nulib_preprocess_node_spotlight(&$variables, $hook) {
-  $variables['sl_type'] = field_fetch_value_fetch('node', $variables['node'], 'field_sl_type', 0);
+  $wrapper = entity_metadata_wrapper('node', $variables['node']);
+
+  $variables['sl_type'] = $wrapper-> field_sl_type -> value();
 
   // Spotlight widgets have different h-tags for their header based on their placement, so we set this here.
   // We also need this value on the template to determine which image to use, if this spotlight is type image.
-  $variables['sl_placement'] = field_fetch_value_fetch('node', $variables['node'], 'field_sl_placement', 0);
+  $variables['sl_placement'] = $wrapper -> field_sl_placement -> value();
   if ($variables['sl_placement'] == 'body') {
     $variables['spotlight_body'] = '<h2>Spotlight</h2>';
   } else {
@@ -346,7 +340,9 @@ function nulib_preprocess_node_spotlight(&$variables, $hook) {
   }
 }
 function nulib_preprocess_node_search_box(&$variables, $hook) {
-  $external_links = field_fetch_value_fetch('node', $variables['node'], 'field_sb_external_links');
+  $wrapper = entity_metadata_wrapper('node', $variables['node']);
+
+  $external_links = $wrapper -> field_sb_external_links ->value();
   if (count($external_links) > 0){
     $variables['classes_array'][] = 'external_links';
   }
