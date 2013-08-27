@@ -13,8 +13,8 @@
 
 screenshot  = screenshot.png
 name        = NU Library
-description = A theme created for the NU Library by <a href="http://ifactory.com/">iFactory</a>. Built as a Zen sub-theme.     
-
+description = A theme created for the NU Library by <a href="http://ifactory.com/">iFactory</a>. Built as a Zen sub-theme.
+dependencies[] = entity
 
 ; This theme is compatible with Drupal 7 core. And it is a sub-theme of Zen.
 

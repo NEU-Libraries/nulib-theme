@@ -266,7 +266,6 @@ function nulib_preprocess_node_take_action(&$variables, $hook) {
       );
     _build_field_collection_admin_nav($variables, $options);
   }
-
   // Check to see if there are any items for this widget
   if (isset($variables['field_ta_item'])) {
     // Gather the items for the widget
@@ -277,17 +276,22 @@ function nulib_preprocess_node_take_action(&$variables, $hook) {
     foreach($items as $idx => $item) {
       // Use the Field Collection module to load this entity
       $fc = field_collection_item_load($item['value']);
-      $expandable = field_fetch_value_fetch('field_collection', $fc, 'field_ta_item_expandable_panel', 0);
+
+      $fc_wrapper = entity_metadata_wrapper('field_collection_item', $fc);
+
+      $expandable = $fc_wrapper -> field_ta_item_expandable_panel -> value();
+
       // Build the HTML for each item
-      $button_text = field_fetch_value_fetch('field_collection', $fc, 'field_ta_item_button_text', 0);
+      $button_text = $fc_wrapper -> field_ta_item_button_text -> value();
+
       if ($expandable) {
         $button = "<a href='#' class='opener'>$button_text</a>";
-        $contents = "<div  class='detail'>" . field_fetch_value_fetch('field_collection', $fc, 'field_ta_item_text', 0) . '</div>';
+        $contents = "<div  class='detail'>" . $fc_wrapper -> field_ta_item_text ->value()['safe_value'] . '</div>';
         $expandable_items[] = $button . $contents;
       } else {
-        $link = field_fetch_value_fetch('field_collection', $fc, 'field_ta_item_link', 0, 'url');
+        $link = $fc_wrapper -> field_ta_item_link -> value()['url'];
         $plain_link = l($button_text, $link, array('html' => TRUE));
-        $icon_class = field_fetch_value_fetch('field_collection', $fc, 'field_ta_item_icon_type', 0);
+        $icon_class = $fc_wrapper -> field_ta_item_icon_type -> value();
         $plain_items[] = _make_li($plain_link, $icon_class);
       }
     }
@@ -307,9 +311,20 @@ function nulib_preprocess_node_take_action(&$variables, $hook) {
     }
   }
 }
+/**
+ *
+ */
+
+/**
+ * NU
+ * @param  [type] $variables [description]
+ * @param  [type] $hook      [description]
+ * @return [type]            [description]
+ */
 function nulib_preprocess_node_link_list(&$variables, $hook) {
+  $wrapper = entity_metadata_wrapper('node', $variables['node']);
   // Link lists are styled differently based on type, so we set the classes array here.
-  $type = field_fetch_value_fetch('node', $variables['node'], 'field_ll_type', 0);
+  $type = $wrapper -> field_ll_type -> value();//field_fetch_value_fetch('node', $variables['node'], 'field_ll_type', 0);
   $variables['type'] = $type;
   $variables['classes_array'][] = $type;
   if ($type == 'also_in_the_library') {
