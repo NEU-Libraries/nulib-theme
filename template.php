@@ -286,7 +286,8 @@ function nulib_preprocess_node_take_action(&$variables, $hook) {
 
       if ($expandable) {
         $button = "<a href='#' class='opener'>$button_text</a>";
-        $contents = "<div  class='detail'>" . $fc_wrapper -> field_ta_item_text ->value()['safe_value'] . '</div>';
+        $item_text = $fc_wrapper -> field_ta_item_text ->value();
+        $contents = "<div  class='detail'>" . $fc_wrapper -> $item_text['safe_value'] . '</div>';
         $expandable_items[] = $button . $contents;
       } else {
         $link = $fc_wrapper -> field_ta_item_link -> value()['url'];
