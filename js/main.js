@@ -256,5 +256,5 @@ $.fn.vAlign = function() {
 
 //Redirect mobile site if sreenwidth is less than or equal to 699.
 if ((screen.width <= 699) && (document.location.href === "http://library.northeastern.edu/")){
-  document.location = "http://www.lib.neu.edu/m";
+  document.location = "http://m.library.northeastern.edu";
 }
