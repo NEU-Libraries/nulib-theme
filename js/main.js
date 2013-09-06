@@ -108,7 +108,7 @@
           src = src.replace('svg','png');
           $('img[src$="svg"]').attr('src',src);
       }
-      var themepath = 'sites/all/themes/nulib';
+      var themepath = '/sites/all/themes/nulib';
       if(!Modernizr.placeholder){
         Modernizr.load({
            load: themepath + '/js/jquery.textPlaceholder.min.js',
