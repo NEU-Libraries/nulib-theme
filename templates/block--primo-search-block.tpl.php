@@ -53,12 +53,19 @@ $primoUrl = variable_get('primo_search_block_url', 'onesearch.northeastern.edu')
 
 
 <div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
-    <?php if ($title): ?>
-      <a href="http://<?php print $primoUrl?>" title="Scholar OneSearch | Homepage" class="svg scholar-one-search">
-        <span class="element-invisible"><?php print $title; ?>"</span>
-      </a>
-    <?php endif; ?>
+    <div class="container">
 
+      <?php if ($title): ?>
+      <div class="title">
+        <a href="http://<?php print $primoUrl?>" title="Scholar OneSearch | Homepage" class="svg scholar-one-search">
+          <span class="element-invisible"><?php print $title; ?>"</span>
+        </a>
+      </div>
+      <?php endif; ?>
+      <div class="search-help">
+        <a href="/get-help/tech-support/about-the-home-page-search" class="help">Search Help</a>
+      </div>
+    </div>
     <div class="content"<?php print $content_attributes; ?>>
       <?php print $content; ?>
     </div>
