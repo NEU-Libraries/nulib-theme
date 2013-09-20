@@ -84,7 +84,6 @@
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <?php
     $content['field_db_donors']['#theme'] = 'theme_item_list';
-    dpm(content);
   ?>
   <?php print $user_picture; ?>
 
