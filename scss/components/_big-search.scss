@@ -1,7 +1,39 @@
-/* Search and Browse widgets -- skinny version, ie in region-content-top */
+.container:before,
+.container:after {
+  display: table;
+  content: " ";
+}
+
+.container:after {
+  clear: both;
+}
+
+.container:before,
+.container:after {
+  display: table;
+  content: " ";
+}
+
+.container:after {
+  clear: both;
+}
 
 //////////////////////////////// Big search
 .bigSearch {
+  .container{
+
+    margin-bottom: 1em;
+
+  }
+  .title{
+    width: 50%;
+    float: left;
+  }
+  .search-help{
+    float: right;
+    clear: right;
+    margin-right: 3.5em;
+  }
   margin-bottom: -4px;
   h4 {
     max-width: 390px;
@@ -18,7 +50,6 @@
   position: relative;
   color: $black;
   display: inline-block;
-
   .nav {
     display: inline-block;
     float: left;
@@ -45,6 +76,14 @@
   list-style: none;
   & > a {
     padding: 0.25em 0.5em;
+  }
+}
+.right-nav .nav{
+  float: right;
+  width: auto;
+  margin-right: 2.5em;
+  & > li{
+    float: right;
   }
 }
 
