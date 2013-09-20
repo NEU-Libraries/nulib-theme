@@ -22,10 +22,17 @@ module.exports = function(grunt) {
         },
         docs:{
           options: {
-            environment: 'development' 
+            environment: 'development'
           }
         },
       },
+    watch: {
+      styles: {
+        files: ['scss/**'],
+        tasks: ['comapss:devel']
+      },
+
+    },
   });
 
   grunt.registerTask('default',['compass:devel']);
