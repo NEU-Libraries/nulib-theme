@@ -3,39 +3,38 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     compass: {                  // Task
+      options: {
+        config: 'config.rb',
+        sassDir: 'scss',
+        cssDir: 'css',
+      },
 
-
-        options: {
-          //config: 'config.rb
-          sassDir: 'scss',
-          cssDir: 'css',
-        },
-        dist: {                   // Target
+      dist: {                   // Target
           options: {              // Target options
-            environment: 'production'
+            environment: 'production',
+            outputStyle: 'compressed',
+            force: true
           }
         },
         devel: {
           options: {
-            environment: 'development'
+            environment: 'development',
+            outputStyle: 'expanded',
+            debugInfo: true
           }
         },
-        docs:{
-          options: {
-            environment: 'development'
-          }
-        },
-      },
+
+    },
     watch: {
       styles: {
         files: ['scss/**'],
-        tasks: ['comapss:devel']
+        tasks: ['compass:devel']
       },
 
     },
   });
 
-  grunt.registerTask('default',['compass:devel']);
+  grunt.registerTask('default',['watch:styles']);
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-jekyll');
