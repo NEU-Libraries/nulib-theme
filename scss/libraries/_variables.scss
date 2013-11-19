@@ -92,6 +92,8 @@ $lightest-taupe: #f2f1ea;
 
 $searchUrlColor: $darker-gray;
 
+$light-warm-gray: #f0efee;
+
 
 // Body Background
 $bodyBackgroundColor: #e9e8e5;
@@ -108,6 +110,10 @@ $line-height-base: 1;
 $text-color: $darkest-gray;
 
 $text-muted-color: $dark-gray;
+
+$serif: Times,"Times New Roman",Georgia,serif;
+
+
 
 
 // Components
@@ -186,3 +192,5 @@ $sb-auto-states:     true;         // Automatically create pseudo styles
 // Search API Pages
 $views-field-counter-color: $text-muted-color;
 $views-field-counter-font-size: 0.9em;
+
+

@@ -6,3 +6,32 @@
 .block {
   margin-bottom: 1.5em;
 }
+
+
+.widget-block{
+  .content{
+    padding: 0.5em;
+  }
+}
+
+
+.block.italic-title{
+  .block-title{
+    @include italic-title;
+    text-align: center;
+    font-size: 1.9em;
+    line-height: 2em;
+    margin: 0.5em 0 0 0;
+  }
+}
+
+
+.twitter-logo{
+  .block-title{
+    @include inline-svg-background($twitter-svg, $twitter-png, $twitter-path);
+    padding-left: 1.65em;
+    background-position: 0.5em 0.2em;
+  }
+}
+
+
