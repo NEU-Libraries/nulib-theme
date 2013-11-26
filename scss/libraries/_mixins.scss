@@ -168,4 +168,18 @@
 
 
 
+@mixin italic-title{
+  font-style: italic;
+  font-family: $serif;
+}
 
+@mixin inline-svg-background($svg-base64, $png-base64, $png-path){
+  .svg &{
+    background-image: $svg-base64;
+  }
+  .no-svg &{
+    background-image: $png-base64;
+    background-image: $png-path;
+  }
+  background-repeat: no-repeat;
+}
