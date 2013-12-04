@@ -11,6 +11,7 @@ $sb-padding: 0.3em 1.5em;
 $sb-font-size: 1.1em;
 $sb-text-color: white;
 $sb-text-style: false;
+$sb-text-color-hover: darken($sb-text-color, 10%);
 $sb-gradient-style: "flat";
 $sb-pseudo-states: true;
 $sb-ie-support: true;
@@ -21,6 +22,11 @@ $sb-ie-support: true;
 @mixin sassy-button-default-structure {
   display: inline-block;
   cursor: pointer;
+  color: $sb-text-color;
+  &:hover,
+  &:focus{
+    color: $sb-text-color-hover;
+  }
 }
 
 //  *    Mixin reference

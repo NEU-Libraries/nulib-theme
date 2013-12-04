@@ -1,3 +1,4 @@
 codekit-config.json
 .sass-cache
 node_modules
+.ruby-gemset
