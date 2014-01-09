@@ -63,7 +63,7 @@ $primoUrl = variable_get('primo_search_block_url', 'onesearch.northeastern.edu')
       </div>
       <?php endif; ?>
       <div class="search-help">
-        <a href="/get-help/tech-support/about-the-home-page-search" class="help">Search Help</a>
+        <a href="/get-help/tech-support/about-the-home-page-search" class="help">About this search</a>
       </div>
     </div>
     <div class="content"<?php print $content_attributes; ?>>
