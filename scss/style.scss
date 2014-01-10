@@ -6,10 +6,15 @@
 @import 'libraries/mixins.scss';
 @import 'sassybuttons';
 @import 'libraries/icons';
+@import 'vendor/font-awesome';
 
-@import 'html-reset.scss';
-@import 'reset-base.scss';
+//Base Styles
+@import 'html-reset';
+@import 'reset-base';
+@import 'base/utilities';
 @import 'base/typography';
+
+//Components
 @import 'page-backgrounds.scss';
 @import 'tabs.scss';
 @import 'pages.scss';
@@ -48,3 +53,4 @@
 //sections
 @import 'sections/bookplates.scss';
 @import 'sections/search_api_pages';
+@import 'sections/resource-nodes';

@@ -96,6 +96,17 @@
     <?php
       if ($view_mode !== "full"){
         print $title_line;
+      }else{
+        $resource_url = $variables['field_resource_link_plain']['und'][0]['value'];
+        $title =  '<i>' . $variables['title'] . '</i>';
+        $ext_link_icon =
+        '<i class="fa fa-external-link" aria-hidden="true"></i>
+        <span class="sr-only">External Link</span>';
+        $link_text = "Connect to: " . $title . " " . $ext_link_icon;
+        print l($link_text , $resource_url, array(
+          'html'=>True,
+          'attributes' => array('class' => "ta-right display-block" )
+          ));
       }
       hide($content['links']);
       print render($content);

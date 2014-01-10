@@ -347,7 +347,6 @@ function nulib_preprocess_node_giving_item(&$variables, $hook) {
  */
 
 function nulib_preprocess_node_resource(&$variables, $hook) {
-  dpm($variables);
   $resource_url = $variables['field_resource_link_plain']['und'][0]['value'];
 
   $icons = field_fetch_value_fetch('node', $variables['node'], 'field_resource_icon');

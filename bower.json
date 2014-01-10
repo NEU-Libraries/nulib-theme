@@ -1,0 +1,26 @@
+{
+  "name": "nulib",
+  "version": "0.0.0",
+  "homepage": "https://github.com/NEU-Libraries/nulib-theme",
+  "authors": [
+    "Steven Bassett <steven.j.bassett@gmail.com>"
+  ],
+  "description": "Northeatern Libraries Drupal 7 theme",
+  "main": "template.php",
+  "keywords": [
+    "Drupal"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/_bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "~4.0.3"
+  }
+}
