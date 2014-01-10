@@ -94,7 +94,9 @@
 
   <div class="content"<?php print $content_attributes; ?>>
     <?php
-      print $title_line;
+      if ($view_mode !== "full"){
+        print $title_line;
+      }
       hide($content['links']);
       print render($content);
     ?>
@@ -105,6 +107,6 @@
           <div class="detail"><?php print $more_info; ?></div>
          </li>
        </ul>
-    <?php endif; ?>  
+    <?php endif; ?>
    </div>
 </div><!-- /.node -->

@@ -343,19 +343,24 @@ function nulib_preprocess_node_giving_item(&$variables, $hook) {
 /**
  * implements hook_preprocess_node_resource()
  *
- * Builds the custom link for the title of the node and addes the icons.
+ * Builds the custom link for the title of the node and adds the icons.
  */
 
 function nulib_preprocess_node_resource(&$variables, $hook) {
+  dpm($variables);
   $resource_url = $variables['field_resource_link_plain']['und'][0]['value'];
+
   $icons = field_fetch_value_fetch('node', $variables['node'], 'field_resource_icon');
   $icons = implode(array_map('_make_icon', $icons));
+
   $variables['title_line'] =
     "<h2>". l($variables['title'], $resource_url, array('html'=>True,)) . "</h2>" .
     $icons;
   $variables['more_info'] =
       field_fetch_value_fetch('node', $variables['node'], 'field_resource_description', 0);
+
   $detailed_subjects = field_fetch_value_fetch('node', $variables['node'], 'field_resource_detailed_subjects', NULL);
+
   if (!$variables['page'] && count($detailed_subjects) > 0) {
     $detailed_subjects = implode(', ', array_map('_get_term_name', $detailed_subjects));
     $variables['more_info'] .=
